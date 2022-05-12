@@ -1,0 +1,14 @@
+CAL_STM_TrqSetRamp_f32 
+
+CAL_STM_UxptTrqLim_f32 
+
+CAL_STM_UxptTrqMonCountTrh_s16 
+
+CAL_STM_UxptTrqMonDebTrh_s16 
+
+CAL_STM_UxptTrqMonErrRst_b 
+
+CAL_STM_SpeedCtlMode_u8 
+
+VAR_STM_UintndTrqMonRslt_b
+VAR_STM_UintndTrqErr_b
