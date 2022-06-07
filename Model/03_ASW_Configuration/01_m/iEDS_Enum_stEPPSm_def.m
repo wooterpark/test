@@ -1,0 +1,28 @@
+classdef iEDS_Enum_stEPPSm_def < Simulink.IntEnumType
+    enumeration
+        PcfStm_Init(0)
+        PcfStm_Selfcheck(1)
+        PcfStm_Idle (2)
+        PcfStm_offP (3)
+        PcfStm_Standby(4)
+        PcfStm_OutP(5)
+        PcfStm_InP(6)
+        PcfStm_Run(7)
+        PcfStm_Fault(8)
+        PcfStm_StallInit(9)
+        PcfStm_BCInit(10)
+        PcfStm_BCOutP(11)
+        PcfStm_BCInP(12)
+        PcfStm_BCRun(13)
+        PcfStm_SLInit(14)
+        PcfStm_SLRun(15)
+        PcfStm_SLCompare(16)
+        PcfStm_SLFnh(17)
+        PcfStm_SLFail(18)
+        PcfStm_StallRun(19)
+        PcfStm_StallOutP(20)
+        PcfStm_StallInP(21)
+        PcfStm_StallSucd(22)
+        PcfStm_SLFaild(23)
+    end
+end
