@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Interfaces</SHORT-NAME>
+      <ELEMENTS>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_IN_Interface</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>IoHwAb_DIO_Get</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>channel</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>dio_status</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/boolean</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_OUT_Interface</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>IoHwAb_DIO_Set</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>channel</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>dio_status</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/boolean</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_ADC_Interface</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>IoHwAb_ADC_GetPhyVoltage</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Channel</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>RawVoltage</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_PWM_SetDutyCycle_Interface</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>IoHwAb_PWM_SetDutyCycle</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>channel</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>dutycycle</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_PWM_SetPeriod_DutyCycle_Interface</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>IoHwAb_PWM_SetPeriod_DutyCycle</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>channel</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>period</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>dutycycle</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_ADC_Control_Interface</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>IoHwAb_ADC_StartConversion</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Channel</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Start</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/boolean</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_ICU_GetPeriod_DutyCycle_Interface</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION UUID="">
+              <SHORT-NAME>IoHwAb_ICU_GetPeriod_DutyCycle</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>channel</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Period</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Dutycycle</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_ICU_StartMeasurement_Interface</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION UUID="">
+              <SHORT-NAME>IoHwAb_ICU_StartMeasurement</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>channel</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Mode</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/boolean</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,83 @@
+/*
+ * NvM_Cfg_MemMap.h
+ *
+ *  Created on: Jul 31, 2017
+ *      Author: NAI1HC
+ */
+#define MEMMAP_ERROR
+
+/*Code sec*/
+#if defined (START_WITH_IF)
+#elif defined NVM_START_SEC_CODE
+  #undef NVM_START_SEC_CODE
+  #define  BSW_START_SEC_CODE
+  #undef MEMMAP_ERROR
+#elif defined NVM_STOP_SEC_CODE
+  #undef NVM_STOP_SEC_CODE
+  #define  BSW_STOP_SEC_CODE
+  #undef MEMMAP_ERROR
+/*Saved zone*/
+#elif defined NVM_START_SEC_SAVED_ZONE_8
+  #undef NVM_START_SEC_SAVED_ZONE_8
+  #define  BSW_START_SEC_VAR_CLEARED_8
+  #undef MEMMAP_ERROR
+#elif defined NVM_STOP_SEC_SAVED_ZONE_8
+  #undef NVM_STOP_SEC_SAVED_ZONE_8
+  #define  BSW_STOP_SEC_VAR_CLEARED_8
+  #undef MEMMAP_ERROR
+#elif defined NVM_START_SEC_SAVED_ZONE_16
+  #undef NVM_START_SEC_SAVED_ZONE_16
+  #define  BSW_START_SEC_VAR_CLEARED_16
+  #undef MEMMAP_ERROR
+#elif defined NVM_STOP_SEC_SAVED_ZONE_16
+  #undef NVM_STOP_SEC_SAVED_ZONE_16
+  #define  BSW_STOP_SEC_VAR_CLEARED_16
+  #undef MEMMAP_ERROR  
+#elif defined NVM_START_SEC_SAVED_ZONE_32
+  #undef NVM_START_SEC_SAVED_ZONE_32
+  #define  BSW_START_SEC_VAR_CLEARED_32
+  #undef MEMMAP_ERROR
+#elif defined NVM_STOP_SEC_SAVED_ZONE_32
+  #undef NVM_STOP_SEC_SAVED_ZONE_32
+  #define  BSW_STOP_SEC_VAR_CLEARED_32
+  #undef MEMMAP_ERROR
+/*Data sec const*/
+#elif defined NVM_START_SEC_CONST_UNSPECIFIED
+    #undef NVM_START_SEC_CONST_UNSPECIFIED
+    #define BSW_START_SEC_CONST_UNSPECIFIED
+    #undef MEMMAP_ERROR
+#elif defined NVM_STOP_SEC_CONST_UNSPECIFIED
+    #undef NVM_STOP_SEC_CONST_UNSPECIFIED
+    #define BSW_STOP_SEC_CONST_UNSPECIFIED
+    #undef MEMMAP_ERROR	
+/*Data sec un-initialized*/
+#elif defined NVM_START_SEC_VAR_CLEARED_8
+    #undef NVM_START_SEC_VAR_CLEARED_8
+    #define BSW_START_SEC_VAR_CLEARED_8
+    #undef MEMMAP_ERROR
+#elif defined NVM_STOP_SEC_VAR_CLEARED_8
+    #undef NVM_STOP_SEC_VAR_CLEARED_8
+    #define BSW_STOP_SEC_VAR_CLEARED_8
+    #undef MEMMAP_ERROR
+#elif defined NVM_START_SEC_VAR_CLEARED_16
+    #undef NVM_START_SEC_VAR_CLEARED_16
+    #define BSW_START_SEC_VAR_CLEARED_16
+    #undef MEMMAP_ERROR
+#elif defined NVM_STOP_SEC_VAR_CLEARED_16
+    #undef NVM_STOP_SEC_VAR_CLEARED_16
+    #define BSW_STOP_SEC_VAR_CLEARED_16
+    #undef MEMMAP_ERROR
+#elif defined NVM_START_SEC_VAR_CLEARED_UNSPECIFIED
+    #undef NVM_START_SEC_VAR_CLEARED_UNSPECIFIED
+    #define BSW_START_SEC_VAR_CLEARED_UNSPECIFIED
+    #undef MEMMAP_ERROR
+#elif defined NVM_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+    #undef NVM_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+    #define BSW_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+    #undef MEMMAP_ERROR	
+	
+#elif defined MEMMAP_ERROR
+   #error "NvM_Cfg_MemMap.h, wrong #pragma command"
+#endif
+
+#include "Bsw_MemMap.h"

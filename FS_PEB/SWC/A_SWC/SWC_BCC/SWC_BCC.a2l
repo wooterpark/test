@@ -1,0 +1,1719 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_BCC.a2l
+ *
+ * Code generation for model "SWC_BCC".
+ *
+ * Model version              : 1.24
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Fri Nov  6 11:38:53 2020
+ * 
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TjrthLv4IhIhTab_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4IhIhTab_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_BCC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_BCC_CM_single
+        /* Number of Axis Pts   */      6
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TjCoolantFlowTab_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_TjCoolantFlowTab_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjCoolantFlowTab_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_BCC_CM_single
+      /* Number of Axis Pts     */      6
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TjrthLv4IhNtcTab_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4IhNtcTab_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_BCC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_BCC_CM_single
+        /* Number of Axis Pts   */      6
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TjCoolantFlowTab_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TjrthLv4DhIhTab_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4DhIhTab_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_BCC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_BCC_CM_single
+        /* Number of Axis Pts   */      6
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TjCoolantFlowTab_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_AgGenCoe_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_AgGenCoe_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_dycLowLimt_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_dycLowLimt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_dycUpLimt_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_dycUpLimt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_iDcEstflt_f32  
+      /* Long Identifier        */      "母线电压估算滤波系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_iDcEstflt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_iThetaOffsetGen_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_iThetaOffsetGen_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_iThetaOffset_f32  
+      /* Long Identifier        */      "相电流折算半个运行周期"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_iThetaOffset_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_tiFull_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_tiFull_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_CoolantFlowReq_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_CoolantFlowReq_u8@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjDycMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjDycMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjDycMin_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjDycMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjLv1Act_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjLv1Act_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjLv2Act_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjLv2Act_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjLv3Act_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjLv3Act_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjLv3Pas_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjLv3Pas_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Tj_cofFltCoolant_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Tj_cofFltCoolant_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dhdh_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dhdh_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dhdl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dhdl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dhil_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dhil_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dhntc_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dhntc_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dldh_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dldh_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dldl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dldl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dlih_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dlih_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dlil_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dlil_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4dlntc_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4dlntc_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4ihdh_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4ihdh_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4ihdl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4ihdl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4ihil_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4ihil_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4ildh_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4ildh_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4ildl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4ildl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4ilih_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4ilih_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4ilil_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4ilil_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjrthLv4ilntc_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjrthLv4ilntc_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_tiPwmLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_tiPwmLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_flgDelayDyc_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_flgDelayDyc_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_flgEnableIdc_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_flgEnableIdc_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_BCC_flgEnableTj_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_BCC_flgEnableTj_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TjstUVW_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TjstUVW_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_BCC_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_WTjpwr_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_WTjpwr_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_WCoolantTj_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_WCoolantTj_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_WihTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_WihTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_WilTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_WilTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_WdlTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_WdlTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_WdhTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_WdhTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_VTjpwr_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_VTjpwr_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_VCoolantTj_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_VCoolantTj_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_VilTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_VilTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_VdlTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_VdlTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_VdhTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_VdhTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_VihTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_VihTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_UTjpwr_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_UTjpwr_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_UCoolantTj_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_UCoolantTj_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_UilTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_UilTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_UdlTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_UdlTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_UdhTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_UdhTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_UihTjtIGBT_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_UihTjtIGBT_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_BCC_iDcLnkEst_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_BCC_iDcLnkEst_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_BCC_iDcLnkEstFlt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_BCC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_BCC_iDcLnkEstFlt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_BCC_flgstGateDrv_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_BCC_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_BCC_flgstGateDrv_b@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_BCC_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_BCC_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_BCC_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_BCC
+      /* Long identifier        */       "SWC_BCC"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_RE_SWC_BCC_100us_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_RE_SWC_BCC_100us_sys
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys"
+      /begin SUB_GROUP
+        S1_iDcLnkCal
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_iDcLnkCal
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal"
+      /begin SUB_GROUP
+        S3_Dyc_Calc
+        S3_Idc_Calc
+        S3_Tj
+        S3_iUVW_Calc
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_flgEnableIdc_b
+        CAL_BCC_flgEnableTj_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_Dyc_Calc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Dyc_Calc"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_flgDelayDyc_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_Idc_Calc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc"
+      /begin SUB_GROUP
+        S5_IdcCalc
+        S5_IdcCalcFlt
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_Tj
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj"
+      /begin SUB_GROUP
+        S6_uTjCal1
+        S6_uTjCal2
+        S6_uTjCal3
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_CoolantFlowReq_u8
+        CAL_TjrthLv4DhIhTab_af32
+        CAL_TjrthLv4IhIhTab_af32
+        CAL_TjrthLv4IhNtcTab_af32
+        CAL_TjrthLv4dhdh_f32
+        CAL_TjrthLv4dhdl_f32
+        CAL_TjrthLv4dhil_f32
+        CAL_TjrthLv4dhntc_f32
+        CAL_TjrthLv4dldh_f32
+        CAL_TjrthLv4dldl_f32
+        CAL_TjrthLv4dlih_f32
+        CAL_TjrthLv4dlil_f32
+        CAL_TjrthLv4dlntc_f32
+        CAL_TjrthLv4ihdh_f32
+        CAL_TjrthLv4ihdl_f32
+        CAL_TjrthLv4ihil_f32
+        CAL_TjrthLv4ildh_f32
+        CAL_TjrthLv4ildl_f32
+        CAL_TjrthLv4ilih_f32
+        CAL_TjrthLv4ilil_f32
+        CAL_TjrthLv4ilntc_f32
+        CAL_tiPwmLim_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_iUVW_Calc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/iUVW_Calc"
+      /begin SUB_GROUP
+        S8_SinCos
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_IdcCalc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc"
+      /begin SUB_GROUP
+        S16_Case1
+        S16_Case2
+        S16_Case3
+        S16_Case4
+        S16_Case5
+        S16_Case6
+        S16_Subsystem1
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_flgDelayDyc_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_BCC_iDcLnkEst_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_IdcCalcFlt
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalcFlt"
+      /begin SUB_GROUP
+        S17_ISC_ILPFilter6
+        S17_Subsystem
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_iDcEstflt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_uTjCal1
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1"
+      /begin SUB_GROUP
+        S59_Subsystem
+        S59_Subsystem12
+        S59_Subsystem14
+        S59_Subsystem3
+        S59_Subsystem4
+        S59_Subsystem5
+        S59_Subsystem7
+        S59_Subsystem8
+        S59_Subsystem9
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Tj_cofFltCoolant_f32
+        CAL_TjstUVW_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_UCoolantTj_f32
+        VAR_UdhTjtIGBT_f32
+        VAR_UdlTjtIGBT_f32
+        VAR_UihTjtIGBT_f32
+        VAR_UilTjtIGBT_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_uTjCal2
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2"
+      /begin SUB_GROUP
+        S60_Subsystem
+        S60_Subsystem12
+        S60_Subsystem14
+        S60_Subsystem3
+        S60_Subsystem4
+        S60_Subsystem5
+        S60_Subsystem7
+        S60_Subsystem8
+        S60_Subsystem9
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Tj_cofFltCoolant_f32
+        CAL_TjstUVW_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_VCoolantTj_f32
+        VAR_VdhTjtIGBT_f32
+        VAR_VdlTjtIGBT_f32
+        VAR_VihTjtIGBT_f32
+        VAR_VilTjtIGBT_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_uTjCal3
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3"
+      /begin SUB_GROUP
+        S61_Subsystem
+        S61_Subsystem15
+        S61_Subsystem4
+        S61_Subsystem5
+        S61_Subsystem7
+        S61_Subsystem8
+        S61_Subsystem9
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Tj_cofFltCoolant_f32
+        CAL_TjstUVW_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_WCoolantTj_f32
+        VAR_WihTjtIGBT_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_SinCos
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/iUVW_Calc/SinCos"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_iThetaOffsetGen_f32
+        CAL_BCC_iThetaOffset_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Case1
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Case1"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_AgGenCoe_f32
+        CAL_BCC_tiFull_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Case2
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Case2"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_AgGenCoe_f32
+        CAL_BCC_tiFull_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Case3
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Case3"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_AgGenCoe_f32
+        CAL_BCC_tiFull_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Case4
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Case4"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_AgGenCoe_f32
+        CAL_BCC_tiFull_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Case5
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Case5"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_AgGenCoe_f32
+        CAL_BCC_tiFull_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Case6
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Case6"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_AgGenCoe_f32
+        CAL_BCC_tiFull_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Subsystem1
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Subsystem1"
+      /begin SUB_GROUP
+        S25_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S17_ISC_ILPFilter6
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalcFlt/ISC_ILPFilter6"
+      /begin REF_MEASUREMENT
+        VAR_BCC_iDcLnkEstFlt_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S17_Subsystem
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalcFlt/Subsystem"
+      /begin REF_MEASUREMENT
+        VAR_BCC_flgstGateDrv_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem12
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem12"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem14
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem14"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem3
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem3"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem4
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem4"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem5
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem5"
+      /begin REF_MEASUREMENT
+        VAR_UTjpwr_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem7
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem7"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem8
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem8"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Subsystem9
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal1/Subsystem9"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem12
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem12"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem14
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem14"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem3
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem3"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem4
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem4"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem5
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem5"
+      /begin REF_MEASUREMENT
+        VAR_VTjpwr_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem7
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem7"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem8
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem8"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Subsystem9
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal2/Subsystem9"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S61_Subsystem
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S61_Subsystem15
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem15"
+      /begin SUB_GROUP
+        S132_Subsystem12
+        S132_Subsystem14
+        S132_Subsystem3
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_WdhTjtIGBT_f32
+        VAR_WdlTjtIGBT_f32
+        VAR_WilTjtIGBT_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S61_Subsystem4
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem4"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S61_Subsystem5
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem5"
+      /begin REF_MEASUREMENT
+        VAR_WTjpwr_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S61_Subsystem7
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem7"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S61_Subsystem8
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem8"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S61_Subsystem9
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem9"
+      /begin REF_CHARACTERISTIC
+        CAL_TjDycMax_f32
+        CAL_TjDycMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S25_Subsystem
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Subsystem1/Subsystem"
+      /begin SUB_GROUP
+        S44_Sec1_Dyc
+        S44_Sec2_Dyc
+        S44_Sec3_Dyc
+        S44_Sec4_Dyc
+        S44_Sec5_Dyc
+        S44_Sec6_Dyc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S132_Subsystem12
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem15/Subsystem12"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S132_Subsystem14
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem15/Subsystem14"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S132_Subsystem3
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Tj/uTjCal3/Subsystem15/Subsystem3"
+      /begin REF_CHARACTERISTIC
+        CAL_TjLv1Act_f32
+        CAL_TjLv2Act_f32
+        CAL_TjLv3Act_f32
+        CAL_TjLv3Pas_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S44_Sec1_Dyc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Subsystem1/Subsystem/Sec1_Dyc"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_dycLowLimt_f32
+        CAL_BCC_dycUpLimt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S44_Sec2_Dyc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Subsystem1/Subsystem/Sec2_Dyc"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_dycLowLimt_f32
+        CAL_BCC_dycUpLimt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S44_Sec3_Dyc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Subsystem1/Subsystem/Sec3_Dyc"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_dycLowLimt_f32
+        CAL_BCC_dycUpLimt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S44_Sec4_Dyc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Subsystem1/Subsystem/Sec4_Dyc"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_dycLowLimt_f32
+        CAL_BCC_dycUpLimt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S44_Sec5_Dyc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Subsystem1/Subsystem/Sec5_Dyc"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_dycLowLimt_f32
+        CAL_BCC_dycUpLimt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S44_Sec6_Dyc
+      /* Long identifier        */       "SWC_BCC/RE_SWC_BCC_100us_sys/iDcLnkCal/Idc_Calc/IdcCalc/Subsystem1/Subsystem/Sec6_Dyc"
+      /begin REF_CHARACTERISTIC
+        CAL_BCC_dycLowLimt_f32
+        CAL_BCC_dycUpLimt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_BCC.a2l */

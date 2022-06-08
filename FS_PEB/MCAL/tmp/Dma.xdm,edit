@@ -1,0 +1,523 @@
+<?xml version='1.0'?>
+<datamodel version="3.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="Dma" type="AR-PACKAGE">
+        <d:lst type="ELEMENTS">
+          <d:chc name="Dma" type="AR-ELEMENT" value="MODULE-CONFIGURATION">
+            <d:ctr type="MODULE-CONFIGURATION">
+              <a:a name="DEF" value="ASPath:/AURIX/Dma"/>
+              <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" 
+                     value="VariantPostBuildSelectable">
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:ctr name="DmaGeneralConfiguration" type="IDENTIFIABLE">
+                <d:var name="DmaIndex" type="INTEGER" value="4"/>
+                <d:var name="DmaDevErrorDetect" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaVersionInfoApi" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaDoubleBufferEnable" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaDeInitApi" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaLinkedListEnable" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaPBFixedAddress" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaDebugSupport" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaResetSfrAtInit" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaRunningInUser0Mode" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaUserModeInitApiEnable" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaUserModeDeInitApiEnable" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="DmaUserModeRuntimeApiEnable" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+              <d:lst name="DmaConfigSet" type="MAP">
+                <d:ctr name="DmaConfigSet_0" type="IDENTIFIABLE">
+                  <d:ctr name="DmaConfigReferencetoMcu" type="IDENTIFIABLE">
+                    <d:ref name="DmaReferenceValue" type="REFERENCE" 
+                           value="ASPath:/Mcu/Mcu/McuModuleConfiguration_0/DmaConfiguration_0"/>
+                  </d:ctr>
+                  <d:ctr name="DmaMoveEngineConfiguration" type="IDENTIFIABLE">
+                    <d:ctr name="DmaPatternConfig" type="IDENTIFIABLE">
+                      <d:var name="DmaPat00" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPat01" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPat02" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPat03" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPat10" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPat11" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPat12" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPat13" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="DmaErrorEnableConfiguration" 
+                           type="IDENTIFIABLE">
+                      <d:var name="DmaMovEng0SrcError" type="ENUMERATION" 
+                             value="TRUE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaMovEng0DstError" type="ENUMERATION" 
+                             value="TRUE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaMovEng0LinkListError" type="ENUMERATION" 
+                             value="TRUE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaMovEng0RAMError" type="ENUMERATION" 
+                             value="TRUE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaMovEng1SrcError" type="ENUMERATION" 
+                             value="TRUE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaMovEng1DstError" type="ENUMERATION" 
+                             value="TRUE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaMovEng1LinkListError" type="ENUMERATION" 
+                             value="TRUE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaMovEng1RAMError" type="ENUMERATION" 
+                             value="TRUE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                  </d:ctr>
+                  <d:lst name="DmaChannelConfiguration" type="MAP">
+                    <d:ctr name="DmaChannel_52_U_CUR" type="IDENTIFIABLE">
+                      <d:var name="DmaChannelNumber" type="INTEGER" value="52"/>
+                      <d:var name="DmaChannelWidth" type="ENUMERATION" 
+                             value="WIDTH_16BITS"/>
+                      <d:var name="DmaNoOfMoves" type="ENUMERATION" 
+                             value="MOVES_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaChannelHwMode" type="ENUMERATION" 
+                             value="HARDWARE_CONTINOUS_MODE"/>
+                      <d:var name="DmaBusPriority" type="ENUMERATION" 
+                             value="LOW">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPeripheralRequest" type="ENUMERATION" 
+                             value="DAISY_CHAIN_SELECT"/>
+                      <d:var name="DmaPatternSelection" type="ENUMERATION" 
+                             value="DISABLED">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSourceAddrMod" type="ENUMERATION" 
+                             value="FACTOR_2"/>
+                      <d:var name="DmaSourceCircularLength" type="INTEGER" 
+                             value="2"/>
+                      <d:var name="DmaAddSubSrcAddr" type="ENUMERATION" 
+                             value="INCREMENT_SRC_ADDR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaDestinationAddrMod" type="ENUMERATION" 
+                             value="FACTOR_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTransferReqStateReset" type="ENUMERATION" 
+                             value="RESET_ONLY_AFTER_TRANSFER">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaDestinationCircularLength" type="INTEGER" 
+                             value="1"/>
+                      <d:var name="DmaAddSubDstAddr" type="ENUMERATION" 
+                             value="INCREMENT_DEST_ADDR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTransactionReqLostEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaInterruptControl" type="ENUMERATION" 
+                             value="INT_DISABLED_TCOUNT_IRDV">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaInterruptRaiseValue" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaWrapSourceEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaWrapDestinationEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSrcCircularBufEn" type="ENUMERATION" 
+                             value="ENABLE"/>
+                      <d:var name="DmaDstCircularBufEn" type="ENUMERATION" 
+                             value="ENABLE"/>
+                      <d:var name="DmaShadowControlConfig" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:ctr name="DmaChannelHwResourceConfig" 
+                             type="IDENTIFIABLE">
+                        <d:var name="DmaHwResourceMode" type="ENUMERATION" 
+                               value="SUPERVISOR_MODE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="DmaChannelHwResourcePartition" 
+                               type="ENUMERATION" 
+                               value="HW_RESOURCE_PARTITION_0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                    <d:ctr name="DmaChannel_51_V_CUR" type="IDENTIFIABLE">
+                      <d:var name="DmaChannelNumber" type="INTEGER" value="51"/>
+                      <d:var name="DmaChannelWidth" type="ENUMERATION" 
+                             value="WIDTH_16BITS"/>
+                      <d:var name="DmaNoOfMoves" type="ENUMERATION" 
+                             value="MOVES_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaChannelHwMode" type="ENUMERATION" 
+                             value="HARDWARE_CONTINOUS_MODE"/>
+                      <d:var name="DmaBusPriority" type="ENUMERATION" 
+                             value="LOW">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPeripheralRequest" type="ENUMERATION" 
+                             value="DAISY_CHAIN_SELECT"/>
+                      <d:var name="DmaPatternSelection" type="ENUMERATION" 
+                             value="DISABLED">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSourceAddrMod" type="ENUMERATION" 
+                             value="FACTOR_2"/>
+                      <d:var name="DmaSourceCircularLength" type="INTEGER" 
+                             value="2"/>
+                      <d:var name="DmaAddSubSrcAddr" type="ENUMERATION" 
+                             value="INCREMENT_SRC_ADDR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaDestinationAddrMod" type="ENUMERATION" 
+                             value="FACTOR_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTransferReqStateReset" type="ENUMERATION" 
+                             value="RESET_ONLY_AFTER_TRANSFER">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaDestinationCircularLength" type="INTEGER" 
+                             value="1"/>
+                      <d:var name="DmaAddSubDstAddr" type="ENUMERATION" 
+                             value="INCREMENT_DEST_ADDR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTransactionReqLostEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaInterruptControl" type="ENUMERATION" 
+                             value="INT_DISABLED_TCOUNT_IRDV">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaInterruptRaiseValue" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaWrapSourceEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaWrapDestinationEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSrcCircularBufEn" type="ENUMERATION" 
+                             value="ENABLE"/>
+                      <d:var name="DmaDstCircularBufEn" type="ENUMERATION" 
+                             value="ENABLE"/>
+                      <d:var name="DmaShadowControlConfig" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:ctr name="DmaChannelHwResourceConfig" 
+                             type="IDENTIFIABLE">
+                        <d:var name="DmaHwResourceMode" type="ENUMERATION" 
+                               value="SUPERVISOR_MODE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="DmaChannelHwResourcePartition" 
+                               type="ENUMERATION" 
+                               value="HW_RESOURCE_PARTITION_0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                    <d:ctr name="DmaChannel_50_W_CUR" type="IDENTIFIABLE">
+                      <d:var name="DmaChannelNumber" type="INTEGER" value="50"/>
+                      <d:var name="DmaChannelWidth" type="ENUMERATION" 
+                             value="WIDTH_16BITS"/>
+                      <d:var name="DmaNoOfMoves" type="ENUMERATION" 
+                             value="MOVES_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaChannelHwMode" type="ENUMERATION" 
+                             value="HARDWARE_CONTINOUS_MODE"/>
+                      <d:var name="DmaBusPriority" type="ENUMERATION" 
+                             value="LOW">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPeripheralRequest" type="ENUMERATION" 
+                             value="HARDWARE_TRIGGER_SELECT">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPatternSelection" type="ENUMERATION" 
+                             value="DISABLED">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSourceAddrMod" type="ENUMERATION" 
+                             value="FACTOR_2"/>
+                      <d:var name="DmaSourceCircularLength" type="INTEGER" 
+                             value="2"/>
+                      <d:var name="DmaAddSubSrcAddr" type="ENUMERATION" 
+                             value="INCREMENT_SRC_ADDR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaDestinationAddrMod" type="ENUMERATION" 
+                             value="FACTOR_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTransferReqStateReset" type="ENUMERATION" 
+                             value="RESET_ONLY_AFTER_TRANSFER">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaDestinationCircularLength" type="INTEGER" 
+                             value="1"/>
+                      <d:var name="DmaAddSubDstAddr" type="ENUMERATION" 
+                             value="INCREMENT_DEST_ADDR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTransactionReqLostEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaInterruptControl" type="ENUMERATION" 
+                             value="INT_DISABLED_TCOUNT_IRDV">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaInterruptRaiseValue" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaWrapSourceEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaWrapDestinationEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSrcCircularBufEn" type="ENUMERATION" 
+                             value="ENABLE"/>
+                      <d:var name="DmaDstCircularBufEn" type="ENUMERATION" 
+                             value="ENABLE"/>
+                      <d:var name="DmaShadowControlConfig" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:ctr name="DmaChannelHwResourceConfig" 
+                             type="IDENTIFIABLE">
+                        <d:var name="DmaHwResourceMode" type="ENUMERATION" 
+                               value="SUPERVISOR_MODE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="DmaChannelHwResourcePartition" 
+                               type="ENUMERATION" 
+                               value="HW_RESOURCE_PARTITION_0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                    <d:ctr name="DmaChannel_32_Uart" type="IDENTIFIABLE">
+                      <d:var name="DmaChannelNumber" type="INTEGER" value="32"/>
+                      <d:var name="DmaChannelWidth" type="ENUMERATION" 
+                             value="WIDTH_8BITS">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaNoOfMoves" type="ENUMERATION" 
+                             value="MOVES_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaChannelHwMode" type="ENUMERATION" 
+                             value="HARDWARE_CONTINOUS_MODE"/>
+                      <d:var name="DmaBusPriority" type="ENUMERATION" 
+                             value="LOW">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPeripheralRequest" type="ENUMERATION" 
+                             value="HARDWARE_TRIGGER_SELECT">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaPatternSelection" type="ENUMERATION" 
+                             value="DISABLED">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSourceAddrMod" type="ENUMERATION" 
+                             value="FACTOR_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSourceCircularLength" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaAddSubSrcAddr" type="ENUMERATION" 
+                             value="INCREMENT_SRC_ADDR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaDestinationAddrMod" type="ENUMERATION" 
+                             value="FACTOR_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTransferReqStateReset" type="ENUMERATION" 
+                             value="RESET_ONLY_AFTER_TRANSFER">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaDestinationCircularLength" type="INTEGER" 
+                             value="3"/>
+                      <d:var name="DmaAddSubDstAddr" type="ENUMERATION" 
+                             value="INCREMENT_DEST_ADDR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTransactionReqLostEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaInterruptControl" type="ENUMERATION" 
+                             value="INT_DISABLED_TCOUNT_DECREMENT"/>
+                      <d:var name="DmaInterruptRaiseValue" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaWrapSourceEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaWrapDestinationEn" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaSrcCircularBufEn" type="ENUMERATION" 
+                             value="ENABLE"/>
+                      <d:var name="DmaDstCircularBufEn" type="ENUMERATION" 
+                             value="ENABLE"/>
+                      <d:var name="DmaShadowControlConfig" type="ENUMERATION" 
+                             value="DISABLE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:ctr name="DmaChannelHwResourceConfig" 
+                             type="IDENTIFIABLE">
+                        <d:var name="DmaHwResourceMode" type="ENUMERATION" 
+                               value="SUPERVISOR_MODE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="DmaChannelHwResourcePartition" 
+                               type="ENUMERATION" 
+                               value="HW_RESOURCE_PARTITION_0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                  </d:lst>
+                </d:ctr>
+              </d:lst>
+              <d:ctr name="DmaPublishedInformation" type="IDENTIFIABLE"/>
+              <d:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <d:var name="ArMajorVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+               <d:var name="ArMinorVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArPatchVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMajorVersion" type="INTEGER" value="1">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+
+
+
+                </d:var>
+                <d:var name="SwMinorVersion" type="INTEGER" value="2">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwPatchVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ModuleId" type="INTEGER" value="255">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorId" type="INTEGER" value="17">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorApiInfix" type="STRING" value="">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Release" type="STRING" value="_TRICORE_TC277">
+                  <a:a name="IMPORTER_INFO">
+                    <a:v>@CALC</a:v>
+                    <a:v>@DEF</a:v>
+                  </a:a>
+                </d:var>
+              </d:ctr>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

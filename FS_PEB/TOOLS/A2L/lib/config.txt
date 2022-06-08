@@ -1,0 +1,6 @@
+--ma2l E:\Code\FS_PEB_0224\TOOLS\A2L\iEDS_main.a2l
+--ca2l_dir E:\Code\FS_PEB_0224\TOOLS\A2L\lib/input
+--adl E:\Code\FS_PEB_0224\TOOLS\A2L\lib/input/temp.adl
+--a2l_out E:\Code\FS_PEB_0224\TOOLS\A2L\delivery\iEDS_delivery_202202251655.a2l
+--log E:\Code\FS_PEB_0224\TOOLS\A2L\lib/log/TxtLog.log
+--ulflog E:\Code\FS_PEB_0224\TOOLS\A2L\lib/log/UlfLog.log

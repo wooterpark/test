@@ -1,0 +1,1805 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_MDF.a2l
+ *
+ * Code generation for model "SWC_MDF".
+ *
+ * Model version              : 1.3
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Tue Jan 26 09:57:53 2021
+ * 
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MDF_PwrLoss_Z_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_PwrLoss_Z_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MDF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MDF_CM_single
+        /* Number of Axis Pts   */      2
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MDF_PwrLoss_Y_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MDF_CM_single
+        /* Number of Axis Pts   */      2
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MDF_PwrLoss_X_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MDF_PwrLoss_X_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_PwrLoss_X_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MDF_CM_single
+      /* Number of Axis Pts     */      2
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MDF_PwrLoss_Y_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_PwrLoss_Y_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MDF_CM_single
+      /* Number of Axis Pts     */      2
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MDF_cofnAbsPhaseFault_Y_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_cofnAbsPhaseFault_Y_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MDF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MDF_CM_single
+        /* Number of Axis Pts   */      46
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MDF_nAbsPhaseFault_X_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MDF_nAbsPhaseFault_X_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nAbsPhaseFault_X_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MDF_CM_single
+      /* Number of Axis Pts     */      46
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_3PhaUnbalance_f32  
+      /* Long Identifier        */      "三相不平衡度阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_3PhaUnbalance_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_DIffAlOfsMax_f32  
+      /* Long Identifier        */      "角度差值阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_DIffAlOfsMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_EMBlkWarn_f32  
+      /* Long Identifier        */      "堵转警告扭矩比例系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_EMBlkWarn_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_FwWiIs_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_FwWiIs_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_FwWoIs_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_FwWoIs_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_IsErrFlt_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_IsErrFlt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_IsErrThres_f32  
+      /* Long Identifier        */      "电流合理性电流差值阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_IsErrThres_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_IsMaxSet_f32  
+      /* Long Identifier        */      "相电流最大值设定值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_IsMaxSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_IsPhaseFault_f32  
+      /* Long Identifier        */      "缺相诊断Is阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_IsPhaseFault_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_IsThreshCirNoPsbl_f32  
+      /* Long Identifier        */      "无法主动短路Is阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_IsThreshCirNoPsbl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_OfsDeltaAgFltFrq_f32  
+      /* Long Identifier        */      "偏移角度差值滤波频率"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_OfsDeltaAgFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_Pwr3PhaFlt_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_Pwr3PhaFlt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_PwrDcLinkEstFlt_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_PwrDcLinkEstFlt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_UdcFwMin_f32  
+      /* Long Identifier        */      "Freewheel状态判断电压阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_UdcFwMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_UdcThreshCirNoPsbl_f32  
+      /* Long Identifier        */      "无法主动短路电压阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_UdcThreshCirNoPsbl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_UsErrFlt_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_UsErrFlt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_UsErrThres_f32  
+      /* Long Identifier        */      "电流合理性电压差值阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_UsErrThres_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_UsFrwhlMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_UsFrwhlMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_cErrPwrDcEstMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_cErrPwrDcEstMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_nAbsPhaseFault_f32  
+      /* Long Identifier        */      "缺相故障判断转速绝对值阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nAbsPhaseFault_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_nAbsThresOpenCirNoPsbl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nAbsThresOpenCirNoPsbl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_nAbsThresblockedElMa_f32  
+      /* Long Identifier        */      "堵转判断转速阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nAbsThresblockedElMa_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_nAbsThreshCirNoPsbl_f32  
+      /* Long Identifier        */      "无法主动短路检测转速阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nAbsThreshCirNoPsbl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_nDidMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nDidMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_nDidMin_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nDidMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_nThresAlOfsNoPlauseFaultMax_f32  
+      /* Long Identifier        */      "角度合理性诊断转速阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nThresAlOfsNoPlauseFaultMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_nThresAlOfsNoPlauseFaultMin_f32  
+      /* Long Identifier        */      "角度合理性诊断转速阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_nThresAlOfsNoPlauseFaultMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_pwrDcDiaMin_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_pwrDcDiaMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -200000.0 
+      /* Upper Limit            */      200000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tThd_TempDBCInvCoolObsvr_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tThd_TempDBCInvCoolObsvr_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tThd_TempDBCInvSens3Pha_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tThd_TempDBCInvSens3Pha_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tThd_TempStr_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tThd_TempStr_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tiAgComp_f32  
+      /* Long Identifier        */      "角度补偿时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tiAgComp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tiAlfOfsNoPlauseFault_f32  
+      /* Long Identifier        */      "角度合理性诊断延时时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tiAlfOfsNoPlauseFault_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tiEMBlk_f32  
+      /* Long Identifier        */      "进堵转限扭的堵转状态持续时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tiEMBlk_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tiOffsetSteady_f32  
+      /* Long Identifier        */      "稳态时间阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tiOffsetSteady_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tiPhaFaultDelay_f32  
+      /* Long Identifier        */      "缺相诊断故障延时"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tiPhaFaultDelay_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tiQuitEMBlk_f32  
+      /* Long Identifier        */      "退出堵转转速大于阈值持续时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tiQuitEMBlk_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_trqOfsNoPlausFault_f32  
+      /* Long Identifier        */      "角度合理性诊断扭矩需求值阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_trqOfsNoPlausFault_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_tOperOutdRngSelState_b  
+      /* Long Identifier        */      "温度传感器状态，后期关联FID"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_tOperOutdRngSelState_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_Inactive_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_Inactive_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      127.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_stFrwhlPhd_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_stFrwhlPhd_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      127.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_stFrwhlWiIs_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_stFrwhlWiIs_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      127.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MDF_stFrwhlWoIs_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MDF_stFrwhlWoIs_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MDF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      127.0
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_OffSetSiteAObs_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MDF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_OffSetSiteAObs_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_OffSetSiteBObs_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MDF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_OffSetSiteBObs_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_offsetDeltaObs_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MDF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_offsetDeltaObs_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_3PhaUnbalanceObs_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MDF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_3PhaUnbalanceObs_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_offsetDeltaFlt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MDF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_offsetDeltaFlt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_AlOfsNoPlausState_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_AlOfsNoPlausState_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_DiashCirNoPsblState_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_DiashCirNoPsblState_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_EmacBlkdState_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_EmacBlkdState_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_ICtlRatState_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_ICtlRatState_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_OpenCirNoPsblState_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_OpenCirNoPsblState_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_OperOutdRngState_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_OperOutdRngState_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_PhaseFaultState_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_PhaseFaultState_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_PrfElDrvState_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_PrfElDrvState_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bAlOfsChk_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bAlOfsChk_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bstGateDrvShCir_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bstGateDrvShCir_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bEMBlkChk_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bEMBlkChk_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bICtlRatChk_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bICtlRatChk_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bstGateDrvOpenCir_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bstGateDrvOpenCir_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_flagOperOutdRngChk_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_flagOperOutdRngChk_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_PhaseFaultChk_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_PhaseFaultChk_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bPwrCmpDFCCalc_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bPwrCmpDFCCalc_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bshCirNoPsblFaul_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bshCirNoPsblFaul_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bFaultPwrCmp_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bFaultPwrCmp_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bPhaseFault_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bPhaseFault_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_flagOperOutdRngFault_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_flagOperOutdRngFault_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bOpenCirNoPsblFault_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bOpenCirNoPsblFault_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bIsOvHiFault_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bIsOvHiFault_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bFaultICtlChk_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bFaultICtlChk_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bFaultEMBlkWarn_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bFaultEMBlkWarn_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bFaultEMBlkErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bFaultEMBlkErr_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MDF_bAlfOfsNoPlauseFault_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MDF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MDF_bAlfOfsNoPlauseFault_b@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_MDF_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_MDF_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_MDF_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_MDF
+      /* Long identifier        */       "SWC_MDF"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_RE_SWC_MDF_10ms_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_RE_SWC_MDF_10ms_sys
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys"
+      /begin SUB_GROUP
+        S1_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_MDF_AlOfsNoPlausState_u8
+        VAR_MDF_DiashCirNoPsblState_u8
+        VAR_MDF_EmacBlkdState_u8
+        VAR_MDF_ICtlRatState_u8
+        VAR_MDF_OpenCirNoPsblState_u8
+        VAR_MDF_OperOutdRngState_u8
+        VAR_MDF_PhaseFaultState_u8
+        VAR_MDF_PrfElDrvState_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Subsystem
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem"
+      /begin SUB_GROUP
+        S3_MDF_Fuc
+        S3_MDF_ParaCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_MDF_Fuc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc"
+      /begin SUB_GROUP
+        S4_DiaAlOfsNoPlaus
+        S4_DiaEMBlk
+        S4_DiaICtlRat
+        S4_DiaIsMax
+        S4_DiaOpenCirNoPsbl
+        S4_DiaOperOutdRng
+        S4_DiaPhaseFault
+        S4_DiaPrfElDrv
+        S4_DiaShCirNoPsbl
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_MDF_ParaCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_ParaCalc"
+      /begin SUB_GROUP
+        S5_FreewheelCalc
+        S5_mdf_DiaElDrvCalc
+        S5_pwrlossCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaAlOfsNoPlaus
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaAlOfsNoPlaus"
+      /begin SUB_GROUP
+        S6_DFCFlag
+        S6_OfsNoPlausFaultCalc
+        S6_mdf_tanDelta_Calc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaEMBlk
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaEMBlk"
+      /begin SUB_GROUP
+        S7_DFCFlag
+        S7_EMBlk
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaICtlRat
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaICtlRat"
+      /begin SUB_GROUP
+        S8_DFCFlag
+        S8_iCtlJudge
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaIsMax
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaIsMax"
+      /begin SUB_GROUP
+        S9_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaOpenCirNoPsbl
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaOpenCirNoPsbl"
+      /begin SUB_GROUP
+        S10_DFCFlag
+        S10_OpenCirNoPsblCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaOperOutdRng
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaOperOutdRng"
+      /begin SUB_GROUP
+        S11_DFCFlag
+        S11_OperOutdRngFltCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaPhaseFault
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaPhaseFault"
+      /begin SUB_GROUP
+        S12_DFCFlag
+        S12_PhaseFaultCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaPrfElDrv
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaPrfElDrv"
+      /begin SUB_GROUP
+        S13_DFCFlag
+        S13_Pwr3PhaCmp
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_DiaShCirNoPsbl
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaShCirNoPsbl"
+      /begin SUB_GROUP
+        S14_DFCCalc
+        S14_DFCFlag
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_FreewheelCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_ParaCalc/FreewheelCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_UdcFwMin_f32
+        CAL_MDF_UsFrwhlMax_f32
+        CAL_MDF_stFrwhlPhd_u8
+        CAL_MDF_stFrwhlWiIs_u8
+        CAL_MDF_stFrwhlWoIs_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_mdf_DiaElDrvCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_ParaCalc/mdf_DiaElDrvCalc"
+      /begin SUB_GROUP
+        S65_mdf_IsErrCalc
+        S65_mdf_Pwr3PhaFlt
+        S65_mdf_UsErrCalc
+        S65_mdf_pwr3PhaMdlFildCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_pwrlossCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_ParaCalc/pwrlossCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_PwrLoss_Z_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_DFCFlag
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaAlOfsNoPlaus/DFCFlag"
+      /begin SUB_GROUP
+        S15_On_Delay
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_nThresAlOfsNoPlauseFaultMax_f32
+        CAL_MDF_nThresAlOfsNoPlauseFaultMin_f32
+        CAL_MDF_trqOfsNoPlausFault_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_OfsNoPlausFaultCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaAlOfsNoPlaus/OfsNoPlausFaultCalc"
+      /begin SUB_GROUP
+        S17_On_Delay
+        S17_mdf_offsetJudge
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_mdf_tanDelta_Calc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaAlOfsNoPlaus/mdf_tanDelta_Calc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_tiAgComp_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_OffSetSiteAObs_f32
+        VAR_MDF_OffSetSiteBObs_f32
+        VAR_MDF_offsetDeltaObs_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_DFCFlag
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaEMBlk/DFCFlag"
+      /begin REF_MEASUREMENT
+        VAR_MDF_bEMBlkChk_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_EMBlk
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaEMBlk/EMBlk"
+      /begin SUB_GROUP
+        S31_EMBlkErrLock
+        S31_EMBlkWarnJud
+        S31_On_Delay
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_DFCFlag
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaICtlRat/DFCFlag"
+      /begin REF_MEASUREMENT
+        VAR_MDF_bICtlRatChk_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_iCtlJudge
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaICtlRat/iCtlJudge"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_IsErrThres_f32
+        CAL_MDF_UsErrThres_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bFaultICtlChk_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_Subsystem
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaIsMax/Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_IsMaxSet_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bIsOvHiFault_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_DFCFlag
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaOpenCirNoPsbl/DFCFlag"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_nAbsThresOpenCirNoPsbl_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bstGateDrvOpenCir_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_OpenCirNoPsblCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaOpenCirNoPsbl/OpenCirNoPsblCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_FwWiIs_f32
+        CAL_MDF_FwWoIs_f32
+        CAL_MDF_stFrwhlWiIs_u8
+        CAL_MDF_stFrwhlWoIs_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bOpenCirNoPsblFault_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_DFCFlag
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaOperOutdRng/DFCFlag"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_Inactive_u8
+        CAL_MDF_tOperOutdRngSelState_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_flagOperOutdRngChk_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_OperOutdRngFltCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaOperOutdRng/OperOutdRngFltCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_tThd_TempDBCInvCoolObsvr_f32
+        CAL_MDF_tThd_TempDBCInvSens3Pha_f32
+        CAL_MDF_tThd_TempStr_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_flagOperOutdRngFault_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S12_DFCFlag
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaPhaseFault/DFCFlag"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_IsPhaseFault_f32
+        CAL_MDF_cofnAbsPhaseFault_Y_af32
+        CAL_MDF_nAbsPhaseFault_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_PhaseFaultChk_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S12_PhaseFaultCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaPhaseFault/PhaseFaultCalc"
+      /begin SUB_GROUP
+        S48_On_Delay
+        S48_UnbalanceDegCompare
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S13_DFCFlag
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaPrfElDrv/DFCFlag"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_nDidMax_f32
+        CAL_MDF_nDidMin_f32
+        CAL_MDF_pwrDcDiaMin_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bPwrCmpDFCCalc_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S13_Pwr3PhaCmp
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaPrfElDrv/Pwr3PhaCmp"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_cErrPwrDcEstMax_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bFaultPwrCmp_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S14_DFCCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaShCirNoPsbl/DFCCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_IsThreshCirNoPsbl_f32
+        CAL_MDF_UdcThreshCirNoPsbl_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bshCirNoPsblFaul_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S14_DFCFlag
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaShCirNoPsbl/DFCFlag"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_nAbsThreshCirNoPsbl_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bstGateDrvShCir_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S65_mdf_IsErrCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_ParaCalc/mdf_DiaElDrvCalc/mdf_IsErrCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_IsErrFlt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S65_mdf_Pwr3PhaFlt
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_ParaCalc/mdf_DiaElDrvCalc/mdf_Pwr3PhaFlt"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_Pwr3PhaFlt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S65_mdf_UsErrCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_ParaCalc/mdf_DiaElDrvCalc/mdf_UsErrCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_UsErrFlt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S65_mdf_pwr3PhaMdlFildCalc
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_ParaCalc/mdf_DiaElDrvCalc/mdf_pwr3PhaMdlFildCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_PwrDcLinkEstFlt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S15_On_Delay
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaAlOfsNoPlaus/DFCFlag/On_Delay"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_tiOffsetSteady_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bAlOfsChk_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S17_On_Delay
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaAlOfsNoPlaus/OfsNoPlausFaultCalc/On_Delay"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_tiAlfOfsNoPlauseFault_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bAlfOfsNoPlauseFault_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S17_mdf_offsetJudge
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaAlOfsNoPlaus/OfsNoPlausFaultCalc/mdf_offsetJudge"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_DIffAlOfsMax_f32
+        CAL_MDF_OfsDeltaAgFltFrq_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_offsetDeltaFlt_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S31_EMBlkErrLock
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaEMBlk/EMBlk/EMBlkErrLock"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_tiQuitEMBlk_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bFaultEMBlkErr_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S31_EMBlkWarnJud
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaEMBlk/EMBlk/EMBlkWarnJud"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_EMBlkWarn_f32
+        CAL_MDF_nAbsThresblockedElMa_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bFaultEMBlkWarn_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S31_On_Delay
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaEMBlk/EMBlk/On_Delay"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_tiEMBlk_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S48_On_Delay
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaPhaseFault/PhaseFaultCalc/On_Delay"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_tiPhaFaultDelay_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_bPhaseFault_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S48_UnbalanceDegCompare
+      /* Long identifier        */       "SWC_MDF/RE_SWC_MDF_10ms_sys/Subsystem/MDF_Fuc/DiaPhaseFault/PhaseFaultCalc/UnbalanceDegCompare"
+      /begin REF_CHARACTERISTIC
+        CAL_MDF_3PhaUnbalance_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MDF_3PhaUnbalanceObs_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_MDF.a2l */

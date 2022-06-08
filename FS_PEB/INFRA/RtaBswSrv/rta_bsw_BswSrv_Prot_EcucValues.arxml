@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-2.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <AR-PACKAGES> 
+  <AR-PACKAGE>
+   <SHORT-NAME>ETAS</SHORT-NAME>
+   <AR-PACKAGES>
+    <AR-PACKAGE>
+     <SHORT-NAME>UBK</SHORT-NAME>
+     <AR-PACKAGES>
+      <AR-PACKAGE>
+       <SHORT-NAME>Project</SHORT-NAME>
+       <AR-PACKAGES>
+        <AR-PACKAGE>
+         <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+         <ELEMENTS>
+          <ECUC-MODULE-CONFIGURATION-VALUES>
+           <SHORT-NAME>rta_bsw_Reset</SHORT-NAME>
+           <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset</DEFINITION-REF>
+           <CONTAINERS>
+            <ECUC-CONTAINER-VALUE>
+             <SHORT-NAME>rta_bsw_Reset_Config</SHORT-NAME>
+             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config</DEFINITION-REF>
+             <SUB-CONTAINERS>
+              <ECUC-CONTAINER-VALUE>
+               <SHORT-NAME>RTA_BSW_RESET_RTA_BSW_BSWSRV_INTSUSP_CTR_VIOLATION_E</SHORT-NAME>
+               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData</DEFINITION-REF>
+               <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_DemVis</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_DEM_0</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_Desc</DEFINITION-REF>
+                 <VALUE>Invalid use of interrupt resume: suspend counter underflow</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_GrpId</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_GRP_RTA_BSW_BSWSRV_E</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_HistBufVis</DEFINITION-REF>
+                 <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_LoopCond</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_DEFAULT_LOOPCOND</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_SoftReset</DEFINITION-REF>
+                 <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+               </PARAMETER-VALUES>
+              </ECUC-CONTAINER-VALUE>
+              <ECUC-CONTAINER-VALUE>
+               <SHORT-NAME>RTA_BSW_RESET_RTA_BSW_BSWSRV_INTSUSP_CORRUPTION</SHORT-NAME>
+               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData</DEFINITION-REF>
+               <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_DemVis</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_DEM_0</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_Desc</DEFINITION-REF>
+                 <VALUE>Interrupt suspend state corrupted by other software</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_GrpId</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_GRP_RTA_BSW_BSWSRV_E</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_HistBufVis</DEFINITION-REF>
+                 <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_LoopCond</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_DEFAULT_LOOPCOND</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_SoftReset</DEFINITION-REF>
+                 <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+               </PARAMETER-VALUES>
+              </ECUC-CONTAINER-VALUE>
+              <ECUC-CONTAINER-VALUE>
+               <SHORT-NAME>RTA_BSW_RESET_RTA_BSW_BSWSRV_LOCK_NESTING_VIOLATION_E</SHORT-NAME>
+               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData</DEFINITION-REF>
+               <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_DemVis</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_DEM_0</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_Desc</DEFINITION-REF>
+                 <VALUE>Invalid use of spinlock: lock nesting violation</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_GrpId</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_GRP_RTA_BSW_BSWSRV_E</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_HistBufVis</DEFINITION-REF>
+                 <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_LoopCond</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_DEFAULT_LOOPCOND</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_SoftReset</DEFINITION-REF>
+                 <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+               </PARAMETER-VALUES>
+              </ECUC-CONTAINER-VALUE>
+              <ECUC-CONTAINER-VALUE>
+               <SHORT-NAME>RTA_BSW_RESET_RTA_BSW_BSWSRV_LOCK_CTR_VIOLATION_E</SHORT-NAME>
+               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData</DEFINITION-REF>
+               <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_DemVis</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_DEM_0</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_Desc</DEFINITION-REF>
+                 <VALUE>Invalid use of spinlock: lock counter underflow</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_GrpId</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_GRP_RTA_BSW_BSWSRV_E</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_HistBufVis</DEFINITION-REF>
+                 <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_LoopCond</DEFINITION-REF>
+                 <VALUE>RTA_BSW_RESET_DEFAULT_LOOPCOND</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                 <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS/RTA/rta_bsw_Reset/EcucModuleDefs/rta_bsw_Reset/rta_bsw_Reset_Config/rta_bsw_Reset_ConfData/rta_bsw_Reset_SoftReset</DEFINITION-REF>
+                 <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+               </PARAMETER-VALUES>
+              </ECUC-CONTAINER-VALUE>
+             </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+           </CONTAINERS>
+          </ECUC-MODULE-CONFIGURATION-VALUES>
+         </ELEMENTS>
+        </AR-PACKAGE>
+       </AR-PACKAGES>
+      </AR-PACKAGE>
+     </AR-PACKAGES>
+    </AR-PACKAGE>
+   </AR-PACKAGES>
+  </AR-PACKAGE>
+ </AR-PACKAGES>
+</AUTOSAR>
+<!-- Autosar Workbench_1.6.1.rc2 - BCT [ECU Conf] - AUTOSAR[r4.0] used by hcj2fe, generated this file on Tue Mar 12 14:05:00 CET 2013 -->

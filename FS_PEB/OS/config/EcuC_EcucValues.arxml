@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RTAOS</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>EcuC</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC</DEFINITION-REF>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>EcucPartitionCollection</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>Partition_Core0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleExecution</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/PartitionCanBeRestarted</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Base_SWC</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_BswM</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_COM_SWC_Core0</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_ComM</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Dcm</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Dem</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Demo_SWC_Core0</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Det</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Diag_SWC</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_EcuM</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_FiM</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_IoHwAbW</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_NvM</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_NvM_SWC</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Proxy_SWC_Core0</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Test_SWC_Core0</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_WdgM</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_WdgM_SWC</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>Partition_Core1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleExecution</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/PartitionCanBeRestarted</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Demo_SWC_Core1</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                        <ECUC-INSTANCE-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                          <VALUE-IREF>
+                            <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/MCU_FlatView/SwComponentTypes/MCU_FlatView/CPT_Test_SWC_Core1</TARGET-REF>
+                          </VALUE-IREF>
+                        </ECUC-INSTANCE-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>Partition_Core2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionQmBswModuleExecution</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleExecution</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucPartitionCollection/EcucPartition/PartitionCanBeRestarted</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>EcucHardware_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucHardware</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>EcucCore0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucHardware/EcucCoreDefinition</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucHardware/EcucCoreDefinition/EcucCoreId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>EcucCore1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucHardware/EcucCoreDefinition</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucHardware/EcucCoreDefinition/EcucCoreId</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>EcucCore2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucHardware/EcucCoreDefinition</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucHardware/EcucCoreDefinition/EcucCoreId</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

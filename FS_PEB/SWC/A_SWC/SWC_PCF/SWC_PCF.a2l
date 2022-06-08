@@ -1,0 +1,4334 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_PCF.a2l
+ *
+ * Code generation for model "SWC_PCF".
+ *
+ * Model version              : 1.3
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Sat Jan 16 13:41:43 2021
+ * 
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_PcfSig_IdcDycX_Idc_af32
+      /* Long Identifier        */      "电流限占空比查表"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_IdcDycX_Idc_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      VAR_PcfSig_IdcPcf_f32
+        /* Conversion Method    */      SWC_PCF_CM_single
+        /* Number of Axis Pts   */      4
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_PcfSig_IdcDycY_dyc_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_PcfSig_IdcDycY_dyc_af32
+      /* Long Identifier        */      "电流限占空比阈值"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_IdcDycY_dyc_af32@ */
+      /* Input Quantity         */      VAR_PcfSig_IdcPcf_f32
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Number of Axis Pts     */      4
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_PcfSig_UdcDycX_Udc_af32
+      /* Long Identifier        */      "UKL30限占空比查表"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_UdcDycX_Udc_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      VAR_PcfSig_UBRPcf_f32
+        /* Conversion Method    */      SWC_PCF_CM_single
+        /* Number of Axis Pts   */      20
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_PcfSig_UdcDycY_dyc_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_PcfSig_UdcDycY_dyc_af32
+      /* Long Identifier        */      "UKL30限占空比阈值"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_UdcDycY_dyc_af32@ */
+      /* Input Quantity         */      VAR_PcfSig_UBRPcf_f32
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Number of Axis Pts     */      20
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_PcfSig_tMosDycX_tMos_af32
+      /* Long Identifier        */      "Mos管温度限占空比查表"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_tMosDycX_tMos_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      VAR_PcfSig_nPcfMot_f32
+        /* Conversion Method    */      SWC_PCF_CM_single
+        /* Number of Axis Pts   */      6
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_PcfSig_tMosDycY_dyc_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_PcfSig_tMosDycY_dyc_af32
+      /* Long Identifier        */      "Mos管温度限占空比阈值"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_tMosDycY_dyc_af32@ */
+      /* Input Quantity         */      VAR_PcfSig_nPcfMot_f32
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Number of Axis Pts     */      6
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_PcfSig_tMosiSENcof_tCof_af32
+      /* Long Identifier        */      "Mos管温度电流补偿系数查表"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_tMosiSENcof_tCof_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      VAR_PcfSig_tMosPcf_f32
+        /* Conversion Method    */      SWC_PCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_PcfSig_tMosiSENcof_tMos_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_PcfSig_tMosiSENcof_tMos_af32
+      /* Long Identifier        */      "Mos管温度电流补偿系数阈值"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_tMosiSENcof_tMos_af32@ */
+      /* Input Quantity         */      VAR_PcfSig_tMosPcf_f32
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Number of Axis Pts     */      10
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_PcfSig_tMosiSENofs_tCof_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_tMosiSENofs_tCof_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      VAR_PcfSig_tMosPcf_f32
+        /* Conversion Method    */      SWC_PCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_PcfSig_tMosiSENofs_tMos_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_PcfSig_tMosiSENofs_tMos_af32
+      /* Long Identifier        */      "EPC工作电流AD偏移系数"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_tMosiSENofs_tMos_af32@ */
+      /* Input Quantity         */      VAR_PcfSig_tMosPcf_f32
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_PCF_CM_single
+      /* Number of Axis Pts     */      10
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_BCRunDyc_f32  
+      /* Long Identifier        */      "盲控状态下给定的固定占空比"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_BCRunDyc_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_InitOutP_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_InitOutP_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_ManualDty_f32  
+      /* Long Identifier        */      "开环控制输出占空比"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_ManualDty_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_PosKd_f32  
+      /* Long Identifier        */      "位置式PID控制Kd值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_PosKd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_PosKi_f32  
+      /* Long Identifier        */      "位置式PID控制Ki值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_PosKi_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_PosKp_f32  
+      /* Long Identifier        */      "位置式PID控制Kp值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_PosKp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_PrePos_f32  
+      /* Long Identifier        */      "动作完成检测精度"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_PrePos_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_SLRunDyc_f32  
+      /* Long Identifier        */      "自学习状态下给定的固定占空比"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_SLRunDyc_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_SLdeltaAimOutP_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_SLdeltaAimOutP_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_SoftDyc_f32  
+      /* Long Identifier        */      "占空比输出延迟时间内输出的小占空比"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_SoftDyc_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_intPIDdownlim_f32  
+      /* Long Identifier        */      "位置PID积分输出下限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_intPIDdownlim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_intPIDuplim_f32  
+      /* Long Identifier        */      "位置PID积分输出上限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_intPIDuplim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_AimInPRatDown_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_AimInPRatDown_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_AimInPRatUp_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_AimInPRatUp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_AimInPRdd_f32  
+      /* Long Identifier        */      "出P位置诊断允许余量redundancy"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_AimInPRdd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_AimOutPRdd_f32  
+      /* Long Identifier        */      "入P位置诊断允许余量redundancy"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_AimOutPRdd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_IdcLockedHiHyst_f32  
+      /* Long Identifier        */      "堵转电流高限滞环阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_IdcLockedHiHyst_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_IdcLockedHi_f32  
+      /* Long Identifier        */      "堵转电流高限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_IdcLockedHi_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_MinPosOutP_f32  
+      /* Long Identifier        */      "最小出P位置与齿顶堵转位置角度差"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_MinPosOutP_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_PosDebounce_f32  
+      /* Long Identifier        */      "位置传感器故障诊断Debounce次数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_PosDebounce_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_PosHighset_f32  
+      /* Long Identifier        */      "位置传感器传输值上限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_PosHighset_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_PosLowset_f32  
+      /* Long Identifier        */      "位置传感器传输值下限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_PosLowset_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_SLInPDown_f32  
+      /* Long Identifier        */      "正常入P位置下限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_SLInPDown_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_SLInPLimt_f32  
+      /* Long Identifier        */      "无位置信号阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_SLInPLimt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_SLInPUp_f32  
+      /* Long Identifier        */      "正常入P位置上限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_SLInPUp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_SLOutPDown_f32  
+      /* Long Identifier        */      "正常出P位置下限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_SLOutPDown_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_SLOutPInit_f32  
+      /* Long Identifier        */      "执行器安装初始位置"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_SLOutPInit_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_SLOutPUp_f32  
+      /* Long Identifier        */      "正常出P位置上限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_SLOutPUp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_SpdHiHyst_f32  
+      /* Long Identifier        */      "允许驻车车速上限滞环"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_SpdHiHyst_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_SpdHi_f32  
+      /* Long Identifier        */      "允许驻车车速上限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_SpdHi_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_UdcCANLowSet_f32  
+      /* Long Identifier        */      "电压设置值2欠压报警执行器停止工作只保持通讯"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_UdcCANLowSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_UdcMotLowSet_f32  
+      /* Long Identifier        */      "电压设置值1执行器不工作"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_UdcMotLowSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_UdcMotManSet_f32  
+      /* Long Identifier        */      "电压设置值4执行器正常工作大于16V过压报警执行器工作"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_UdcMotManSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_UdcMotUVSet_f32  
+      /* Long Identifier        */      "电压设置值3欠压报警执行器工作"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_UdcMotUVSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_VDD5Debounce_f32  
+      /* Long Identifier        */      "位置传感器5V供电电压故障Debounce次数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_VDD5Debounce_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_VDD5Highset_f32  
+      /* Long Identifier        */      "位置传感器5V供电电压上限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_VDD5Highset_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_VDD5Lowset_f32  
+      /* Long Identifier        */      "位置传感器5V供电电压下限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_VDD5Lowset_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_nMechHiHyst_f32  
+      /* Long Identifier        */      "用电机转速判断速度阈值上限滞环"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_nMechHiHyst_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_nMechHi_f32  
+      /* Long Identifier        */      "用电机转速判断速度阈值上限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_nMechHi_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_nMotLockedLowHyst_f32  
+      /* Long Identifier        */      "堵转转速高限滞环阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_nMotLockedLowHyst_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_nMotLockedLow_f32  
+      /* Long Identifier        */      "堵转转速高限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_nMotLockedLow_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_posSenHiRngSet_f32  
+      /* Long Identifier        */      "两路传感器Pos值运行最大误差范围"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_posSenHiRngSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_tMosHighSet_f32  
+      /* Long Identifier        */      "MOS管温度上限值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_tMosHighSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_tMosLowSet_f32  
+      /* Long Identifier        */      "MOS管温度下限值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_tMosLowSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_AimInPLimt_f32  
+      /* Long Identifier        */      "入P极限位置标定量"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_AimInPLimt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_AngMotPos_f32  
+      /* Long Identifier        */      "有效运行区间占整圈比例"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_AngMotPos_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_GernMot_f32  
+      /* Long Identifier        */      "电机到输出端减速比"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_GernMot_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_IUBPcfFltCoe_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_IUBPcfFltCoe_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_IUBSet_f32  
+      /* Long Identifier        */      "给定电流值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_IUBSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_PosCnvFac_f32  
+      /* Long Identifier        */      "EPC执行器位置信号精度系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_PosCnvFac_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_PosOffset_f32  
+      /* Long Identifier        */      "EPC执行器位置信号偏移量系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_PosOffset_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_VehSpd_f32  
+      /* Long Identifier        */      "车速信号标定量给定"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_VehSpd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_deltaAimInP_f32  
+      /* Long Identifier        */      "入P目标位置与极限位置的余量"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_deltaAimInP_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_deltaAimOutP_f32  
+      /* Long Identifier        */      "出P位置到入P位置转动范围"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_deltaAimOutP_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_factMosFlt_f32  
+      /* Long Identifier        */      "Mos管温度滤波系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_factMosFlt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_iSENCnvFac_f32  
+      /* Long Identifier        */      "EPC工作电流AD转换系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_iSENCnvFac_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_iSENFltCoe_f32  
+      /* Long Identifier        */      "EPC工作电流滤波系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_iSENFltCoe_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_nMotFltCoe_f32  
+      /* Long Identifier        */      "执行器电机转速滤波系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_nMotFltCoe_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_tDelayTestP_f32  
+      /* Long Identifier        */      "出入P自动测试延迟时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_tDelayTestP_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_SLAccSpdUp_f32  
+      /* Long Identifier        */      "电机转动速度阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_SLAccSpdUp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_SLAccTrqDes_f32  
+      /* Long Identifier        */      "电机转动加速扭矩"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_SLAccTrqDes_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_SLActRunSpdUp_f32  
+      /* Long Identifier        */      "驻车执行器动作时最低电机速度阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_SLActRunSpdUp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_timePrePos_u16  
+      /* Long Identifier        */      "满足精度范围连续检测次数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_timePrePos_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_BCLockedNum_u16  
+      /* Long Identifier        */      "盲控状态允许执行器转动的最大运行时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_BCLockedNum_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_LockedNum_u16  
+      /* Long Identifier        */      "堵转诊断次数对应堵转时间判断"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_LockedNum_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_cntNorAct_u16  
+      /* Long Identifier        */      "执行器出入P正常运行时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_cntNorAct_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_cntOverAct_u16  
+      /* Long Identifier        */      "执行器出入P最大允许运行时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_cntOverAct_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_tMosNum_u16  
+      /* Long Identifier        */      "MOS管温度故障诊断次数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_tMosNum_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_tRetry_u16  
+      /* Long Identifier        */      "堵转重试等待时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_tRetry_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_TimesTestP_u16  
+      /* Long Identifier        */      "出入P自动测试次数设置"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_TimesTestP_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_BCActimeLimt_u16  
+      /* Long Identifier        */      "盲控动作时间阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_BCActimeLimt_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_SLActimeLimt_u16  
+      /* Long Identifier        */      "执行单次标定动作时间阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_SLActimeLimt_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_SLMotorAcctimeLimt_u16  
+      /* Long Identifier        */      "位置标定时电机转动时间阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_SLMotorAcctimeLimt_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_SLWaitimeLimt_u16  
+      /* Long Identifier        */      "电机转动结束后等待电机静止时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_SLWaitimeLimt_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_cntSLWaitRunLimt_u16  
+      /* Long Identifier        */      "进入动作的等待时间"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_cntSLWaitRunLimt_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_ManualDir_b  
+      /* Long Identifier        */      "开环控制输出转动方向"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_ManualDir_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_ManualEn_b  
+      /* Long Identifier        */      "开环控制输出Mos管使能"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_ManualEn_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_SLRunDir_b  
+      /* Long Identifier        */      "自学习状态下朝出P极限位置转动方向"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_SLRunDir_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_flgFnhSwt_b  
+      /* Long Identifier        */      "执行器动作完成信号标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_flgFnhSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_flgFnh_b  
+      /* Long Identifier        */      "执行器动作完成信号标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_flgFnh_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfCtl_flgManual_b  
+      /* Long Identifier        */      "开环控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfCtl_flgManual_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_flgBCLockedSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_flgBCLockedSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_flgBCLocked_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_flgBCLocked_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_flgFaultSwt_b  
+      /* Long Identifier        */      "EPC故障状态标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_flgFaultSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_flgFault_b  
+      /* Long Identifier        */      "EPC故障状态标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_flgFault_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_flgLocked_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_flgLocked_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_flgLockedlSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_flgLockedlSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_flgRetrySwt_b  
+      /* Long Identifier        */      "堵转重试标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_flgRetrySwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_flgRetry_b  
+      /* Long Identifier        */      "堵转重试标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_flgRetry_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgACC_b  
+      /* Long Identifier        */      "加速信号标定量给定"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgACC_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgAimInPLimtSwt_b  
+      /* Long Identifier        */      "入P极限位置标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgAimInPLimtSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgBrakeSwt_b  
+      /* Long Identifier        */      "刹车信号标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgBrakeSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgIUBSwt_b  
+      /* Long Identifier        */      "切换使用给定电流值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgIUBSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgKL15Swt_b  
+      /* Long Identifier        */      "KL15信号标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgKL15Swt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgKL15_b  
+      /* Long Identifier        */      "KL15信号标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgKL15_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgNVMSLFnhSwt_b  
+      /* Long Identifier        */      "NVM输出自学习完成标志位标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgNVMSLFnhSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgNVMSLFnh_b  
+      /* Long Identifier        */      "NVM输出自学习完成标志位标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgNVMSLFnh_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgPSwt_b  
+      /* Long Identifier        */      "挡杆P信号标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgPSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgP_b  
+      /* Long Identifier        */      "挡杆P信号标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgP_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgPowerOnSwt_b  
+      /* Long Identifier        */      "EPC工作电路使能信号标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgPowerOnSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgPowerOn_b  
+      /* Long Identifier        */      "EPC工作电路使能信号标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgPowerOn_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgTestPSwt_b  
+      /* Long Identifier        */      "出入P自动测试切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgTestPSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgUseISENorIUB_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgUseISENorIUB_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgstBeltSwt_b  
+      /* Long Identifier        */      "驾驶侧安全带信号标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgstBeltSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgstDoorSwt_b  
+      /* Long Identifier        */      "驾驶侧门信号标定量控制切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgstDoorSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_flgTestPSwt_b  
+      /* Long Identifier        */      "出入P自动测试切换开关"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_flgTestPSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_flgUseAutoBackP_b  
+      /* Long Identifier        */      "是否启用自动出入P功能"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_flgUseAutoBackP_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_flgUseBlindCtl_b  
+      /* Long Identifier        */      "是否启用盲控功能"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_flgUseBlindCtl_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_flgUseFaultRec_b  
+      /* Long Identifier        */      "是否启用故障恢复功能"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_flgUseFaultRec_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_flgUseRPC_b  
+      /* Long Identifier        */      "是否启用堵转重试功能"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_flgUseRPC_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_flgUseSLC_b  
+      /* Long Identifier        */      "是否启用位置自学习功能"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_flgUseSLC_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfDia_Retrytimes_u8  
+      /* Long Identifier        */      "堵转允许重试次数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfDia_Retrytimes_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_flgBrake_u8  
+      /* Long Identifier        */      "刹车信号标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_flgBrake_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_stBelt_u8  
+      /* Long Identifier        */      "驾驶侧安全带信号标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_stBelt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfSig_stDoor_u8  
+      /* Long Identifier        */      "驾驶侧门信号标定量控制"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfSig_stDoor_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_SLRetryTimesLimt_u8  
+      /* Long Identifier        */      "执行器标定重试次数阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_SLRetryTimesLimt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PcfStm_SLRunTimesLimt_u8  
+      /* Long Identifier        */      "执行器标定动作次数阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PcfStm_SLRunTimesLimt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_PCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_Pos1_f32
+      /* Long identifier        */      "1路位置信号"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_Pos1_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_tMosPcf_f32
+      /* Long identifier        */      "Mos管温度"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_tMosPcf_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_IsenPcf_f32
+      /* Long identifier        */      "EPC工作电流"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_IsenPcf_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_IsentMosPcf_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_IsentMosPcf_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_IUBPcf_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_IUBPcf_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_IdcPcf_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_IdcPcf_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_Pos2_f32
+      /* Long identifier        */      "2路位置信号"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_Pos2_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_VehSpd_f32
+      /* Long identifier        */      "车速信号"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_VehSpd_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_PosAimInP_f32
+      /* Long identifier        */      "入P目标位置"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_PosAimInP_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_PosAimOutP_f32
+      /* Long identifier        */      "出P目标位置"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_PosAimOutP_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_nPcfMot_f32
+      /* Long identifier        */      "执行器转速"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_nPcfMot_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_VDD5Pcf_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_VDD5Pcf_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_UBRPcf_f32
+      /* Long identifier        */      "EPC工作电压"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_UBRPcf_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_AimPosPID_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_AimPosPID_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_PosDif_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_PosDif_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_PosKp_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_PosKp_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_PosKi_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_PosKi_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_PosKd_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_PosKd_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_PosPIDOut_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_PosPIDOut_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_SoftDycPID_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_SoftDycPID_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_DycLim_f32
+      /* Long identifier        */      "占空比限制"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_DycLim_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_DycOutPID_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_DycOutPID_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_SLPosReg_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_SLPosReg_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_SLtrqDes_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_PCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_SLtrqDes_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_TestTimes_u16
+      /* Long identifier        */      "出入P自动测试次数"
+      /* Data type              */      UWORD
+      /* Conversion method      */      SWC_PCF_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_TestTimes_u16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_Actime_u16
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SWC_PCF_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_Actime_u16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_stSLActPos_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_stSLActPos_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_stActPos_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_stActPos_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_stRunTi_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_stRunTi_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_stParkCtlReq_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_stParkCtlReq_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_stUdc_u8
+      /* Long identifier        */      "EPC工作电压等级"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_stUdc_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_stPark_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_stPark_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_stParkCtl_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_stParkCtl_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_BCstDiag_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_BCstDiag_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_SLstDiag_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_SLstDiag_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_SLstModeReq_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_SLstModeReq_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_flgP_b
+      /* Long identifier        */      "挡杆信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_flgP_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgActJudgeToSLRun_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgActJudgeToSLRun_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgBCLocked_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgBCLocked_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_flgIoc_b
+      /* Long identifier        */      "EPC电路过流信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_flgIoc_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgHwIdcOv_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgHwIdcOv_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgSenOv_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgSenOv_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgSenVerFail_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgSenVerFail_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgBPCToFault_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgBPCToFault_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_flgKL15_b
+      /* Long identifier        */      "KL15信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_flgKL15_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgCritSpd_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgCritSpd_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_flgBrake_b
+      /* Long identifier        */      "刹车状态信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_flgBrake_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_stDoor_b
+      /* Long identifier        */      "驾驶侧门状态信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_stDoor_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgEnAutoInP_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgEnAutoInP_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_flgACC_b
+      /* Long identifier        */      "加速信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_flgACC_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_flgPowerOn_b
+      /* Long identifier        */      "PowerOn使能信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_flgPowerOn_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgDiaAutoP_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgDiaAutoP_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgEnAutoOutP_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgEnAutoOutP_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgFaultToBPC_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgFaultToBPC_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgRunTiOv_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgRunTiOv_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgLocked_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgLocked_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgRetry_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgRetry_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_VDD5PcfErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_VDD5PcfErr_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgRetryShield_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgRetryShield_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgFault_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgFault_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgFaultToParkCtl_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgFaultToParkCtl_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgPCInPtoRun_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgPCInPtoRun_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgNPCToStandby_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgNPCToStandby_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgNPCToRPC_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgNPCToRPC_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgSLAccToWait_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgSLAccToWait_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgSLCToStandby_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgSLCToStandby_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgUdcLoErr_b
+      /* Long identifier        */      "工作电压故障"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgUdcLoErr_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgtMosOv_b
+      /* Long identifier        */      "Mos管过温故障"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgtMosOv_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDiag_flgselfCkFnh_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDiag_flgselfCkFnh_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_NVMSLFnh_b
+      /* Long identifier        */      "自学习完成信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_NVMSLFnh_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgAimInPRat_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgAimInPRat_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgStandbyToNPC_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgStandbyToNPC_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgStandbyToSLC_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgStandbyToSLC_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgNPCActPos_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgNPCActPos_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgPCInitToInP_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgPCInitToInP_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgPCInitToOutP_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgPCInitToOutP_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_enMosPID_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_enMosPID_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_enMosOutPID_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_enMosOutPID_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_DirOutPID_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_DirOutPID_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_enMos_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_enMos_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgAllowPwmRun_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgAllowPwmRun_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDiag_flgselfCkErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDiag_flgselfCkErr_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgShtDwnReq_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgShtDwnReq_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgUnexPosWarn_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgUnexPosWarn_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfCtl_ActFnh_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfCtl_ActFnh_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfSig_flgBelt_b
+      /* Long identifier        */      "安全带状态信号"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfSig_flgBelt_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_BCMotDir_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_BCMotDir_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_BCenMos_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_BCenMos_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_MotDir_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_MotDir_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_enMos_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_enMos_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgRetryFnh_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgRetryFnh_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_SLActDir_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_SLActDir_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_SLEnMotorAcc_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_SLEnMotorAcc_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_SLenMos_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_SLenMos_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_BCflgModeReq_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_BCflgModeReq_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_SLflgPosNvm_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_SLflgPosNvm_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfStm_flgAutoP_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfStm_flgAutoP_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgStallFault_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgStallFault_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_PcfDia_flgstallPause_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_PCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_PcfDia_flgstallPause_b@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_PCF_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_PCF_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_PCF_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_PCF_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_PCF
+      /* Long identifier        */       "SWC_PCF"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_RE_SWC_PCF_10ms_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_RE_SWC_PCF_10ms_sys
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys"
+      /begin SUB_GROUP
+        S1_PCF_10ms
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_UBRPcf_f32
+        VAR_PcfSig_VDD5Pcf_f32
+        VAR_PcfSig_flgIoc_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_PCF_10ms
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms"
+      /begin SUB_GROUP
+        S3_PCF_Diagnosis
+        S3_PCF_PWMControl
+        S3_PCF_SignalProcess
+        S3_PCF_StateManagement
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_PCF_Diagnosis
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis"
+      /begin SUB_GROUP
+        S4_PCF_Diag
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_PCF_PWMControl
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl"
+      /begin SUB_GROUP
+        S5_PcfCtl_MotorControl
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_PCF_SignalProcess
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess"
+      /begin SUB_GROUP
+        S6_PCF_Sig
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_PCF_StateManagement
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement"
+      /begin SUB_GROUP
+        S7_Pcf_Stm
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_PCF_Diag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag"
+      /begin SUB_GROUP
+        S9_Basic_Diagnosis
+        S9_Compound_Diagnosis
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_PcfCtl_MotorControl
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl"
+      /begin SUB_GROUP
+        S68_PcfCtl_Ctl
+        S68_PcfCtl_Swt
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_PCF_Sig
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig"
+      /begin SUB_GROUP
+        S85_PcfSig_001
+        S85_PcfSig_002
+        S85_PcfSig_003
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_Pcf_Stm
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm"
+      /begin SUB_GROUP
+        S118_PcfStm_Judgment
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_Actime_u16
+        VAR_PcfStm_BCMotDir_b
+        VAR_PcfStm_BCenMos_b
+        VAR_PcfStm_BCflgModeReq_b
+        VAR_PcfStm_BCstDiag_u8
+        VAR_PcfStm_MotDir_b
+        VAR_PcfStm_SLActDir_b
+        VAR_PcfStm_SLEnMotorAcc_b
+        VAR_PcfStm_SLPosReg_f32
+        VAR_PcfStm_SLenMos_b
+        VAR_PcfStm_SLflgPosNvm_b
+        VAR_PcfStm_SLstDiag_u8
+        VAR_PcfStm_SLstModeReq_u8
+        VAR_PcfStm_SLtrqDes_f32
+        VAR_PcfStm_enMos_b
+        VAR_PcfStm_flgAutoP_b
+        VAR_PcfStm_flgRetryFnh_b
+        VAR_PcfStm_stParkCtl_u8
+        VAR_PcfStm_stPark_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_Basic_Diagnosis
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis"
+      /begin SUB_GROUP
+        S10_ActorPosDiag
+        S10_BlindCtlStallDiag
+        S10_IocDiag
+        S10_NormalStallDiag
+        S10_SenDemDiag
+        S10_Subsystem
+        S10_UdcDiag
+        S10_VDD5VDiag
+        S10_flgCritSpdDiag
+        S10_flgNPCActPosDiag
+        S10_stSLActPosDiag
+        S10_tActDiag
+        S10_tMosDiag
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_Compound_Diagnosis
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis"
+      /begin SUB_GROUP
+        S11_AllowPwmRunDiag
+        S11_CheckSelfDiag
+        S11_DwnReqDiag
+        S11_FaultDiag
+        S11_PosErrDiag
+        S11_RetryDiag
+        S11_StallRetry
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S68_PcfCtl_Ctl
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl"
+      /begin SUB_GROUP
+        S69_Act_Fin
+        S69_DycProcess
+        S69_PID_Enable
+        S69_PcfCtl_enMosandAimPos
+        S69_Ref
+        S69_Swt
+        S69_posititional_PID
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S68_PcfCtl_Swt
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Swt"
+      /begin SUB_GROUP
+        S70_If_Action_Subsystem
+        S70_If_Action_Subsystem1
+        S70_If_Action_Subsystem4
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_flgManual_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfCtl_enMos_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S85_PcfSig_001
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001"
+      /begin SUB_GROUP
+        S86_Pending_signal
+        S86_VCU_signal
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S85_PcfSig_002
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002"
+      /begin SUB_GROUP
+        S87_EpcPos1
+        S87_EpcPos2
+        S87_IUBEpc
+        S87_flgKL15
+        S87_flgPowerOn
+        S87_iEpc
+        S87_tEpc
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_flgUseISENorIUB_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_IdcPcf_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S85_PcfSig_003
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_003"
+      /begin SUB_GROUP
+        S88_DycLim
+        S88_NVMAimOutP
+        S88_NVMSLFnh
+        S88_nMotCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S118_PcfStm_Judgment
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment"
+      /begin SUB_GROUP
+        S119_ActJudgeToSLRun
+        S119_FaultToBPC
+        S119_NPCToRPC
+        S119_PCInPorOutPToRun
+        S119_PCInitToInPorOutP
+        S119_ParkToFault
+        S119_SLAccToWait
+        S119_StndbyToSLCorNPC
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfStm_BCActimeLimt_u16
+        CAL_PcfStm_SLAccSpdUp_f32
+        CAL_PcfStm_SLAccTrqDes_f32
+        CAL_PcfStm_SLActRunSpdUp_f32
+        CAL_PcfStm_SLActimeLimt_u16
+        CAL_PcfStm_SLMotorAcctimeLimt_u16
+        CAL_PcfStm_SLRetryTimesLimt_u8
+        CAL_PcfStm_SLRunTimesLimt_u8
+        CAL_PcfStm_SLWaitimeLimt_u16
+        CAL_PcfStm_cntSLWaitRunLimt_u16
+        CAL_PcfStm_flgUseAutoBackP_b
+        CAL_PcfStm_flgUseBlindCtl_b
+        CAL_PcfStm_flgUseFaultRec_b
+        CAL_PcfStm_flgUseRPC_b
+        CAL_PcfStm_flgUseSLC_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_ActorPosDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/ActorPosDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_AimInPRdd_f32
+        CAL_PcfDia_AimOutPRdd_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_stActPos_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_BlindCtlStallDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/BlindCtlStallDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_BCLockedNum_u16
+        CAL_PcfDia_IdcLockedHiHyst_f32
+        CAL_PcfDia_IdcLockedHi_f32
+        CAL_PcfDia_flgBCLockedSwt_b
+        CAL_PcfDia_flgBCLocked_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgBCLocked_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_IocDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/IocDiag"
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgHwIdcOv_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_NormalStallDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/NormalStallDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_IdcLockedHiHyst_f32
+        CAL_PcfDia_IdcLockedHi_f32
+        CAL_PcfDia_LockedNum_u16
+        CAL_PcfDia_flgLocked_b
+        CAL_PcfDia_flgLockedlSwt_b
+        CAL_PcfDia_nMotLockedLowHyst_f32
+        CAL_PcfDia_nMotLockedLow_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgLocked_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_SenDemDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/SenDemDiag"
+      /begin SUB_GROUP
+        S16_Debounce1
+        S16_Debounce2
+        S16_PosDiag
+        S16_latch1
+        S16_latch2
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_Subsystem
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_AimInPRatDown_f32
+        CAL_PcfDia_AimInPRatUp_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgAimInPRat_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_UdcDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/UdcDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_UdcCANLowSet_f32
+        CAL_PcfDia_UdcMotLowSet_f32
+        CAL_PcfDia_UdcMotManSet_f32
+        CAL_PcfDia_UdcMotUVSet_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgUdcLoErr_b
+        VAR_PcfDia_stUdc_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_VDD5VDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/VDD5VDiag"
+      /begin SUB_GROUP
+        S19_Debounce2
+        S19_latch1
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_VDD5Highset_f32
+        CAL_PcfDia_VDD5Lowset_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_flgCritSpdDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/flgCritSpdDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_SpdHiHyst_f32
+        CAL_PcfDia_SpdHi_f32
+        CAL_PcfDia_nMechHiHyst_f32
+        CAL_PcfDia_nMechHi_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgCritSpd_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_flgNPCActPosDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/flgNPCActPosDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_MinPosOutP_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgNPCActPos_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_stSLActPosDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/stSLActPosDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_SLInPDown_f32
+        CAL_PcfDia_SLInPLimt_f32
+        CAL_PcfDia_SLInPUp_f32
+        CAL_PcfDia_SLOutPDown_f32
+        CAL_PcfDia_SLOutPInit_f32
+        CAL_PcfDia_SLOutPUp_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_stSLActPos_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_tActDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/tActDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_cntNorAct_u16
+        CAL_PcfDia_cntOverAct_u16
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgRunTiOv_b
+        VAR_PcfDia_stRunTi_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_tMosDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/tMosDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_tMosHighSet_f32
+        CAL_PcfDia_tMosLowSet_f32
+        CAL_PcfDia_tMosNum_u16
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgtMosOv_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_AllowPwmRunDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis/AllowPwmRunDiag"
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgAllowPwmRun_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_CheckSelfDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis/CheckSelfDiag"
+      /begin REF_MEASUREMENT
+        VAR_PcfDiag_flgselfCkErr_b
+        VAR_PcfDiag_flgselfCkFnh_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_DwnReqDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis/DwnReqDiag"
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgShtDwnReq_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_FaultDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis/FaultDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_flgFaultSwt_b
+        CAL_PcfDia_flgFault_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgFault_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_PosErrDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis/PosErrDiag"
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgUnexPosWarn_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_RetryDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis/RetryDiag"
+      /begin SUB_GROUP
+        S63_Swt
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_StallRetry
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis/StallRetry"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_Retrytimes_u8
+        CAL_PcfDia_tRetry_u16
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgStallFault_b
+        VAR_PcfDia_flgstallPause_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S69_Act_Fin
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/Act_Fin"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_PrePos_f32
+        CAL_PcfCtl_timePrePos_u16
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S69_DycProcess
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/DycProcess"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_SoftDyc_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfCtl_DirOutPID_b
+        VAR_PcfCtl_DycOutPID_f32
+        VAR_PcfCtl_SoftDycPID_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S69_PID_Enable
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/PID_Enable"
+      /begin REF_MEASUREMENT
+        VAR_PcfCtl_enMosOutPID_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S69_PcfCtl_enMosandAimPos
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/PcfCtl_enMosandAimPos"
+      /begin SUB_GROUP
+        S74_If_Action_Subsystem
+        S74_If_Action_Subsystem1
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_PcfCtl_AimPosPID_f32
+        VAR_PcfCtl_enMosPID_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S69_Ref
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/Ref"
+      /begin REF_MEASUREMENT
+        VAR_PcfCtl_PosDif_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S69_Swt
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/Swt"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_flgFnhSwt_b
+        CAL_PcfCtl_flgFnh_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfCtl_ActFnh_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S69_posititional_PID
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/posititional_PID"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_PosKd_f32
+        CAL_PcfCtl_PosKi_f32
+        CAL_PcfCtl_PosKp_f32
+        CAL_PcfCtl_intPIDdownlim_f32
+        CAL_PcfCtl_intPIDuplim_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfCtl_PosKd_f32
+        VAR_PcfCtl_PosKi_f32
+        VAR_PcfCtl_PosKp_f32
+        VAR_PcfCtl_PosPIDOut_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S70_If_Action_Subsystem
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Swt/If Action Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_BCRunDyc_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S70_If_Action_Subsystem1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Swt/If Action Subsystem1"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_SLRunDir_b
+        CAL_PcfCtl_SLRunDyc_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S70_If_Action_Subsystem4
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Swt/If Action Subsystem4"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_ManualDir_b
+        CAL_PcfCtl_ManualDty_f32
+        CAL_PcfCtl_ManualEn_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S86_Pending_signal
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001/Pending_signal"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_VehSpd_f32
+        CAL_PcfSig_flgACC_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_VehSpd_f32
+        VAR_PcfSig_flgACC_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S86_VCU_signal
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001/VCU_signal"
+      /begin SUB_GROUP
+        S90_flgBrake
+        S90_flgP
+        S90_flgP_In
+        S90_stBelt
+        S90_stDoor
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S87_EpcPos1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/EpcPos1"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_PosCnvFac_f32
+        CAL_PcfSig_PosOffset_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_Pos1_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S87_EpcPos2
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/EpcPos2"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_PosCnvFac_f32
+        CAL_PcfSig_PosOffset_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_Pos2_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S87_IUBEpc
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/IUBEpc"
+      /begin SUB_GROUP
+        S101_flt1
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_IUBSet_f32
+        CAL_PcfSig_flgIUBSwt_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S87_flgKL15
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/flgKL15"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_flgKL15Swt_b
+        CAL_PcfSig_flgKL15_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_flgKL15_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S87_flgPowerOn
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/flgPowerOn"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_flgPowerOnSwt_b
+        CAL_PcfSig_flgPowerOn_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_flgPowerOn_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S87_iEpc
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/iEpc"
+      /begin SUB_GROUP
+        S106_Subsystem
+        S106_Subsystem1
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_iSENCnvFac_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_IsenPcf_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S87_tEpc
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/tEpc"
+      /begin SUB_GROUP
+        S107_flt
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_factMosFlt_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S88_DycLim
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_003/DycLim"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_IdcDycX_Idc_af32
+        CAL_PcfSig_UdcDycX_Udc_af32
+        CAL_PcfSig_tMosDycX_tMos_af32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_DycLim_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S88_NVMAimOutP
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_003/NVMAimOutP"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_AimInPLimt_f32
+        CAL_PcfSig_deltaAimInP_f32
+        CAL_PcfSig_deltaAimOutP_f32
+        CAL_PcfSig_flgAimInPLimtSwt_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_PosAimInP_f32
+        VAR_PcfSig_PosAimOutP_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S88_NVMSLFnh
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_003/NVMSLFnh"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_flgNVMSLFnhSwt_b
+        CAL_PcfSig_flgNVMSLFnh_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_NVMSLFnh_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S88_nMotCalc
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_003/nMotCalc"
+      /begin SUB_GROUP
+        S116_flt1
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_AngMotPos_f32
+        CAL_PcfSig_GernMot_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_ActJudgeToSLRun
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/ActJudgeToSLRun"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgActJudgeToSLRun_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_FaultToBPC
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/FaultToBPC"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgBPCToFault_b
+        VAR_PcfStm_flgFaultToBPC_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_NPCToRPC
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/NPCToRPC"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgNPCToRPC_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_PCInPorOutPToRun
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/PCInPorOutPToRun"
+      /begin SUB_GROUP
+        S124_DiaAutoP
+        S124_EnAutoInP
+        S124_EnAutoOutP
+        S124_InPtoRun
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_PCInitToInPorOutP
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/PCInitToInPorOutP"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgPCInitToInP_b
+        VAR_PcfStm_flgPCInitToOutP_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_ParkToFault
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/ParkToFault"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgFaultToParkCtl_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_SLAccToWait
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/SLAccToWait"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgSLAccToWait_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_StndbyToSLCorNPC
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/StndbyToSLCorNPC"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgNPCToStandby_b
+        VAR_PcfStm_flgSLCToStandby_b
+        VAR_PcfStm_flgStandbyToNPC_b
+        VAR_PcfStm_flgStandbyToSLC_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Debounce1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/SenDemDiag/Debounce1"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_PosDebounce_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_Debounce2
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/SenDemDiag/Debounce2"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_PosDebounce_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_PosDiag
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/SenDemDiag/PosDiag"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_PosHighset_f32
+        CAL_PcfDia_PosLowset_f32
+        CAL_PcfDia_posSenHiRngSet_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_latch1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/SenDemDiag/latch1"
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgSenVerFail_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_latch2
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/SenDemDiag/latch2"
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgSenOv_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S19_Debounce2
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/VDD5VDiag/Debounce2"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_VDD5Debounce_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S19_latch1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Basic_Diagnosis/VDD5VDiag/latch1"
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_VDD5PcfErr_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S63_Swt
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_Diagnosis/PCF_Diag/Compound_Diagnosis/RetryDiag/Swt"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfDia_flgRetrySwt_b
+        CAL_PcfDia_flgRetry_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfDia_flgRetryShield_b
+        VAR_PcfDia_flgRetry_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S74_If_Action_Subsystem
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/PcfCtl_enMosandAimPos/If Action Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_SLdeltaAimOutP_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S74_If_Action_Subsystem1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_PWMControl/PcfCtl_MotorControl/PcfCtl_Ctl/PcfCtl_enMosandAimPos/If Action Subsystem1"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfCtl_InitOutP_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S90_flgBrake
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001/VCU_signal/flgBrake"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_flgBrakeSwt_b
+        CAL_PcfSig_flgBrake_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_flgBrake_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S90_flgP
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001/VCU_signal/flgP"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_flgPSwt_b
+        CAL_PcfSig_flgP_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_flgP_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S90_flgP_In
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001/VCU_signal/flgP_In"
+      /begin SUB_GROUP
+        S93_TimesCalc
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_TimesTestP_u16
+        CAL_PcfSig_flgTestPSwt_b
+        CAL_PcfSig_tDelayTestP_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S90_stBelt
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001/VCU_signal/stBelt"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_flgstBeltSwt_b
+        CAL_PcfSig_stBelt_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_flgBelt_b
+        VAR_PcfSig_stParkCtlReq_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S90_stDoor
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001/VCU_signal/stDoor"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_flgstDoorSwt_b
+        CAL_PcfSig_stDoor_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_stDoor_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S101_flt1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/IUBEpc/flt1"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_IUBPcfFltCoe_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_IUBPcf_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S106_Subsystem
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/iEpc/Subsystem"
+      /begin SUB_GROUP
+        S109_flt1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S106_Subsystem1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/iEpc/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_tMosiSENcof_tCof_af32
+        CAL_PcfSig_tMosiSENofs_tCof_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S107_flt
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/tEpc/flt"
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_tMosPcf_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S116_flt1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_003/nMotCalc/flt1"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_nMotFltCoe_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_nPcfMot_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S124_DiaAutoP
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/PCInPorOutPToRun/DiaAutoP"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgDiaAutoP_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S124_EnAutoInP
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/PCInPorOutPToRun/EnAutoInP"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgEnAutoInP_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S124_EnAutoOutP
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/PCInPorOutPToRun/EnAutoOutP"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfStm_flgTestPSwt_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgEnAutoOutP_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S124_InPtoRun
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_StateManagement/Pcf_Stm/PcfStm_Judgment/PCInPorOutPToRun/InPtoRun"
+      /begin REF_MEASUREMENT
+        VAR_PcfStm_flgPCInPtoRun_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S93_TimesCalc
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_001/VCU_signal/flgP_In/TimesCalc"
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_TestTimes_u16
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S109_flt1
+      /* Long identifier        */       "SWC_PCF/RE_SWC_PCF_10ms_sys/PCF_10ms/PCF_SignalProcess/PCF_Sig/PcfSig_002/iEpc/Subsystem/flt1"
+      /begin REF_CHARACTERISTIC
+        CAL_PcfSig_iSENFltCoe_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_PcfSig_IsentMosPcf_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_PCF.a2l */

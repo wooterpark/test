@@ -1,0 +1,12 @@
+Start at 2022/1/6 11:25:20
+RTA-OS Code Generator 
+Version 5.6.2.26988, Copyright © ETAS 2018
+.................................................................................................................
+Stop at 2022/1/6 11:28:12
+Information: Allocating SRC_GPSR00 to core 0
+Information: Allocating SRC_GPSR01 to core 1
+Information: Allocating SRC_GPSR02 to core 2
+Information: Updated 'RTAOS.a'
+
+Errors: 0, Warnings: 0.
+Stop at 2022/1/6 11:28:12

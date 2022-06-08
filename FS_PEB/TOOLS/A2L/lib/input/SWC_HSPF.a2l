@@ -1,0 +1,1986 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_HSPF.a2l
+ *
+ * Code generation for model "SWC_HSPF".
+ *
+ * Model version              : 1.24
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Tue Jan 19 14:59:09 2021
+ * 
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_Hspf_CodeDataMatchTable_af32
+      /* Long Identifier        */      "软件和数据匹配表"
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CodeDataMatchTable_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      7
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_CodeTable_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      6
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_DataTable_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Hspf_DataTable_af32
+      /* Long Identifier        */      "数据版本号"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_DataTable_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Number of Axis Pts     */      6
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Hspf_CodeTable_af32
+      /* Long Identifier        */      "软件版本号"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CodeTable_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Number of Axis Pts     */      7
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_Hspf_ProjectNumMatchTable_af32
+      /* Long Identifier        */      "项目匹配表"
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_ProjectNumMatchTable_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      7
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_ProjectNuminSWTable_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      6
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_CPLDProjectNumTable_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Hspf_CPLDProjectNumTable_af32
+      /* Long Identifier        */      "CPLD项目号"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CPLDProjectNumTable_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Number of Axis Pts     */      6
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Hspf_ProjectNuminSWTable_af32
+      /* Long Identifier        */      "解析出来的项目号"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_ProjectNuminSWTable_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Number of Axis Pts     */      7
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_Hspf_CodeCpldSwMatchTable_af32
+      /* Long Identifier        */      "软件和CPLD软件版本号匹配表"
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CodeCpldSwMatchTable_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      7
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_CodeTable_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      4
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_CpldSwTable_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Hspf_CpldSwTable_af32
+      /* Long Identifier        */      "CPLD软件版本"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CpldSwTable_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Number of Axis Pts     */      4
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_Hspf_CodeHvMcuMatchTable_af32
+      /* Long Identifier        */      "软件和高压MCU版本号匹配表"
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CodeHvMcuMatchTable_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      7
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_CodeTable_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      6
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_HvMcuTable_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Hspf_HvMcuTable_af32
+      /* Long Identifier        */      "高压MCU版本号"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_HvMcuTable_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Number of Axis Pts     */      6
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_Hspf_HwAnalHwVerMatchTable_af32
+      /* Long Identifier        */      "硬件匹配表"
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_HwAnalHwVerMatchTable_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      VAR_Bsw_Hwver_f32
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      6
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_HwVerTable_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_HSPF_CM_single
+        /* Number of Axis Pts   */      2
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Hspf_HwAnalTable_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Hspf_HwAnalTable_af32
+      /* Long Identifier        */      "解析匹配"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_HwAnalTable_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Number of Axis Pts     */      2
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Hspf_HwVerTable_af32
+      /* Long Identifier        */      "硬件版本号"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_HwVerTable_af32@ */
+      /* Input Quantity         */      VAR_Bsw_Hwver_f32
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_HSPF_CM_single
+      /* Number of Axis Pts     */      6
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_CltInletTempFltFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CltInletTempFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_TmpCoolanTjFltFrq_f32  
+      /* Long Identifier        */      "估算水温滤波频率"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_TmpCoolanTjFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_TmpUFltFrq_f32  
+      /* Long Identifier        */      "Temperature filter cut off frequency"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_TmpUFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_TmpVFltFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_TmpVFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_TmpWFltFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_TmpWFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_iDcLnkEstFltFrq_f32  
+      /* Long Identifier        */      "母线电流慢滤波值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_iDcLnkEstFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_nFltFrq_f32  
+      /* Long Identifier        */      "电机转速慢滤波截止频率 "
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_nFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_tCoolantFltFrq_f32  
+      /* Long Identifier        */      "冷却水滤波截止频率"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_tCoolantFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_tStrrTmp1FltFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_tStrrTmp1FltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_tStrrTmp2FltFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_tStrrTmp2FltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_tSwtTempSttrHiLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_tSwtTempSttrHiLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_tSwtTempSttrLoLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_tSwtTempSttrLoLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_uDcLnkFltFrq_f32  
+      /* Long Identifier        */      "母线电压慢滤波截止频率 "
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_uDcLnkFltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_uKl30FltFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_uKl30FltFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_VerChkTime_u16  
+      /* Long Identifier        */      "软件匹配超时"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_VerChkTime_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_cntIPhCalOffTolCnt_u16  
+      /* Long Identifier        */      "相电流采样总计数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_cntIPhCalOffTolCnt_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_cntIPhCalOffValCnt_u16  
+      /* Long Identifier        */      "相电流采样有效计数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_cntIPhCalOffValCnt_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_iPhaHighSet_u16  
+      /* Long Identifier        */      "相电流采样有效上限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_iPhaHighSet_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_iPhaLowSet_u16  
+      /* Long Identifier        */      "相电流采样有效下限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_iPhaLowSet_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_tDBCCmpTime_u16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_tDBCCmpTime_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_CrashChkCntLoLim_s8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CrashChkCntLoLim_s8@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_CrashChkSubCnt_s8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CrashChkSubCnt_s8@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_INVOpenChkCntLoLim_s8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_INVOpenChkCntLoLim_s8@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_INVOpenChkSubCnt_s8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_INVOpenChkSubCnt_s8@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_MotTemLowTable_af32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_MotTemLowTable_af32@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+      /* Array Size             */
+      NUMBER                            1024
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_MotorOpenChkCntLoLim_s8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_MotorOpenChkCntLoLim_s8@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_MototOpenChkSubCnt_s8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_MototOpenChkSubCnt_s8@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_bt15ChkCntLoLim_s8  
+      /* Long Identifier        */      "点火信号消除下限限值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_bt15ChkCntLoLim_s8@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_bt15ChkSubCnt_s8  
+      /* Long Identifier        */      "点火信号确认下减个数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_bt15ChkSubCnt_s8@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_int8 
+      /* Lower Limit            */      -128 
+      /* Upper Limit            */      127
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_CrashChkAddCnt_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CrashChkAddCnt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_CrashChkCntHiLim_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_CrashChkCntHiLim_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_DBCTempROCLimChkCnt_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_DBCTempROCLimChkCnt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_INVOpenChkAddCnt_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_INVOpenChkAddCnt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_INVOpenChkCntHiLim_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_INVOpenChkCntHiLim_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_MotTemHigTable_af32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_MotTemHigTable_af32@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+      /* Array Size             */
+      NUMBER                            1024
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_MotorOpenChkAddCnt_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_MotorOpenChkAddCnt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_MotorOpenChkCntHiLim_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_MotorOpenChkCntHiLim_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_Multiple_u8  
+      /* Long Identifier        */      "信号采样频率"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_Multiple_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_VerMatchFailure_u8  
+      /* Long Identifier        */      "自检失败"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_VerMatchFailure_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_VerMatchSucceed_u8  
+      /* Long Identifier        */      "自检成功"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_VerMatchSucceed_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_VerMatchTimeOutErr_u8  
+      /* Long Identifier        */      "自检进行中"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_VerMatchTimeOutErr_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_VerMatchUncheck_u8  
+      /* Long Identifier        */      "自检未进行"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_VerMatchUncheck_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_bt15ChkAddCnt_u8  
+      /* Long Identifier        */      "点火信号确认上加个数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_bt15ChkAddCnt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_bt15ChkCntHiLim_u8  
+      /* Long Identifier        */      "点火信号确认上限限值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_bt15ChkCntHiLim_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_stPreDrvCtl_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_stPreDrvCtl_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_tDBCTempROCLim_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_tDBCTempROCLim_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Hspf_tDBCtempOffset_u8  
+      /* Long Identifier        */      "IGBT温度偏差阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Hspf_tDBCtempOffset_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_HSPF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_Hwver_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_Hwver_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_tDBCTempU_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_tDBCTempU_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_tDBCTempV_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_tDBCTempV_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_tDBCTempW_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_tDBCTempW_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_tCoolantTemp_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_tCoolantTemp_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_uKl30_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_uKl30_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_tCoolantTemp_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_tCoolantTemp_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_tDrvBoardTemp_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_tDrvBoardTemp_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_uDcLnk_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_HSPF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_uDcLnk_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_tStrrTemp1_u16
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SWC_HSPF_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_tStrrTemp1_u16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_tStrrTemp2_u16
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SWC_HSPF_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_tStrrTemp2_u16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_tDBCTempU_u16
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SWC_HSPF_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_tDBCTempU_u16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_tDBCTempV_u16
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SWC_HSPF_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_tDBCTempV_u16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_tDBCTempW_u16
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SWC_HSPF_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_tDBCTempW_u16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_tDrvBoardTemp_u16
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SWC_HSPF_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_tDrvBoardTemp_u16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_tStrrTemp1_s16
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SWC_HSPF_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_tStrrTemp1_s16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_tStrrTemp2_s16
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SWC_HSPF_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_tStrrTemp2_s16@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_stVerChk_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_stVerChk_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_VerMatchFailureErr_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_VerMatchFailureErr_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_HWVer_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_HWVer_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_bSwtTempSttr1_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_bSwtTempSttr1_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_bSwtTempSttr2_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_bSwtTempSttr2_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_INV_Open_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_INV_Open_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_Motor_Open_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_Motor_Open_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_tDBCCmpErrDelay_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_tDBCCmpErrDelay_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_Wake_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_Wake_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_bt15_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_bt15_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Bsw_Crash_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Bsw_Crash_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_flgSttr2NoErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_flgSttr2NoErr_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Hspf_flgSttr1NoErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_HSPF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Hspf_flgSttr1NoErr_b@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_HSPF_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_HSPF_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_HSPF_CM_int8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_HSPF_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_HSPF_CM_int16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_HSPF_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_HSPF
+      /* Long identifier        */       "SWC_HSPF"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_RE_SWC_HSPF_10ms_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_RE_SWC_HSPF_10ms_sys
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys"
+      /begin SUB_GROUP
+        S1_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_Bsw_Crash_b
+        VAR_Bsw_Hwver_f32
+        VAR_Bsw_INV_Open_b
+        VAR_Bsw_Motor_Open_b
+        VAR_Bsw_Wake_b
+        VAR_Bsw_bt15_b
+        VAR_Bsw_tCoolantTemp_f32
+        VAR_Hspf_uKl30_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Subsystem
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem"
+      /begin SUB_GROUP
+        S3_HSPF_GsDia
+        S3_HSPF_SelfTest
+        S3_HSPF_SigDebounce
+        S3_HSPF_TjProcess
+        S3_HSPF_VerChk
+        S3_SPF_SigFlt
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_HSPF_GsDia
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_GsDia"
+      /begin SUB_GROUP
+        S4_HSPF_sttrTempDia
+        S4_HSPF_tDBCTempDia
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_HSPF_SelfTest
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_SelfTest"
+      /begin SUB_GROUP
+        S5_IPhaSenOffCal1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_HSPF_SigDebounce
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_SigDebounce"
+      /begin SUB_GROUP
+        S6_HSPF_CrashDebounce
+        S6_HSPF_INV_OpenDebounce
+        S6_HSPF_Motor_OpenDebounce
+        S6_HSPF_WakeDebounce
+        S6_HSPF_bt15Debounce
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_HSPF_TjProcess
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_TjProcess"
+      /begin SUB_GROUP
+        S7_HSPF_tDBCTempUFilter
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_TmpCoolanTjFltFrq_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_HSPF_VerChk
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_VerChk"
+      /begin SUB_GROUP
+        S8_HspfVerChk
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_VerMatchUncheck_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_SPF_SigFlt
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt"
+      /begin SUB_GROUP
+        S9_DrvBoardTemp
+        S9_HSPF_nFilter
+        S9_HSPF_tCoolantFilter
+        S9_HSPF_tCoolantFilter2
+        S9_HSPF_tCoolantTemp
+        S9_HSPF_tDBCTempUCnv
+        S9_HSPF_tDBCTempUFilter
+        S9_HSPF_tDBCTempVCnv
+        S9_HSPF_tDBCTempVFilter
+        S9_HSPF_tDBCTempWFilter
+        S9_HSPF_tDrvBoardTemp
+        S9_HSPF_tStrrTemp1Filter
+        S9_HSPF_tStrrTemp2Filter
+        S9_HSPF_tSttrTemp2Cnv
+        S9_HSPF_uDcLnkFilter
+        S9_HSPF_uKl30Filter
+        S9_SPF_tDBCTempWCnv
+        S9_SPF_tSttrTemp1Cnv
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_CltInletTempFltFrq_f32
+        CAL_Hspf_TmpUFltFrq_f32
+        CAL_Hspf_TmpVFltFrq_f32
+        CAL_Hspf_TmpWFltFrq_f32
+        CAL_Hspf_iDcLnkEstFltFrq_f32
+        CAL_Hspf_nFltFrq_f32
+        CAL_Hspf_tCoolantFltFrq_f32
+        CAL_Hspf_tStrrTmp1FltFrq_f32
+        CAL_Hspf_tStrrTmp2FltFrq_f32
+        CAL_Hspf_uDcLnkFltFrq_f32
+        CAL_Hspf_uKl30FltFrq_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Bsw_tDBCTempU_u16
+        VAR_Bsw_tDBCTempV_u16
+        VAR_Bsw_tDBCTempW_u16
+        VAR_Bsw_tDrvBoardTemp_u16
+        VAR_Bsw_tStrrTemp1_u16
+        VAR_Bsw_tStrrTemp2_u16
+        VAR_Hspf_uDcLnk_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_HSPF_sttrTempDia
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_GsDia/HSPF_sttrTempDia"
+      /begin REF_MEASUREMENT
+        VAR_Hspf_flgSttr1NoErr_b
+        VAR_Hspf_flgSttr2NoErr_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_HSPF_tDBCTempDia
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_GsDia/HSPF_tDBCTempDia"
+      /begin SUB_GROUP
+        S12_ErrDelay
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_tDBCtempOffset_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_IPhaSenOffCal1
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_SelfTest/IPhaSenOffCal1"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_cntIPhCalOffTolCnt_u16
+        CAL_Hspf_cntIPhCalOffValCnt_u16
+        CAL_Hspf_iPhaHighSet_u16
+        CAL_Hspf_iPhaLowSet_u16
+        CAL_Hspf_stPreDrvCtl_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_HSPF_CrashDebounce
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_SigDebounce/HSPF_CrashDebounce"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_CrashChkAddCnt_u8
+        CAL_Hspf_CrashChkCntHiLim_u8
+        CAL_Hspf_CrashChkCntLoLim_s8
+        CAL_Hspf_CrashChkSubCnt_s8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_HSPF_INV_OpenDebounce
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_SigDebounce/HSPF_INV_OpenDebounce"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_INVOpenChkAddCnt_u8
+        CAL_Hspf_INVOpenChkCntHiLim_u8
+        CAL_Hspf_INVOpenChkCntLoLim_s8
+        CAL_Hspf_INVOpenChkSubCnt_s8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_HSPF_Motor_OpenDebounce
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_SigDebounce/HSPF_Motor_OpenDebounce"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_MotorOpenChkAddCnt_u8
+        CAL_Hspf_MotorOpenChkCntHiLim_u8
+        CAL_Hspf_MotorOpenChkCntLoLim_s8
+        CAL_Hspf_MototOpenChkSubCnt_s8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_HSPF_WakeDebounce
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_SigDebounce/HSPF_WakeDebounce"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_bt15ChkAddCnt_u8
+        CAL_Hspf_bt15ChkCntHiLim_u8
+        CAL_Hspf_bt15ChkCntLoLim_s8
+        CAL_Hspf_bt15ChkSubCnt_s8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_HSPF_bt15Debounce
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_SigDebounce/HSPF_bt15Debounce"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_bt15ChkAddCnt_u8
+        CAL_Hspf_bt15ChkCntHiLim_u8
+        CAL_Hspf_bt15ChkCntLoLim_s8
+        CAL_Hspf_bt15ChkSubCnt_s8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_HSPF_tDBCTempUFilter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_TjProcess/HSPF_tDBCTempUFilter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_HspfVerChk
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_VerChk/HspfVerChk"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_CodeCpldSwMatchTable_af32
+        CAL_Hspf_CodeDataMatchTable_af32
+        CAL_Hspf_CodeHvMcuMatchTable_af32
+        CAL_Hspf_HwAnalHwVerMatchTable_af32
+        CAL_Hspf_ProjectNumMatchTable_af32
+        CAL_Hspf_VerChkTime_u16
+        CAL_Hspf_VerMatchFailure_u8
+        CAL_Hspf_VerMatchSucceed_u8
+        CAL_Hspf_VerMatchTimeOutErr_u8
+        CAL_Hspf_VerMatchUncheck_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Hspf_HWVer_u8
+        VAR_Hspf_VerMatchFailureErr_u8
+        VAR_Hspf_stVerChk_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_DrvBoardTemp
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/DrvBoardTemp"
+      /begin REF_MEASUREMENT
+        VAR_Hspf_tDrvBoardTemp_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_nFilter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_nFilter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tCoolantFilter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tCoolantFilter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tCoolantFilter2
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tCoolantFilter2"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tCoolantTemp
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tCoolantTemp"
+      /begin REF_MEASUREMENT
+        VAR_Hspf_tCoolantTemp_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tDBCTempUCnv
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tDBCTempUCnv"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_DBCTempROCLimChkCnt_u8
+        CAL_Hspf_tDBCTempROCLim_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Hspf_tDBCTempU_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tDBCTempUFilter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tDBCTempUFilter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tDBCTempVCnv
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tDBCTempVCnv"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_DBCTempROCLimChkCnt_u8
+        CAL_Hspf_tDBCTempROCLim_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Hspf_tDBCTempV_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tDBCTempVFilter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tDBCTempVFilter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tDBCTempWFilter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tDBCTempWFilter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tDrvBoardTemp
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tDrvBoardTemp"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tStrrTemp1Filter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tStrrTemp1Filter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tStrrTemp2Filter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tStrrTemp2Filter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_tSttrTemp2Cnv
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_tSttrTemp2Cnv"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_MotTemHigTable_af32
+        CAL_Hspf_MotTemLowTable_af32
+        CAL_Hspf_tSwtTempSttrHiLim_f32
+        CAL_Hspf_tSwtTempSttrLoLim_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Hspf_bSwtTempSttr2_b
+        VAR_Hspf_tStrrTemp2_s16
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_uDcLnkFilter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_uDcLnkFilter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_HSPF_uKl30Filter
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/HSPF_uKl30Filter"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_Multiple_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_SPF_tDBCTempWCnv
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/SPF_tDBCTempWCnv"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_DBCTempROCLimChkCnt_u8
+        CAL_Hspf_tDBCTempROCLim_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Hspf_tDBCTempW_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_SPF_tSttrTemp1Cnv
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/SPF_SigFlt/SPF_tSttrTemp1Cnv"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_MotTemHigTable_af32
+        CAL_Hspf_MotTemLowTable_af32
+        CAL_Hspf_tSwtTempSttrHiLim_f32
+        CAL_Hspf_tSwtTempSttrLoLim_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Hspf_bSwtTempSttr1_b
+        VAR_Hspf_tStrrTemp1_s16
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S12_ErrDelay
+      /* Long identifier        */       "SWC_HSPF/RE_SWC_HSPF_10ms_sys/Subsystem/HSPF_GsDia/HSPF_tDBCTempDia/ErrDelay"
+      /begin REF_CHARACTERISTIC
+        CAL_Hspf_tDBCCmpTime_u16
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Hspf_tDBCCmpErrDelay_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_HSPF.a2l */

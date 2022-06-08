@@ -1,0 +1,3847 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_MCF.a2l
+ *
+ * Code generation for model "SWC_MCF".
+ *
+ * Model version              : 1.10
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Mon Jan 25 16:58:23 2021
+ * 
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_DeadTimeTableY_Ti_af32
+      /* Long Identifier        */      "死区时间查表输出死区时间"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DeadTimeTableY_Ti_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      15
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_DeadTimeTableX_Frq_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MCF_DeadTimeTableX_Frq_af32
+      /* Long Identifier        */      "死区时间查表输入载频"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DeadTimeTableX_Frq_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      15
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_UsUseRateDesTableY_UsRes_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_UsUseRateDesTableY_UsRes_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      11
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_UsUseRateDesTableX_Spd_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MCF_UsUseRateDesTableX_Spd_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_UsUseRateDesTableX_Spd_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      11
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_AgRangeDeadCpnY_Ag_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_AgRangeDeadCpnY_Ag_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -65535.0
+      /* Upper Limit            */      65535.0
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      7
+        /* Lower Limit          */      -65535.0
+        /* Upper Limit          */      65535.0
+        AXIS_PTS_REF                    CAL_MCF_AgRangeDeadCpnX_Trq_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MCF_AgRangeDeadCpnX_Trq_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_AgRangeDeadCpnX_Trq_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      7
+      /* Lower Limit            */      -65535.0
+      /* Upper Limit            */      65535.0
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_HarmIn11ZRY_Is_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_HarmIn11ZRY_Is_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      23
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_HarmIn1113ZRX_Spd_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MCF_HarmIn1113ZRX_Spd_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_HarmIn1113ZRX_Spd_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      23
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_HarmIn11ZRY_Thetam_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_HarmIn11ZRY_Thetam_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      23
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_HarmIn1113ZRX_Spd_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_CoefPIAlphaZeroFtlY_Kp_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefPIAlphaZeroFtlY_Kp_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_CoefPIZoreCtlX_N_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MCF_CoefPIZoreCtlX_N_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefPIZoreCtlX_N_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      10
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_CoefPIAlphaZeroCtlY_Ki_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefPIAlphaZeroCtlY_Ki_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_CoefPIZoreCtlX_N_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_CoefPIBetaZeroCtlY_Kp_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefPIBetaZeroCtlY_Kp_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_CoefPIZoreCtlX_N_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_CoefPIBetaZeroCtlY_Ki_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefPIBetaZeroCtlY_Ki_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_CoefPIZoreCtlX_N_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_uDDesEOLY_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uDDesEOLY_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      20
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_IrmsDesEOLX_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MCF_IrmsDesEOLX_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_IrmsDesEOLX_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      20
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_OmbwFirstFltY_Ombw_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_OmbwFirstFltY_Ombw_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_OmbwFirstFltX_N_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MCF_OmbwFirstFltX_N_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_OmbwFirstFltX_N_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      10
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_cofPowerLimitMotHeat_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_cofPowerLimitMotHeat_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      9
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_tStrrTempFltMotHeat_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_tStrrTempFltMotHeat_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_tStrrTempFltMotHeat_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      9
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MCF_TrqOffActiveHeat_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_TrqOffActiveHeat_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MCF_CM_single
+        /* Number of Axis Pts   */      9
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MCF_SpdActiveHeat_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MCF_SpdActiveHeat_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_SpdActiveHeat_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MCF_CM_single
+      /* Number of Axis Pts     */      9
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_AgDiffCurrSec_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_AgDiffCurrSec_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_AplhaRefZeroCtl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_AplhaRefZeroCtl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_BetaRefZeroCtl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_BetaRefZeroCtl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_CoefFltZero_A_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefFltZero_A_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_CoefFltZero_B_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefFltZero_B_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_CoefFltZero_C_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefFltZero_C_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_CoefuDCLimtEOL_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_CoefuDCLimtEOL_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DeadTimeCpn_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DeadTimeCpn_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DeltaPower_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DeltaPower_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DisChaisdDes_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DisChaisdDes_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DisChaisqDes_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DisChaisqDes_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DownLimPIZeroCtl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DownLimPIZeroCtl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DownLimitIMotHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DownLimitIMotHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DownLimitPIMotHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DownLimitPIMotHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DycUSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DycUSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DycVSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DycVSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_DycWSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_DycWSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FixFreq_f32  
+      /* Long Identifier        */      "定频"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FixFreq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FrqRmp_f32  
+      /* Long Identifier        */      "载频Ramp值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FrqRmp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_HalfFreq_f32  
+      /* Long Identifier        */      "半频"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_HalfFreq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_IsSet11ZR_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_IsSet11ZR_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_IsThetaSet11ZR_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_IsThetaSet11ZR_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_IsrmsDesEOL_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_IsrmsDesEOL_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_KiAlphaZeroCtl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_KiAlphaZeroCtl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_KiBetaZeroCtl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_KiBetaZeroCtl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_KiMotHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_KiMotHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_KiUdEOL_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_KiUdEOL_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_KpAlphaZeroCtl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_KpAlphaZeroCtl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_KpBetaZeroCtl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_KpBetaZeroCtl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_KpMotHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_KpMotHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_KpUdEOL_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_KpUdEOL_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_OffsetInternal_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_OffsetInternal_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      360.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_SampleTime_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_SampleTime_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_SpdOffActiveHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_SpdOffActiveHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_SpdOffDeadCpn_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_SpdOffDeadCpn_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_SpdOnDeadCpn_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_SpdOnDeadCpn_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_TrqInvMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_TrqInvMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_TrqOffDeadCpn_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_TrqOffDeadCpn_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_UpLimPIZeroCtl_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_UpLimPIZeroCtl_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_UpLimitIMotHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_UpLimitIMotHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_UpLimitPIMotHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_UpLimitPIMotHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_UpPowerHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_UpPowerHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_UsdScalSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_UsdScalSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_UsqScalSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_UsqScalSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_cofFltN_f32  
+      /* Long Identifier        */      "转速滤波系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_cofFltN_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_cofFltPowerHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_cofFltPowerHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_cofFltWe_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_cofFltWe_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_cofOverModu_f32  
+      /* Long Identifier        */      "过调制系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_cofOverModu_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_iUCnvFac_f32  
+      /* Long Identifier        */      "U相转换系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_iUCnvFac_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_iVCnvFac_f32  
+      /* Long Identifier        */      "V相转换系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_iVCnvFac_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_iWCnvFac_f32  
+      /* Long Identifier        */      "W相转换系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_iWCnvFac_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_isMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_isMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_isSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_isSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_isThetaSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_isThetaSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_isdSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_isdSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_isdfwKi_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_isdfwKi_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_isdfwKp_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_isdfwKp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_isqSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_isqSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_nDpwmOffDelay_f32  
+      /* Long Identifier        */      "DPWM功能关闭滞环条件(转速)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_nDpwmOffDelay_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_nDpwmOff_f32  
+      /* Long Identifier        */      "DPWM功能关闭条件(转速)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_nDpwmOff_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_perCpnAg_f32  
+      /* Long Identifier        */      "角度补偿周期"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_perCpnAg_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_ratLo_f32  
+      /* Long Identifier        */      "占空比限制下限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_ratLo_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_ratNarrWave_f32  
+      /* Long Identifier        */      "窄波低阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_ratNarrWave_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_ratUp_f32  
+      /* Long Identifier        */      "占空比限制上限"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_ratUp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_trqDpwmOff_f32  
+      /* Long Identifier        */      "DPWM功能关闭条件(扭矩)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_trqDpwmOff_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_uDDownLimEOL_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uDDownLimEOL_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_uDUpLimEOL_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uDUpLimEOL_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_uDclnkSet_f32  
+      /* Long Identifier        */      "内部母线电压设置"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uDclnkSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_uQDesEOL_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uQDesEOL_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_udDecoupki_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_udDecoupki_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_udOverGain_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_udOverGain_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_udki_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_udki_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_udkp_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_udkp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_uqDecoupki_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uqDecoupki_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_uqOverGain_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uqOverGain_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_uqki_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uqki_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_uqkp_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_uqkp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_PowerMotHeat_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_PowerMotHeat_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FlgUpdateDyc_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FlgUpdateDyc_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FlgUseClose_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FlgUseClose_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FlgUseDeadCpn_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FlgUseDeadCpn_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FlgUseEOL_b  
+      /* Long Identifier        */      "电感测试标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FlgUseEOL_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FlgUseOpen_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FlgUseOpen_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FlgUseSatuEOL_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FlgUseSatuEOL_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_FlgUseSetDyc_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_FlgUseSetDyc_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_bUseduDclnkSet_b  
+      /* Long Identifier        */      "内外部电压来源切换"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_bUseduDclnkSet_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgCalibOffset_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgCalibOffset_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgDpwm_b  
+      /* Long Identifier        */      "DPWM功能使能标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgDpwm_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgHarmInIsThetaTab11ZR_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgHarmInIsThetaTab11ZR_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgInternalOffset_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgInternalOffset_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgLowOrHvudcLnk_b  
+      /* Long Identifier        */      "高压低压切换标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgLowOrHvudcLnk_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgMotHeat_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgMotHeat_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgNWS_b  
+      /* Long Identifier        */      "窄波抑制功能使能标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgNWS_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgOfsClbTest_b  
+      /* Long Identifier        */      "使用自标定数值调试标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgOfsClbTest_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgOverModu_b  
+      /* Long Identifier        */      "过调制使能标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgOverModu_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgRpwmFrqRandom_b  
+      /* Long Identifier        */      "Rpwm随机频率标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgRpwmFrqRandom_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgTabZeroCtl_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgTabZeroCtl_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgUse1113ZR_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgUse1113ZR_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgUseFF_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgUseFF_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgUseUsOver_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgUseUsOver_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgUseUsdqSet_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgUseUsdqSet_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgUseZeroCtl_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgUseZeroCtl_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgUseisTheta_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgUseisTheta_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgUseisdqSet_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgUseisdqSet_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_flgVF_b  
+      /* Long Identifier        */      "变频使能标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_flgVF_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_ActiveHeatInit_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_ActiveHeatInit_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      255.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_ActiveHeatNormal_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_ActiveHeatNormal_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      255.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_Non_ActiveHeat_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_Non_ActiveHeat_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      255.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_Part_ActiveHeat_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_Part_ActiveHeat_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      255.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_stChangePha_u8  
+      /* Long Identifier        */      "换相标志位"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_stChangePha_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_uint8 
+      /* Lower Limit            */      1.0 
+      /* Upper Limit            */      6.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_stDpwm_u8  
+      /* Long Identifier        */      "DPWM调制方式选择"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_stDpwm_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      127.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MCF_stPwmMode_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MCF_stPwmMode_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MCF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      255.0
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_iU_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_iU_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_iV_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_iV_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_iW_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_iW_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_Is_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_Is_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_agOffset_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_agOffset_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_agRtrEe_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_agRtrEe_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uDcLnk_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uDcLnk_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_idAct_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_idAct_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_iqAct_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_iqAct_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_UsUseRateDes_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_UsUseRateDes_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_udRv_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_udRv_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_periodCalc_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_periodCalc_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_isdFW_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_isdFW_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_idMotHeat_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_idMotHeat_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_idDes_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_idDes_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_MPC_Ld_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_MPC_Ld_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_Rdc_nWoFlt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_Rdc_nWoFlt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_MPC_Lq_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_MPC_Lq_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_MPC_LdSubLq_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_MPC_LdSubLq_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_iqDes_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_iqDes_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_EmfBack_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_EmfBack_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uqRv_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uqRv_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_udDes_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_udDes_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uqDes_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uqDes_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_UsUseRateReal_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_UsUseRateReal_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uAlphaDeadCpn_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uAlphaDeadCpn_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uBetaDeadCpn_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uBetaDeadCpn_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_UdDes11ZR_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_UdDes11ZR_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_UqDes11ZR_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_UqDes11ZR_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uAlphaZero_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uAlphaZero_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uBetaZero_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uBetaZero_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uDDesEOL_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uDDesEOL_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uQDesEOL_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uQDesEOL_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uAOfsClb_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uAOfsClb_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uBOfsClb_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uBOfsClb_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_usPeak_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_usPeak_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_AgRem_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_AgRem_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uAOm_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uAOm_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_uBOm_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_uBOm_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_iAlphaActFlt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_iAlphaActFlt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_iBetaActFlt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_iBetaActFlt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_IsSet11ZR_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_IsSet11ZR_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_IsThetaSet11ZR_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_IsThetaSet11ZR_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_PCUHeaterPower_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_PCUHeaterPower_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_PowerDcLnk_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_PowerDcLnk_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_PowerMech_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_PowerMech_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_PowerMotHeat_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_PowerMotHeat_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_HSPF_stIphaOffCal_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      255.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_HSPF_stIphaOffCal_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_TMAhtChsts_f32
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      255.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_TMAhtChsts_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_flgFw_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_flgFw_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_flgMotHeat_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_flgMotHeat_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_SCF_flgInitEn_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_SCF_flgInitEn_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MCF_FlgDeadCpn_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_MCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MCF_FlgDeadCpn_b@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_MCF_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_MCF_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_MCF_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_MCF
+      /* Long identifier        */       "SWC_MCF"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_RE_SWC_MCF_100us_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_RE_SWC_MCF_100us_sys
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys"
+      /begin SUB_GROUP
+        S1_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Subsystem
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem"
+      /begin SUB_GROUP
+        S3_MCF_Signal
+        S3_McFwc
+        S3_McPoc
+        S3_McSfc
+        S3_McVmc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_MCF_Signal
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/MCF_Signal"
+      /begin SUB_GROUP
+        S4_MCF_Signal
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_McFwc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc"
+      /begin SUB_GROUP
+        S5_McFwc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_McPoc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc"
+      /begin SUB_GROUP
+        S6_McPoc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_McSfc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc"
+      /begin SUB_GROUP
+        S7_McSfc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_McVmc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc"
+      /begin SUB_GROUP
+        S8_McVmc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_MCF_Signal
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/MCF_Signal/MCF_Signal"
+      /begin SUB_GROUP
+        S9_IsCalc
+        S9_OffsetCal
+        S9_SigCnv
+        S9_park
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_MCF_HSPF_stIphaOffCal_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_McFwc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc"
+      /begin SUB_GROUP
+        S17_Conditional_Judgment_
+        S17_idqDes
+        S17_udqDes
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_McPoc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc"
+      /begin SUB_GROUP
+        S59_Calculat__Dead_Compensation_Voltage
+        S59_Harmonic_Injection_Funcation
+        S59_Zero_Sequence_Control_Function
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_McSfc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc/McSfc"
+      /begin SUB_GROUP
+        S105_Calibration_Duty_Cycle
+        S105_EOL_Function
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_McVmc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc"
+      /begin SUB_GROUP
+        S115_MCF_DPWM
+        S115_MCF_OverModu
+        S115_MCF_RePark
+        S115_MCF_frqpwmCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_IsCalc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/MCF_Signal/MCF_Signal/IsCalc"
+      /begin REF_MEASUREMENT
+        VAR_MCF_Is_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_OffsetCal
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/MCF_Signal/MCF_Signal/OffsetCal"
+      /begin SUB_GROUP
+        S12_Rem3
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_OffsetInternal_f32
+        CAL_MCF_flgCalibOffset_b
+        CAL_MCF_flgInternalOffset_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_agOffset_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_SigCnv
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/MCF_Signal/MCF_Signal/SigCnv"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_bUseduDclnkSet_b
+        CAL_MCF_flgLowOrHvudcLnk_b
+        CAL_MCF_iUCnvFac_f32
+        CAL_MCF_iVCnvFac_f32
+        CAL_MCF_iWCnvFac_f32
+        CAL_MCF_stChangePha_u8
+        CAL_MCF_uDclnkSet_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_iU_f32
+        VAR_MCF_iV_f32
+        VAR_MCF_iW_f32
+        VAR_MCF_uDcLnk_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_park
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/MCF_Signal/MCF_Signal/park"
+      /begin REF_MEASUREMENT
+        VAR_MCF_idAct_f32
+        VAR_MCF_iqAct_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S17_Conditional_Judgment_
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/Conditional Judgment "
+      /begin SUB_GROUP
+        S18_FwcUsRes
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S17_idqDes
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes"
+      /begin SUB_GROUP
+        S19_FluxWeakeningLoop
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S17_udqDes
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/udqDes"
+      /begin SUB_GROUP
+        S20_CurrentLoop
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Calculat__Dead_Compensation_Voltage
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Calculat_ Dead_Compensation_Voltage"
+      /begin SUB_GROUP
+        S60_Calculate_dead_compensation_voltage
+        S60_Determines_dead_compensation_is_enabled
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_MCF_uAlphaDeadCpn_f32
+        VAR_MCF_uBetaDeadCpn_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Harmonic_Injection_Funcation
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Harmonic_Injection_Funcation"
+      /begin SUB_GROUP
+        S61_Harmonic_injection_of_11_and_13
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgUse1113ZR_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_UdDes11ZR_f32
+        VAR_MCF_UqDes11ZR_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S59_Zero_Sequence_Control_Function
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function"
+      /begin SUB_GROUP
+        S62_Calculate_zero_sequence_alpha_and_beta_axis_voltage
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgUseZeroCtl_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_uAlphaZero_f32
+        VAR_MCF_uBetaZero_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S105_Calibration_Duty_Cycle
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc/McSfc/Calibration Duty Cycle"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_DycUSet_f32
+        CAL_MCF_DycVSet_f32
+        CAL_MCF_DycWSet_f32
+        CAL_MCF_FlgUpdateDyc_b
+        CAL_MCF_FlgUseSetDyc_b
+        CAL_MCF_stPwmMode_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S105_EOL_Function
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc/McSfc/EOL Function"
+      /begin SUB_GROUP
+        S107_Inductancetestfunction
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_FlgUseEOL_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_uDDesEOL_f32
+        VAR_MCF_uQDesEOL_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S115_MCF_DPWM
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_DPWM"
+      /begin SUB_GROUP
+        S116_MCF_DPWM
+        S116_MCF_DeadTimeCalc
+        S116_MCF_DpwmEn
+        S116_MCF_NarrWaSupr
+        S116_MCF_dycCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S115_MCF_OverModu
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_OverModu"
+      /begin SUB_GROUP
+        S117_MCF_OverModuEn
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgOverModu_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S115_MCF_RePark
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_RePark"
+      /begin SUB_GROUP
+        S118_Mcf_AgTranCalc
+        S118_OSC_AlOfsClbCompen
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S115_MCF_frqpwmCalc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_frqpwmCalc"
+      /begin SUB_GROUP
+        S119_FrqRamp
+        S119_FrqRamp1
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_FixFreq_f32
+        CAL_MCF_HalfFreq_f32
+        CAL_MCF_flgRpwmFrqRandom_b
+        CAL_MCF_flgVF_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S12_Rem3
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/MCF_Signal/MCF_Signal/OffsetCal/Rem3"
+      /begin REF_MEASUREMENT
+        VAR_MCF_agRtrEe_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S18_FwcUsRes
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/Conditional Judgment /FwcUsRes"
+      /begin SUB_GROUP
+        S21_GetFwFlag
+        S21_GetUsResAct
+        S21_UsdqDesCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S19_FluxWeakeningLoop
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop"
+      /begin SUB_GROUP
+        S27_GetisdDesFw
+        S27_isdDesCoordinate1
+        S27_isqDesCoordinate
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_MCF_MPC_LdSubLq_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S20_CurrentLoop
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/udqDes/CurrentLoop"
+      /begin SUB_GROUP
+        S55_Subsystem
+        S55_Subsystem1
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_MCF_MPC_Ld_f32
+        VAR_MCF_MPC_Lq_f32
+        VAR_MCF_Rdc_nWoFlt_f32
+        VAR_MCF_SCF_flgInitEn_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Calculate_dead_compensation_voltage
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Calculat_ Dead_Compensation_Voltage/Calculate dead compensation voltage"
+      /begin SUB_GROUP
+        S63_Calculate_coefficient_alpha_and_beta_axis
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S60_Determines_dead_compensation_is_enabled
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Calculat_ Dead_Compensation_Voltage/Determines dead compensation is enabled"
+      /begin SUB_GROUP
+        S64_Determines_whether_dead_compensation_is_enabled
+        S64_Flag_of_dead_compensation_according_to_speed
+        S64__Flag_of_dead_compensation_according_to_torque
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S61_Harmonic_injection_of_11_and_13
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Harmonic_Injection_Funcation/Harmonic_injection_of_11_and_13"
+      /begin SUB_GROUP
+        S86_Set_11_steps_current_amplitude_and_phase
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S62_Calculate_zero_sequence_alpha_and_beta_axis_voltage
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage"
+      /begin SUB_GROUP
+        S92_Calculate_KpKi_for_uAlpha
+        S92_Calculate_KpKi_for_uBeta
+        S92_Incremental_PI
+        S92_Incremental_PI1
+        S92_Signal_Filter_of_current_of_alpha_axis_1
+        S92_Signal_Filter_of_current_of_alpha_axis_2
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S107_Inductancetestfunction
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc/McSfc/EOL Function/Inductancetestfunction"
+      /begin SUB_GROUP
+        S108_Close_Loop
+        S108_Open_Loop
+        S108_Output_UdDes_of_inductance
+        S108_Switch_UdDes_of_inductance
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S116_MCF_DPWM
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_DPWM/MCF_DPWM"
+      /begin SUB_GROUP
+        S120_DPWM_tiModu
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S116_MCF_DeadTimeCalc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_DPWM/MCF_DeadTimeCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_DeadTimeTableY_Ti_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S116_MCF_DpwmEn
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_DPWM/MCF_DpwmEn"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgDpwm_b
+        CAL_MCF_nDpwmOffDelay_f32
+        CAL_MCF_nDpwmOff_f32
+        CAL_MCF_trqDpwmOff_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S116_MCF_NarrWaSupr
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_DPWM/MCF_NarrWaSupr"
+      /begin SUB_GROUP
+        S124_OSC_SwtCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S116_MCF_dycCalc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_DPWM/MCF_dycCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_ratLo_f32
+        CAL_MCF_ratUp_f32
+        CAL_MCF_stChangePha_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S117_MCF_OverModuEn
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_OverModu/MCF_OverModuEn"
+      /begin SUB_GROUP
+        S168_Rem60
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_cofOverModu_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_uAOm_f32
+        VAR_MCF_uBOm_f32
+        VAR_MCF_usPeak_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S118_Mcf_AgTranCalc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_RePark/Mcf_AgTranCalc"
+      /begin SUB_GROUP
+        S177_First_LowPass
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_perCpnAg_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S118_OSC_AlOfsClbCompen
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_RePark/OSC_AlOfsClbCompen"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgOfsClbTest_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_uAOfsClb_f32
+        VAR_MCF_uBOfsClb_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_FrqRamp
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_frqpwmCalc/FrqRamp"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_FrqRmp_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S119_FrqRamp1
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_frqpwmCalc/FrqRamp1"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_FrqRmp_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S21_GetFwFlag
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/Conditional Judgment /FwcUsRes/GetFwFlag"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_UsUseRateDesTableY_UsRes_af32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_UsUseRateDes_f32
+        VAR_MCF_flgFw_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S21_GetUsResAct
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/Conditional Judgment /FwcUsRes/GetUsResAct"
+      /begin REF_MEASUREMENT
+        VAR_MCF_UsUseRateReal_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S21_UsdqDesCalc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/Conditional Judgment /FwcUsRes/UsdqDesCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_UsdScalSet_f32
+        CAL_MCF_UsqScalSet_f32
+        CAL_MCF_flgUseUsdqSet_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_udDes_f32
+        VAR_MCF_uqDes_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S27_GetisdDesFw
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw"
+      /begin SUB_GROUP
+        S29_IncPI
+        S29_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S27_isdDesCoordinate1
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isdDesCoordinate1"
+      /begin SUB_GROUP
+        S30_Discharge_id
+        S30_id_Set
+        S30_id_ThetaSet
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgUseisTheta_b
+        CAL_MCF_flgUseisdqSet_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_idDes_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S27_isqDesCoordinate
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isqDesCoordinate"
+      /begin SUB_GROUP
+        S31_Discharge_iq
+        S31_iq_Cal
+        S31_iq_Set
+        S31_iq_ThetaSet
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgUseisTheta_b
+        CAL_MCF_flgUseisdqSet_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_iqDes_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S55_Subsystem
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/udqDes/CurrentLoop/Subsystem"
+      /begin SUB_GROUP
+        S56_First_LowPass
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgUseUsOver_b
+        CAL_MCF_udOverGain_f32
+        CAL_MCF_uqOverGain_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_EmfBack_f32
+        VAR_MCF_udRv_f32
+        VAR_MCF_uqRv_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S55_Subsystem1
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/udqDes/CurrentLoop/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_udDecoupki_f32
+        CAL_MCF_udki_f32
+        CAL_MCF_udkp_f32
+        CAL_MCF_uqDecoupki_f32
+        CAL_MCF_uqki_f32
+        CAL_MCF_uqkp_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S63_Calculate_coefficient_alpha_and_beta_axis
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Calculat_ Dead_Compensation_Voltage/Calculate dead compensation voltage/Calculate coefficient alpha and beta axis"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_AgDiffCurrSec_f32
+        CAL_MCF_AgRangeDeadCpnY_Ag_af32
+        CAL_MCF_DeadTimeCpn_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S64__Flag_of_dead_compensation_according_to_torque
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Calculat_ Dead_Compensation_Voltage/Determines dead compensation is enabled/ Flag of dead compensation according to torque"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_TrqOffDeadCpn_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S64_Determines_whether_dead_compensation_is_enabled
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Calculat_ Dead_Compensation_Voltage/Determines dead compensation is enabled/Determines whether dead compensation is enabled"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_FlgUseDeadCpn_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_FlgDeadCpn_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S64_Flag_of_dead_compensation_according_to_speed
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Calculat_ Dead_Compensation_Voltage/Determines dead compensation is enabled/Flag of dead compensation according to speed"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_SpdOffDeadCpn_f32
+        CAL_MCF_SpdOnDeadCpn_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S86_Set_11_steps_current_amplitude_and_phase
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Harmonic_Injection_Funcation/Harmonic_injection_of_11_and_13/Set_11_steps_current_amplitude_and_phase"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_HarmIn11ZRY_Is_af32
+        CAL_MCF_HarmIn11ZRY_Thetam_af32
+        CAL_MCF_IsSet11ZR_f32
+        CAL_MCF_IsThetaSet11ZR_f32
+        CAL_MCF_flgHarmInIsThetaTab11ZR_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_IsSet11ZR_f32
+        VAR_MCF_IsThetaSet11ZR_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S92_Calculate_KpKi_for_uAlpha
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Calculate KpKi for uAlpha"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_CoefPIAlphaZeroCtlY_Ki_af32
+        CAL_MCF_CoefPIAlphaZeroFtlY_Kp_af32
+        CAL_MCF_KiAlphaZeroCtl_f32
+        CAL_MCF_KpAlphaZeroCtl_f32
+        CAL_MCF_flgTabZeroCtl_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S92_Calculate_KpKi_for_uBeta
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Calculate KpKi for uBeta"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_CoefPIBetaZeroCtlY_Ki_af32
+        CAL_MCF_CoefPIBetaZeroCtlY_Kp_af32
+        CAL_MCF_KiBetaZeroCtl_f32
+        CAL_MCF_KpBetaZeroCtl_f32
+        CAL_MCF_flgTabZeroCtl_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S92_Incremental_PI
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Incremental PI"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_AplhaRefZeroCtl_f32
+        CAL_MCF_DownLimPIZeroCtl_f32
+        CAL_MCF_UpLimPIZeroCtl_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S92_Incremental_PI1
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Incremental PI1"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_BetaRefZeroCtl_f32
+        CAL_MCF_DownLimPIZeroCtl_f32
+        CAL_MCF_UpLimPIZeroCtl_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S92_Signal_Filter_of_current_of_alpha_axis_1
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Signal Filter of current of alpha axis 1"
+      /begin SUB_GROUP
+        S97_First_low_pass
+        S97_Second_band_stop_filter
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S92_Signal_Filter_of_current_of_alpha_axis_2
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Signal Filter of current of alpha axis 2"
+      /begin SUB_GROUP
+        S98_First_low_pass
+        S98_Second_band_stop_filter
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S108_Close_Loop
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc/McSfc/EOL Function/Inductancetestfunction/Close Loop"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_FlgUseSatuEOL_b
+        CAL_MCF_IsrmsDesEOL_f32
+        CAL_MCF_KiUdEOL_f32
+        CAL_MCF_KpUdEOL_f32
+        CAL_MCF_uDDownLimEOL_f32
+        CAL_MCF_uDUpLimEOL_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S108_Open_Loop
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc/McSfc/EOL Function/Inductancetestfunction/Open Loop"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_IsrmsDesEOL_f32
+        CAL_MCF_uDDesEOLY_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S108_Output_UdDes_of_inductance
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc/McSfc/EOL Function/Inductancetestfunction/Output UdDes of inductance"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_CoefuDCLimtEOL_f32
+        CAL_MCF_TrqInvMax_f32
+        CAL_MCF_uQDesEOL_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S108_Switch_UdDes_of_inductance
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McSfc/McSfc/EOL Function/Inductancetestfunction/Switch UdDes of inductance"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_FlgUseClose_b
+        CAL_MCF_FlgUseOpen_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S120_DPWM_tiModu
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_DPWM/MCF_DPWM/DPWM_tiModu"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_stDpwm_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S124_OSC_SwtCalc
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_DPWM/MCF_NarrWaSupr/OSC_SwtCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgNWS_b
+        CAL_MCF_ratNarrWave_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S168_Rem60
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_OverModu/MCF_OverModuEn/Rem60"
+      /begin REF_MEASUREMENT
+        VAR_MCF_AgRem_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S177_First_LowPass
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McVmc/McVmc/MCF_RePark/Mcf_AgTranCalc/First_LowPass"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_cofFltN_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S29_IncPI
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/IncPI"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgUseFF_b
+        CAL_MCF_isdfwKi_f32
+        CAL_MCF_isdfwKp_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_isdFW_f32
+        VAR_MCF_periodCalc_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S29_Subsystem1
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1"
+      /begin SUB_GROUP
+        S34_Subsystem
+        S34_Subsystem4
+        S34_Subsystem5
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_MCF_idMotHeat_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S30_Discharge_id
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isdDesCoordinate1/Discharge_id"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_DisChaisdDes_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S30_id_Set
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isdDesCoordinate1/id_Set"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_isdSet_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S30_id_ThetaSet
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isdDesCoordinate1/id_ThetaSet"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_isSet_f32
+        CAL_MCF_isThetaSet_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S31_Discharge_iq
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isqDesCoordinate/Discharge_iq"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_DisChaisqDes_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S31_iq_Cal
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isqDesCoordinate/iq_Cal"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_isMax_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S31_iq_Set
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isqDesCoordinate/iq_Set"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_isqSet_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S31_iq_ThetaSet
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/isqDesCoordinate/iq_ThetaSet"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_isSet_f32
+        CAL_MCF_isThetaSet_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S56_First_LowPass
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/udqDes/CurrentLoop/Subsystem/First_LowPass"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_cofFltWe_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S97_First_low_pass
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Signal Filter of current of alpha axis 1/First low pass"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_OmbwFirstFltY_Ombw_af32
+        CAL_MCF_SampleTime_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_iBetaActFlt_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S97_Second_band_stop_filter
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Signal Filter of current of alpha axis 1/Second band stop filter"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_CoefFltZero_A_f32
+        CAL_MCF_CoefFltZero_B_f32
+        CAL_MCF_CoefFltZero_C_f32
+        CAL_MCF_SampleTime_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S98_First_low_pass
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Signal Filter of current of alpha axis 2/First low pass"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_OmbwFirstFltY_Ombw_af32
+        CAL_MCF_SampleTime_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_iAlphaActFlt_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S98_Second_band_stop_filter
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McPoc/McPoc/Zero Sequence Control Function/Calculate zero sequence alpha and beta axis voltage/Signal Filter of current of alpha axis 2/Second band stop filter"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_CoefFltZero_A_f32
+        CAL_MCF_CoefFltZero_B_f32
+        CAL_MCF_CoefFltZero_C_f32
+        CAL_MCF_SampleTime_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S34_Subsystem
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1/Subsystem"
+      /begin SUB_GROUP
+        S38_First_LowPass
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_ActiveHeatInit_u8
+        CAL_MCF_ActiveHeatNormal_u8
+        CAL_MCF_DeltaPower_f32
+        CAL_MCF_Non_ActiveHeat_u8
+        CAL_MCF_Part_ActiveHeat_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_TMAhtChsts_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S34_Subsystem4
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1/Subsystem4"
+      /begin SUB_GROUP
+        S39_Subsystem1
+        S39_Subsystem2
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S34_Subsystem5
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1/Subsystem5"
+      /begin SUB_GROUP
+        S40_Subsystem
+        S40_Subsystem4
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S38_First_LowPass
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1/Subsystem/First_LowPass"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_cofFltPowerHeat_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S39_Subsystem1
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1/Subsystem4/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_UpPowerHeat_f32
+        CAL_PowerMotHeat_f32
+        CAL_cofPowerLimitMotHeat_af32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_PCUHeaterPower_f32
+        VAR_MCF_PowerDcLnk_f32
+        VAR_MCF_PowerMech_f32
+        VAR_MCF_PowerMotHeat_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S39_Subsystem2
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1/Subsystem4/Subsystem2"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_DownLimitIMotHeat_f32
+        CAL_MCF_DownLimitPIMotHeat_f32
+        CAL_MCF_KiMotHeat_f32
+        CAL_MCF_KpMotHeat_f32
+        CAL_MCF_UpLimitIMotHeat_f32
+        CAL_MCF_UpLimitPIMotHeat_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S40_Subsystem
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1/Subsystem5/Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_flgMotHeat_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MCF_flgMotHeat_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S40_Subsystem4
+      /* Long identifier        */       "SWC_MCF/RE_SWC_MCF_100us_sys/Subsystem/McFwc/McFwc/idqDes/FluxWeakeningLoop/GetisdDesFw/Subsystem1/Subsystem5/Subsystem4"
+      /begin REF_CHARACTERISTIC
+        CAL_MCF_SpdOffActiveHeat_f32
+        CAL_MCF_TrqOffActiveHeat_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_MCF.a2l */

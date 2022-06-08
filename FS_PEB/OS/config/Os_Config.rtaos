@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RTAOS_Project version="1.0">
+  <Working name=".\TC_275_base.arxml" />
+  <File name=".\TC_275_base.arxml" />
+  <File name=".\EcuC_EcucValues.arxml" />
+  <File name=".\osNeeds.arxml" />
+  <File name="..\..\RTE\gen\iocNeeds.arxml" />
+  <Options>
+    <Option name="BuildGui.OutputFolder">./</Option>
+    <Option name="BuildGui.AddWorkingDirInc">TRUE</Option>
+    <Option name="BuildGui.CleanRebuild">TRUE</Option>
+    <Option name="BuildGui.OutputLocations">[*.c]..\Output\src;[*.h]..\Output\inc;[*]..\Output</Option>
+    <Option name="BuildGui.IncludePaths">..\OsShell;..\..\RTE\gen;..\..\RTE\Cfg;..\..\INFRA\api;..\..\INFRA\Memmap;..\..\MCAL\api</Option>
+    <Option name="BuildGui.LastBuildCommand">rtaosgen.exe --build:clean --output:./ --output:[*.c]..\Output\src --output:[*.h]..\Output\inc --output:[*]..\Output --include:./ --include:..\OsShell --include:..\..\RTE\gen --include:..\..\RTE\Cfg --include:..\..\INFRA\api --include:..\..\INFRA\Memmap --include:..\..\MCAL\api Os_Config.rtaos</Option>
+  </Options>
+</RTAOS_Project>

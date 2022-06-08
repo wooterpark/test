@@ -1,0 +1,2704 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     a2ltoolkit.a2l
+ *
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "A2LTOOLKIT_A2L"
+  
+  /begin HEADER "A2LTOOLKIT_A2L"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "A2LTOOLKIT_A2L"
+    
+    /begin MOD_PAR "A2LTOOLKIT_A2L"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "A2LTOOLKIT_A2L" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+
+   
+  /begin MEASUREMENT Rte_Rx_000194_CSPF_RecTrqDmpMax
+    "Rte_Rx_000194_CSPF_RecTrqDmpMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000063_HSPF_tStrrTemp2Flt
+    "Rte_Rx_000063_HSPF_tStrrTemp2Flt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000241_TPC_bDernOvrUdc
+    "Rte_Rx_000241_TPC_bDernOvrUdc"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000081_LvPower_stLowpowerUp
+    "Rte_Rx_000081_LvPower_stLowpowerUp"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000031_Com_VCU06_stDoor
+    "Rte_Rx_000031_Com_VCU06_stDoor"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000243_TPC_bDernUndrUdc
+    "Rte_Rx_000243_TPC_bDernUndrUdc"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000061_HSPF_tIgbtTjFlt
+    "Rte_Rx_000061_HSPF_tIgbtTjFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000177_SCF_stDrvCtl
+    "Rte_Rx_000177_SCF_stDrvCtl"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000213_Cpld_CpldSwVer
+    "Rte_Rx_000213_Cpld_CpldSwVer"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000004_Com_VCU01_idcMin
+    "Rte_Rx_000004_Com_VCU01_idcMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000027_Com_VCU06_Park
+    "Rte_Rx_000027_Com_VCU06_Park"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000143_PCF_dycPWM
+    "Rte_Rx_000143_PCF_dycPWM"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000165_RCF_stEstAlRtrOfs
+    "Rte_Rx_000165_RCF_stEstAlRtrOfs"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000195_CSPF_RecTrqDmpMin
+    "Rte_Rx_000195_CSPF_RecTrqDmpMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000026_Com_VCU05_stDmpCtLReq
+    "Rte_Rx_000026_Com_VCU05_stDmpCtLReq"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000160_RCF_cTrqSlpOfsClb
+    "Rte_Rx_000160_RCF_cTrqSlpOfsClb"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000206_CSPF_RecidcMax
+    "Rte_Rx_000206_CSPF_RecidcMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000102_MCF_stPwmMode
+    "Rte_Rx_000102_MCF_stPwmMode"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000202_CSPF_RecUdcMax
+    "Rte_Rx_000202_CSPF_RecUdcMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000252_VCF_TrqDes
+    "Rte_Rx_000252_VCF_TrqDes"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000224_Snapshot_flgPostDrvDone
+    "Rte_Rx_000224_Snapshot_flgPostDrvDone"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000214_Cpld_IgbtState
+    "Rte_Rx_000214_Cpld_IgbtState"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000208_CSPF_RecstDmpCtLReq
+    "Rte_Rx_000208_CSPF_RecstDmpCtLReq"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000150_PhC_iVNoOff
+    "Rte_Rx_000150_PhC_iVNoOff"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000199_CSPF_RecTrqMinNCtL
+    "Rte_Rx_000199_CSPF_RecTrqMinNCtL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000240_TPC_bDernOvrIdc
+    "Rte_Rx_000240_TPC_bDernOvrIdc"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000162_RCF_flgOfsClbSucToNVM
+    "Rte_Rx_000162_RCF_flgOfsClbSucToNVM"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000125_MPC_TrqMechFlt
+    "Rte_Rx_000125_MPC_TrqMechFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000082_MCF_DycU
+    "Rte_Rx_000082_MCF_DycU"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000005_Com_VCU01_UdcMax
+    "Rte_Rx_000005_Com_VCU01_UdcMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000220_DiagCalib_FailCode5
+    "Rte_Rx_000220_DiagCalib_FailCode5"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000040_HSPF_PwrDcLnk
+    "Rte_Rx_000040_HSPF_PwrDcLnk"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000233_TPC_bDernCAN
+    "Rte_Rx_000233_TPC_bDernCAN"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000006_Com_VCU01_UdcMin
+    "Rte_Rx_000006_Com_VCU01_UdcMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000204_CSPF_RecflgCrash
+    "Rte_Rx_000204_CSPF_RecflgCrash"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000141_PCF_SLtrqDes
+    "Rte_Rx_000141_PCF_SLtrqDes"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000209_CSPF_RecstMainReLay
+    "Rte_Rx_000209_CSPF_RecstMainReLay"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000086_MCF_Is
+    "Rte_Rx_000086_MCF_Is"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000071_HvMcu_VDD15L_Vol
+    "Rte_Rx_000071_HvMcu_VDD15L_Vol"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000236_TPC_bDernDrvBoardTemp
+    "Rte_Rx_000236_TPC_bDernDrvBoardTemp"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000251_VCF_NsetPReq
+    "Rte_Rx_000251_VCF_NsetPReq"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000145_PCF_flgSLWD
+    "Rte_Rx_000145_PCF_flgSLWD"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000186_BCC_iDcLnkEstFlt
+    "Rte_Rx_000186_BCC_iDcLnkEstFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000024_Com_VCU05_bSetOfsAL
+    "Rte_Rx_000024_Com_VCU05_bSetOfsAL"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000050_HSPF_stIphaOffCal
+    "Rte_Rx_000050_HSPF_stIphaOffCal"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000227_TDC_flgTrqLmtActv
+    "Rte_Rx_000227_TDC_flgTrqLmtActv"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000074_HvMcu_tDBCTempV
+    "Rte_Rx_000074_HvMcu_tDBCTempV"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000178_SCF_stFFAction
+    "Rte_Rx_000178_SCF_stFFAction"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000000_Com_BMS01_BattCurr
+    "Rte_Rx_000000_Com_BMS01_BattCurr"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000016_Com_VCU04_MotDir
+    "Rte_Rx_000016_Com_VCU04_MotDir"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000138_PCF_MotDir
+    "Rte_Rx_000138_PCF_MotDir"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000022_Com_VCU05_TrqDmpMin
+    "Rte_Rx_000022_Com_VCU05_TrqDmpMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000062_HSPF_tStrrTemp1Flt
+    "Rte_Rx_000062_HSPF_tStrrTemp1Flt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000096_MCF_iW
+    "Rte_Rx_000096_MCF_iW"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000148_PhC_iUNoOff
+    "Rte_Rx_000148_PhC_iUNoOff"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000234_TPC_bDernCoolantTemp
+    "Rte_Rx_000234_TPC_bDernCoolantTemp"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000060_HSPF_tDrvBoardTempFlt
+    "Rte_Rx_000060_HSPF_tDrvBoardTempFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000053_HSPF_tCoolantTjFlt
+    "Rte_Rx_000053_HSPF_tCoolantTjFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000014_Com_VCU03_TrqMin
+    "Rte_Rx_000014_Com_VCU03_TrqMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000232_TPC_TrqMin
+    "Rte_Rx_000232_TPC_TrqMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000137_NvM_flgAngAutoClbOffset
+    "Rte_Rx_000137_NvM_flgAngAutoClbOffset"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000172_SCF_flgEmgReqInvDcha
+    "Rte_Rx_000172_SCF_flgEmgReqInvDcha"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000176_SCF_stDisChg
+    "Rte_Rx_000176_SCF_stDisChg"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000019_Com_VCU04_bKL15
+    "Rte_Rx_000019_Com_VCU04_bKL15"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000147_PCF_stParkCtl
+    "Rte_Rx_000147_PCF_stParkCtl"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000219_DiagCalib_FailCode4
+    "Rte_Rx_000219_DiagCalib_FailCode4"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000168_Rdc_nWoFlt
+    "Rte_Rx_000168_Rdc_nWoFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000161_RCF_flgOfsClbSuc
+    "Rte_Rx_000161_RCF_flgOfsClbSuc"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000070_HvMcu_HvMcuVer
+    "Rte_Rx_000070_HvMcu_HvMcuVer"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000197_CSPF_RecTrqMaxNCtL
+    "Rte_Rx_000197_CSPF_RecTrqMaxNCtL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000090_MCF_frqPwm
+    "Rte_Rx_000090_MCF_frqPwm"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000207_CSPF_RecidcMin
+    "Rte_Rx_000207_CSPF_RecidcMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000010_Com_VCU02_NDiffMax
+    "Rte_Rx_000010_Com_VCU02_NDiffMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000069_HvMcu_AlOfsClb_TimeStamp
+    "Rte_Rx_000069_HvMcu_AlOfsClb_TimeStamp"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000078_HvMcu_uDcLnkHvMcu
+    "Rte_Rx_000078_HvMcu_uDcLnkHvMcu"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000155_RCF_AutoClbOffset
+    "Rte_Rx_000155_RCF_AutoClbOffset"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000167_Rdc_ArctanAgRtr
+    "Rte_Rx_000167_Rdc_ArctanAgRtr"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000073_HvMcu_tDBCTempU
+    "Rte_Rx_000073_HvMcu_tDBCTempU"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000083_MCF_DycV
+    "Rte_Rx_000083_MCF_DycV"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000079_Igbt_flgGateDrvRdyHs
+    "Rte_Rx_000079_Igbt_flgGateDrvRdyHs"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000051_HSPF_tCoolantTempFlt
+    "Rte_Rx_000051_HSPF_tCoolantTempFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000013_Com_VCU03_TrqMax
+    "Rte_Rx_000013_Com_VCU03_TrqMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000042_HSPF_bt15
+    "Rte_Rx_000042_HSPF_bt15"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000244_TPC_stMotorMod
+    "Rte_Rx_000244_TPC_stMotorMod"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000203_CSPF_RecUdcMin
+    "Rte_Rx_000203_CSPF_RecUdcMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000028_Com_VCU06_VehGrad
+    "Rte_Rx_000028_Com_VCU06_VehGrad"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000249_VCF_HoldStartTrq
+    "Rte_Rx_000249_VCF_HoldStartTrq"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000174_SCF_flgUdcLowToTpc
+    "Rte_Rx_000174_SCF_flgUdcLowToTpc"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000043_HSPF_flgCrash
+    "Rte_Rx_000043_HSPF_flgCrash"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000229_TPC_SgnTrqMechDir
+    "Rte_Rx_000229_TPC_SgnTrqMechDir"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000180_SCF_stGateDrv
+    "Rte_Rx_000180_SCF_stGateDrv"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000021_Com_VCU05_OfsAL
+    "Rte_Rx_000021_Com_VCU05_OfsAL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000193_CSPF_RecNSetP
+    "Rte_Rx_000193_CSPF_RecNSetP"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000121_MPC_Rs
+    "Rte_Rx_000121_MPC_Rs"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000017_Com_VCU04_NSetP
+    "Rte_Rx_000017_Com_VCU04_NSetP"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000200_CSPF_RecTrqSLope
+    "Rte_Rx_000200_CSPF_RecTrqSLope"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000119_MPC_Psi
+    "Rte_Rx_000119_MPC_Psi"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000242_TPC_bDernStrTemp
+    "Rte_Rx_000242_TPC_bDernStrTemp"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000041_HSPF_Wake
+    "Rte_Rx_000041_HSPF_Wake"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000152_PhC_iWNoOff
+    "Rte_Rx_000152_PhC_iWNoOff"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000156_RCF_TrqEmDesOfsClb
+    "Rte_Rx_000156_RCF_TrqEmDesOfsClb"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000109_MDF_stFrwhl
+    "Rte_Rx_000109_MDF_stFrwhl"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000129_MPC_isdFlt
+    "Rte_Rx_000129_MPC_isdFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000030_Com_VCU06_stBreak
+    "Rte_Rx_000030_Com_VCU06_stBreak"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000072_HvMcu_flgUphaEdgeRiseCo
+    "Rte_Rx_000072_HvMcu_flgUphaEdgeRiseCo"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000146_PCF_flgShtDwnReq
+    "Rte_Rx_000146_PCF_flgShtDwnReq"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000164_RCF_stAgRtrOfsCal
+    "Rte_Rx_000164_RCF_stAgRtrOfsCal"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000094_MCF_iV
+    "Rte_Rx_000094_MCF_iV"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000181_SCF_stModeReqToTdc
+    "Rte_Rx_000181_SCF_stModeReqToTdc"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000237_TPC_bDernExcMax
+    "Rte_Rx_000237_TPC_bDernExcMax"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000002_Com_BMS01_stMainReLay
+    "Rte_Rx_000002_Com_BMS01_stMainReLay"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000196_CSPF_RecTrqMax
+    "Rte_Rx_000196_CSPF_RecTrqMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000228_TPC_SgnRotDir
+    "Rte_Rx_000228_TPC_SgnRotDir"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000132_MPC_isqFlt
+    "Rte_Rx_000132_MPC_isqFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000092_MCF_iU
+    "Rte_Rx_000092_MCF_iU"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000044_HSPF_iDcLnkEstFlt
+    "Rte_Rx_000044_HSPF_iDcLnkEstFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000007_Com_VCU01_stHvbMaiRly
+    "Rte_Rx_000007_Com_VCU01_stHvbMaiRly"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000107_MDF_bFaultEMBlkWarnSt
+    "Rte_Rx_000107_MDF_bFaultEMBlkWarnSt"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000217_DiagCalib_FailCode2
+    "Rte_Rx_000217_DiagCalib_FailCode2"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000023_Com_VCU05_TrqDmpMax
+    "Rte_Rx_000023_Com_VCU05_TrqDmpMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000190_CSPF_RecKpHighNCtL
+    "Rte_Rx_000190_CSPF_RecKpHighNCtL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000239_TPC_bDernMtrSpd
+    "Rte_Rx_000239_TPC_bDernMtrSpd"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000123_MPC_TrqMech
+    "Rte_Rx_000123_MPC_TrqMech"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000215_Cpld_ProjectNum
+    "Rte_Rx_000215_Cpld_ProjectNum"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000038_Epark_posPcf
+    "Rte_Rx_000038_Epark_posPcf"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000048_HSPF_nSlowFlt
+    "Rte_Rx_000048_HSPF_nSlowFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000140_PCF_SLInPLimt
+    "Rte_Rx_000140_PCF_SLInPLimt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000039_Epark_posPcfMon
+    "Rte_Rx_000039_Epark_posPcfMon"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000184_SCF_stSysCtl
+    "Rte_Rx_000184_SCF_stSysCtl"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000139_PCF_SLEnMotorAcc
+    "Rte_Rx_000139_PCF_SLEnMotorAcc"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000210_CSPF_RecstModeReq
+    "Rte_Rx_000210_CSPF_RecstModeReq"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000103_MCF_tiLock
+    "Rte_Rx_000103_MCF_tiLock"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000248_Tja1043_flgCAN_WakeUp
+    "Rte_Rx_000248_Tja1043_flgCAN_WakeUp"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000198_CSPF_RecTrqMin
+    "Rte_Rx_000198_CSPF_RecTrqMin"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000075_HvMcu_tDBCTempW
+    "Rte_Rx_000075_HvMcu_tDBCTempW"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000235_TPC_bDernDbcTemp
+    "Rte_Rx_000235_TPC_bDernDbcTemp"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000066_HSPF_uDcLnkSlowFlt
+    "Rte_Rx_000066_HSPF_uDcLnkSlowFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000001_Com_BMS01_BattVoLt
+    "Rte_Rx_000001_Com_BMS01_BattVoLt"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000254_VCF_trqRamp
+    "Rte_Rx_000254_VCF_trqRamp"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000238_TPC_bDernExcMin
+    "Rte_Rx_000238_TPC_bDernExcMin"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000222_DiagCalib_FailCode7
+    "Rte_Rx_000222_DiagCalib_FailCode7"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000250_VCF_KpNCtl
+    "Rte_Rx_000250_VCF_KpNCtl"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000113_MPC_Ld
+    "Rte_Rx_000113_MPC_Ld"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000226_TDC_TrqDes
+    "Rte_Rx_000226_TDC_TrqDes"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000171_SCF_bHvReady
+    "Rte_Rx_000171_SCF_bHvReady"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000065_HSPF_tStrrTempFlt
+    "Rte_Rx_000065_HSPF_tStrrTempFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000008_Com_VCU02_KpHighNCtL
+    "Rte_Rx_000008_Com_VCU02_KpHighNCtL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000015_Com_VCU03_cTrqSlopeMax
+    "Rte_Rx_000015_Com_VCU03_cTrqSlopeMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000003_Com_VCU01_idcMax
+    "Rte_Rx_000003_Com_VCU01_idcMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000111_MPC_IsFlt
+    "Rte_Rx_000111_MPC_IsFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000247_TPC_stTrqEmMin
+    "Rte_Rx_000247_TPC_stTrqEmMin"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000020_Com_VCU04_stModeReq
+    "Rte_Rx_000020_Com_VCU04_stModeReq"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000011_Com_VCU02_TrqMaxNCtL
+    "Rte_Rx_000011_Com_VCU02_TrqMaxNCtL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000134_NvM_SLFnh
+    "Rte_Rx_000134_NvM_SLFnh"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000101_MCF_secVolt
+    "Rte_Rx_000101_MCF_secVolt"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000029_Com_VCU06_stBelt
+    "Rte_Rx_000029_Com_VCU06_stBelt"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000205_CSPF_RecflgDchaReq
+    "Rte_Rx_000205_CSPF_RecflgDchaReq"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000182_SCF_stPreDrvCtl
+    "Rte_Rx_000182_SCF_stPreDrvCtl"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000135_NvM_SLInPLimt
+    "Rte_Rx_000135_NvM_SLInPLimt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000076_HvMcu_tDrvBoardTemp
+    "Rte_Rx_000076_HvMcu_tDrvBoardTemp"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000216_DiagCalib_FailCode1
+    "Rte_Rx_000216_DiagCalib_FailCode1"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000189_CSPF_RecKpDmp
+    "Rte_Rx_000189_CSPF_RecKpDmp"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000037_Epark_iPcf
+    "Rte_Rx_000037_Epark_iPcf"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000009_Com_VCU02_KpLowNCtL
+    "Rte_Rx_000009_Com_VCU02_KpLowNCtL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000012_Com_VCU02_TrqMinNCtL
+    "Rte_Rx_000012_Com_VCU02_TrqMinNCtL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000218_DiagCalib_FailCode3
+    "Rte_Rx_000218_DiagCalib_FailCode3"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000116_MPC_Lq
+    "Rte_Rx_000116_MPC_Lq"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000246_TPC_stTrqEmMax
+    "Rte_Rx_000246_TPC_stTrqEmMax"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000068_HSPF_uKl30Flt
+    "Rte_Rx_000068_HSPF_uKl30Flt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000025_Com_VCU05_kDmp
+    "Rte_Rx_000025_Com_VCU05_kDmp"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000144_PCF_flgAllowPwmRun
+    "Rte_Rx_000144_PCF_flgAllowPwmRun"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000253_VCF_stModeReq
+    "Rte_Rx_000253_VCF_stModeReq"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000058_HSPF_tDBCTempWFlt
+    "Rte_Rx_000058_HSPF_tDBCTempWFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000231_TPC_TrqMax
+    "Rte_Rx_000231_TPC_TrqMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000223_DiagCalib_FailCode8
+    "Rte_Rx_000223_DiagCalib_FailCode8"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000080_Igbt_flgGateDrvRdyLs
+    "Rte_Rx_000080_Igbt_flgGateDrvRdyLs"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    1
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000056_HSPF_tDBCTempVFlt
+    "Rte_Rx_000056_HSPF_tDBCTempVFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000221_DiagCalib_FailCode6
+    "Rte_Rx_000221_DiagCalib_FailCode6"
+    UBYTE
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    255
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000201_CSPF_RecTrqSetP
+    "Rte_Rx_000201_CSPF_RecTrqSetP"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000084_MCF_DycW
+    "Rte_Rx_000084_MCF_DycW"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000018_Com_VCU04_TrqSetP
+    "Rte_Rx_000018_Com_VCU04_TrqSetP"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000192_CSPF_RecNDiffMax
+    "Rte_Rx_000192_CSPF_RecNDiffMax"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000142_PCF_Status
+    "Rte_Rx_000142_PCF_Status"
+    UWORD
+    RTE_A2L_Ident_Int
+    1
+    100
+    0
+    65535
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000191_CSPF_RecKpLowNCtL
+    "Rte_Rx_000191_CSPF_RecKpLowNCtL"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+  /begin MEASUREMENT Rte_Rx_000054_HSPF_tDBCTempUFlt
+    "Rte_Rx_000054_HSPF_tDBCTempUFlt"
+    FLOAT32_IEEE
+    RTE_A2L_Ident_Float
+    1
+    100
+    -3.4E+38
+    3.4E+38
+    
+    ECU_ADDRESS 0x00000000
+  /end MEASUREMENT
+         
+
+
+
+
+
+    /begin COMPU_METHOD
+    /* Name of CompuMethod    */      RTE_A2L_Ident_Float
+    /* Long identifier        */      "Q = V"
+    /* Conversion Type        */      RAT_FUNC
+    /* Format                 */      "%8.6"
+    /* Units                  */      ""
+    /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+    /* Name of CompuMethod    */      RTE_A2L_Ident_Int
+    /* Long identifier        */      "Q = V"
+    /* Conversion Type        */      RAT_FUNC
+    /* Format                 */      "%8.0"
+    /* Units                  */      ""
+    /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+
+    /begin COMPU_METHOD
+    /* Name of CompuMethod    */      BSW_A2L_Ident_Float
+    /* Long identifier        */      "Q = V"
+    /* Conversion Type        */      RAT_FUNC
+    /* Format                 */      "%8.6"
+    /* Units                  */      ""
+    /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+    /* Name of CompuMethod    */      BSW_A2L_Ident_Int
+    /* Long identifier        */      "Q = V"
+    /* Conversion Type        */      RAT_FUNC
+    /* Format                 */      "%8.0"
+    /* Units                  */      ""
+    /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+
+  
+
+  
+    
+  /end MODULE
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF A2LTOOLKIT_A2L.a2l */

@@ -1,0 +1,27 @@
+[ Comment of project ]
+PROJECT NAME           : ETAS_AUTOSAR
+PROJECT LONGIDENTIFIER : XCP on CAN
+HEADER PROJECT_NO      : ETAS_AUTOSAR
+DAY OF CREATING        : 2022/2/25
+TIME OF CREATING       : 16:56:53
+ASAP2 FILE             : E:\Code\FS_PEB_0224\delivery\iEDS_delivery_202202251655.a2l
+MASTER HEX FILE        : E:\Code\FS_PEB_0224\delivery\iEDS_delivery_202202251655.hex
+
+[ Comment of dataset ]
+COUNTER OF CHANGES     : 3726
+DATASET                : RP: iEDS_delivery_202202251655 (DEFAULT/iEDS_delivery_202202251655/iEDS_delivery_202202251655/iEDS_delivery_202202251655)
+LAST USER              : banjianan
+DAY OF CHANGING        : 2022/2/25
+TIME OF CHANGING       : 16:57:20
+COMMENTS               : 
+
+这个数据集的HEX文件是:
+E:\Code\FS_PEB_0224\delivery\iEDS_delivery_202202251655.hex
+2022/2/25 16:55:02 5042 KB
+
+
+
+从主文件 :iEDS_delivery_202202251655复制 (2022/2/25 16:56:55)
+创建HEX文件: E:\Code\FS_PEB_0224\delivery\iEDS_delivery_202202251655_data.hex
+2022/2/25 16:57:33 4293 KB by: banjianan
+

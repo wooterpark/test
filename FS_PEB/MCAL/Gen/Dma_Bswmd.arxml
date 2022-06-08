@@ -1,0 +1,1890 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!--
+/******************************************************************************
+**                                                                           **
+** Copyright (C) Infineon Technologies (2015)                                **
+**                                                                           **
+** All rights reserved.                                                      **
+**                                                                           **
+** This document contains proprietary information belonging to Infineon      **
+** Technologies. Passing on and copying of this document, and communication  **
+** of its contents is not permitted without prior written authorization.     **
+**                                                                           **
+*******************************************************************************
+**                                                                           **
+**  $FILENAME   : Dma_Bswmd.arxml $                                          **
+**                                                                           **
+**  $CC VERSION : \main\22 $                                                 **
+**                                                                           **
+**  $DATE       : 2015-11-30 $                                               **
+**                                                                           **
+**  AUTHOR    : DL-AUTOSAR-Engineering                                       **
+**                                                                           **
+**  VENDOR    : Infineon Technologies                                        **
+**                                                                           **
+**  DESCRIPTION  : BSWMD for Dma driver                            **
+**                                                                           **
+**  MAY BE CHANGED BY USER [yes/no]: No                                      **
+**                                                                           **
+******************************************************************************/
+/******************************************************************************
+**  Traceability   :                                                         **
+** [cover parentID=SAS_AS4XX_DMA_PR669,SAS_AS4XX_DMA_PR672,SAS_AS4XX_DMA_PR677,
+                   SAS_AS4XX_DMA_PR678,SAS_AS4XX_DMA_PR680,SAS_AS4XX_DMA_PR681,
+                   SAS_AS4XX_DMA_PR683,SAS_AS4XX_DMA_PR684,SAS_AS4XX_DMA_PR685,
+                   SAS_AS4XX_DMA_PR695,SAS_AS4XX_DMA_PR670]
+    [/cover]
+                                                                             **
+******************************************************************************/
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd"> 
+<AR-PACKAGES>
+    <AR-PACKAGE>
+        <SHORT-NAME>AURIX_Dma</SHORT-NAME>
+        <AR-PACKAGES>
+            <AR-PACKAGE>
+                <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+                <CATEGORY>STANDARD</CATEGORY>
+                <ELEMENTS>
+                    <BSW-MODULE-DESCRIPTION>
+                        <SHORT-NAME>Dma</SHORT-NAME>
+                        <LONG-NAME>
+                            <L-4 L="EN">Direct Memory Access</L-4>
+                        </LONG-NAME>
+                        <CATEGORY>BSW_MODULE</CATEGORY>
+                        <MODULE-ID>255</MODULE-ID>
+                        <PROVIDED-ENTRYS>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_Init</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_StartSwTransaction</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_StartHwTransaction</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_DisableHwTransaction</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GetChannelStatus</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GetMoveEngineErrFlags</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ClearMoveEngineErrFlags</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ClearInterruptStatus</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GetTransferCount</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ConfigHaltChannel</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ConfigChannelInterrupt</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GiveSwTrigger</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GetCRC</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ConfigShadowAddress</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ReconfigureChannel</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        </PROVIDED-ENTRYS>
+                        <BSW-MODULE-DEPENDENCYS>
+                            <BSW-MODULE-DEPENDENCY>
+                                <SHORT-NAME>DetDependency</SHORT-NAME>
+                                <TARGET-MODULE-ID>15</TARGET-MODULE-ID>
+                                <REQUIRED-ENTRYS>
+                                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                        <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Det/BswModuleEntrys/Det_ReportError</BSW-MODULE-ENTRY-REF>
+                                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                </REQUIRED-ENTRYS>
+                            </BSW-MODULE-DEPENDENCY>
+                        </BSW-MODULE-DEPENDENCYS>
+                        <INTERNAL-BEHAVIORS>
+                          <BSW-INTERNAL-BEHAVIOR>
+                            <SHORT-NAME>DmaBehavior</SHORT-NAME>
+                            <CONSTANT-MEMORYS>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Dma_kConfigPtr</SHORT-NAME>
+                                <CATEGORY>DATA_REFERENCE</CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                  <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <SW-POINTER-TARGET-PROPS>
+                                <TARGET-CATEGORY>TYPE_REFERENCE</TARGET-CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                      <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    </SW-POINTER-TARGET-PROPS>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                <TYPE-TREF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ConfigType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                            </CONSTANT-MEMORYS>
+                            <STATIC-MEMORYS>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Dma_DriverState</SHORT-NAME>
+                                <SW-DATA-DEF-PROPS>
+                                  <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                <TYPE-TREF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Dma_ChannelState</SHORT-NAME>
+                                <SW-DATA-DEF-PROPS>
+                                  <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                <TYPE-TREF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                            </STATIC-MEMORYS>
+                            <ENTITYS>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_Init</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_Init</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_StartSwTransaction</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_StartSwTransaction</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_StartHwTransaction</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_StartHwTransaction</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_DisableHwTransaction</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_DisableHwTransaction</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_GetChannelStatus</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GetChannelStatus</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_GetMoveEngineErrFlags</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GetMoveEngineErrFlags</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_ClearMoveEngineErrFlags</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ClearMoveEngineErrFlags</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_ClearInterruptStatus</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ClearInterruptStatus</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_GetTransferCount</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GetTransferCount</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_ConfigHaltChannel</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ConfigHaltChannel</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_ConfigChannelInterrupt</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ConfigChannelInterrupt</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_GiveSwTrigger</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GiveSwTrigger</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_GetCRC</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_GetCRC</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_ConfigShadowAddress</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ConfigShadowAddress</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>Dma_ReconfigureChannel</SHORT-NAME>
+                                <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX_Dma/BswModuleEntrys/Dma_ReconfigureChannel</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                            </ENTITYS>
+                          </BSW-INTERNAL-BEHAVIOR>
+                        </INTERNAL-BEHAVIORS>
+                    </BSW-MODULE-DESCRIPTION>
+                </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+                <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+                <CATEGORY>STANDARD</CATEGORY>
+                <ELEMENTS>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_Init</SHORT-NAME>
+                        <SERVICE-ID>0</SERVICE-ID>
+                        <IS-REENTRANT>false</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                            <CATEGORY>DATA_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-POINTER-TARGET-PROPS>
+                                <TARGET-CATEGORY>TYPE_REFERENCE</TARGET-CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                </SW-POINTER-TARGET-PROPS>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_StartSwTransaction</SHORT-NAME>
+                        <SERVICE-ID>2</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>SrcAddress</SHORT-NAME>
+                            <CATEGORY>DATA_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-POINTER-TARGET-PROPS>
+                                <TARGET-CATEGORY>TYPE_REFERENCE</TARGET-CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                </SW-POINTER-TARGET-PROPS>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>DestAddress</SHORT-NAME>
+                            <CATEGORY>DATA_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-POINTER-TARGET-PROPS>
+                                <TARGET-CATEGORY>TYPE_REFERENCE</TARGET-CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                </SW-POINTER-TARGET-PROPS>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>TCount</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_StartHwTransaction</SHORT-NAME>
+                        <SERVICE-ID>3</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>SrcAddress</SHORT-NAME>
+                            <CATEGORY>DATA_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-POINTER-TARGET-PROPS>
+                                <TARGET-CATEGORY>TYPE_REFERENCE</TARGET-CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                </SW-POINTER-TARGET-PROPS>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>DestAddress</SHORT-NAME>
+                            <CATEGORY>DATA_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-POINTER-TARGET-PROPS>
+                                <TARGET-CATEGORY>TYPE_REFERENCE</TARGET-CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                </SW-POINTER-TARGET-PROPS>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>TCount</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_DisableHwTransaction</SHORT-NAME>
+                        <SERVICE-ID>4</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_GetChannelStatus</SHORT-NAME>
+                        <SERVICE-ID>5</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChannelStatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_GetMoveEngineErrFlags</SHORT-NAME>
+                        <SERVICE-ID>6</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ErrorType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>MoveEngine</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_ClearMoveEngineErrFlags</SHORT-NAME>
+                        <SERVICE-ID>7</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>MoveEngine</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>ClrErrMask</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_ClearInterruptStatus</SHORT-NAME>
+                        <SERVICE-ID>8</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_GetTransferCount</SHORT-NAME>
+                        <SERVICE-ID>9</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_ConfigHaltChannel</SHORT-NAME>
+                        <SERVICE-ID>10</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>HaltMode</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChannelHaltType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_ConfigChannelInterrupt</SHORT-NAME>
+                        <SERVICE-ID>11</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>InterruptMode</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_InterruptModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_GiveSwTrigger</SHORT-NAME>
+                        <SERVICE-ID>14</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_GetCRC</SHORT-NAME>
+                        <SERVICE-ID>15</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_CrcSetType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_ConfigShadowAddress</SHORT-NAME>
+                        <SERVICE-ID>17</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>ShadowAddrPtr</SHORT-NAME>
+                            <CATEGORY>DATA_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-POINTER-TARGET-PROPS>
+                                <TARGET-CATEGORY>TYPE_REFERENCE</TARGET-CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                </SW-POINTER-TARGET-PROPS>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                    <BSW-MODULE-ENTRY>
+                        <SHORT-NAME>Dma_ReconfigureChannel</SHORT-NAME>
+                        <SERVICE-ID>18</SERVICE-ID>
+                        <IS-REENTRANT>true</IS-REENTRANT>
+                        <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                        <CALL-TYPE>REGULAR</CALL-TYPE>
+                        <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                        <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                        <RETURN-TYPE>
+                          <SHORT-NAME>Return</SHORT-NAME>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </RETURN-TYPE>
+                        <ARGUMENTS>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>Channel</SHORT-NAME>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                          <SW-SERVICE-ARG>
+                            <SHORT-NAME>ChAddrConfigPtr</SHORT-NAME>
+                            <CATEGORY>DATA_REFERENCE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-POINTER-TARGET-PROPS>
+                                <TARGET-CATEGORY>TYPE_REFERENCE</TARGET-CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AURIX_Dma/ImplementationDataTypes/Dma_ChannelAddressConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                                </SW-POINTER-TARGET-PROPS>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-SERVICE-ARG>
+                        </ARGUMENTS>
+                    </BSW-MODULE-ENTRY>
+                </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+                <SHORT-NAME>Implementations</SHORT-NAME>
+                <ELEMENTS>
+                    <BSW-IMPLEMENTATION>
+                        <SHORT-NAME>Dma</SHORT-NAME>
+                        <CODE-DESCRIPTORS>
+                            <CODE>
+                                <SHORT-NAME>Files</SHORT-NAME>
+                                <ARTIFACT-DESCRIPTORS>
+                                    <AUTOSAR-ENGINEERING-OBJECT>
+                                        <SHORT-LABEL>ssc::src::Dma.c</SHORT-LABEL>
+                                        <CATEGORY>SWSRC</CATEGORY>
+                                    </AUTOSAR-ENGINEERING-OBJECT>
+                                    <AUTOSAR-ENGINEERING-OBJECT>
+                                        <SHORT-LABEL>ssc::inc::Dma.h</SHORT-LABEL>
+                                        <CATEGORY>SWHDR</CATEGORY>
+                                    </AUTOSAR-ENGINEERING-OBJECT>
+                                    <AUTOSAR-ENGINEERING-OBJECT>
+                                        <SHORT-LABEL>ssc::inc::Dma_Dbg.h</SHORT-LABEL>
+                                        <CATEGORY>SWHDR</CATEGORY>
+                                    </AUTOSAR-ENGINEERING-OBJECT>
+                                    <AUTOSAR-ENGINEERING-OBJECT>
+                                        <SHORT-LABEL>mak::dma_infineon_tricore::ssc::mak::infineon_dma_cfg.mak</SHORT-LABEL>
+                                        <CATEGORY>SWMAKE</CATEGORY>
+                                    </AUTOSAR-ENGINEERING-OBJECT>
+                                    <AUTOSAR-ENGINEERING-OBJECT>
+                                        <SHORT-LABEL>mak::dma_infineon_tricore::ssc::mak::infineon_dma_check.mak</SHORT-LABEL>
+                                        <CATEGORY>SWMAKE</CATEGORY>
+                                    </AUTOSAR-ENGINEERING-OBJECT>
+                                    <AUTOSAR-ENGINEERING-OBJECT>
+                                        <SHORT-LABEL>mak::dma_infineon_tricore::ssc::mak::infineon_dma_defs.mak</SHORT-LABEL>
+                                        <CATEGORY>SWMAKE</CATEGORY>
+                                    </AUTOSAR-ENGINEERING-OBJECT>
+                                    <AUTOSAR-ENGINEERING-OBJECT>
+                                        <SHORT-LABEL>mak::dma_infineon_tricore::ssc::mak::infineon_dma_rules.mak</SHORT-LABEL>
+                                        <CATEGORY>SWMAKE</CATEGORY>
+                                    </AUTOSAR-ENGINEERING-OBJECT>
+                                </ARTIFACT-DESCRIPTORS>
+                            </CODE>
+                        </CODE-DESCRIPTORS>
+                        <COMPILERS>
+                            <COMPILER>
+                                <SHORT-NAME>TASKING_COMPILE</SHORT-NAME>
+                                <NAME>TASKING</NAME>
+                                <OPTIONS>&quot;-c --core=tc1.6.x -t -Wa-gAHLs --emit-locals=-equ,-symbols -Wa-Ogs -Wa--error-limit=42 --iso=90 --eabi-compliant --integer-enumeration --language=-comments,-gcc,+volatile,-strings --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O2ROPYG --tradeoff=4 -g --source -D_TASKING_C_TRICORE_=1 $(CALLFUNCTION)&quot;</OPTIONS>
+                                <VENDOR>Tasking</VENDOR>
+                                <VERSION>Tasking</VERSION>
+                            </COMPILER>
+                            <COMPILER>
+                                <SHORT-NAME>DIAB_COMPILE</SHORT-NAME>
+                                <NAME>DIAB</NAME>
+                                <OPTIONS>&quot;-c -tTC27xAstep16PMG:cross -Xdialect-c89 -Xno-common -Xalign-functions=4 -Xfp-fast -Xsection-split=1 -Xkeep-assembly-file=2 -g3 -ew4084 -ei4177,4550,4549,4068,5388 -XO -D_DIABDATA_C_TRICORE_=1 $(CALLFUNCTION)&quot;</OPTIONS>
+                                <VENDOR>WindRiver</VENDOR>
+                                <VERSION>WindRiver</VERSION>
+                            </COMPILER>
+                            <COMPILER>
+                                <SHORT-NAME>GNU_COMPILE</SHORT-NAME>
+                                <NAME>GNU</NAME>
+                                <OPTIONS>&quot;-c -save-temps=obj -std=iso9899:1990 -ansi -fno-asm -ffreestanding -Wundef -Wp,-std=iso9899:1990 -fno-short-enums -fpeel-loops -falign-functions=4 -frecord-gcc-switches -fsection-anchors -funsigned-bitfields -ffunction-sections -fno-ivopts -fno-peephole2 -nostartfiles -O3 -g3 -W -Wall -Wuninitialized -DTRIBOARD_TC27XX -mcpu=tc27xx -D_GNU_C_TRICORE_=1 $(CALLFUNCTION)&quot;</OPTIONS>
+                                <VENDOR>Hightec</VENDOR>
+                                <VERSION>Hightec</VERSION>
+                            </COMPILER>
+                        </COMPILERS>
+                        <GENERATED-ARTIFACTS>
+                            <DEPENDENCY-ON-ARTIFACT>
+                                <SHORT-NAME>Dma_PBCfg_c</SHORT-NAME>
+                                <ARTIFACT-DESCRIPTOR>
+                                    <SHORT-LABEL>generate::src::Dma_PBCfg.c</SHORT-LABEL>
+                                    <CATEGORY>SWSRC</CATEGORY>
+                                </ARTIFACT-DESCRIPTOR>
+                                <USAGES>
+                                    <USAGE>CODEGENERATION</USAGE>
+                                </USAGES>
+                            </DEPENDENCY-ON-ARTIFACT>
+                            <DEPENDENCY-ON-ARTIFACT>
+                                <SHORT-NAME>Dma_Cfg_h</SHORT-NAME>
+                                <ARTIFACT-DESCRIPTOR>
+                                    <SHORT-LABEL>generate::inc::Dma_Cfg.h</SHORT-LABEL>
+                                    <CATEGORY>SWHDR</CATEGORY>
+                                </ARTIFACT-DESCRIPTOR>
+                                <USAGES>
+                                    <USAGE>CODEGENERATION</USAGE>
+                                </USAGES>
+                            </DEPENDENCY-ON-ARTIFACT>
+                            <DEPENDENCY-ON-ARTIFACT>
+                                <SHORT-NAME>Dma_xdm</SHORT-NAME>
+                                <ARTIFACT-DESCRIPTOR>
+                                    <SHORT-LABEL>config::Dma.xdm</SHORT-LABEL>
+                                    <CATEGORY>SWTOOL</CATEGORY>
+                                </ARTIFACT-DESCRIPTOR>
+                                <USAGES>
+                                    <USAGE>CODEGENERATION</USAGE>
+                                </USAGES>
+                            </DEPENDENCY-ON-ARTIFACT>
+                            <DEPENDENCY-ON-ARTIFACT>
+                                <SHORT-NAME>Dma_bmd</SHORT-NAME>
+                                <ARTIFACT-DESCRIPTOR>
+                                    <SHORT-LABEL>autosar::Dma.bmd</SHORT-LABEL>
+                                    <CATEGORY>SWTOOL</CATEGORY>
+                                </ARTIFACT-DESCRIPTOR>
+                                <USAGES>
+                                    <USAGE>CODEGENERATION</USAGE>
+                                </USAGES>
+                            </DEPENDENCY-ON-ARTIFACT>
+                        </GENERATED-ARTIFACTS>
+                        <LINKERS>
+                            <LINKER>
+                                <SHORT-NAME>TASKING_LINK</SHORT-NAME>
+                                <NAME>TASKING</NAME>
+                                <OPTIONS>&quot;-t -d_mcal_pjt.lsl -D__CPU__=tc27x -Cmpe:vtc -Otxycl --error-limit=42 -M -mcrfiklsmnoduq -lc -lfp -lrt&quot;</OPTIONS>
+                                <VENDOR>Tasking</VENDOR>
+                                <VERSION>Tasking</VERSION>
+                            </LINKER>
+                            <LINKER>
+                                <SHORT-NAME>DIAB_LINK</SHORT-NAME>
+                                <NAME>DIAB</NAME>
+                                <OPTIONS>&quot;-m6 &quot;_mcal_pjt.dld&quot; -lc&quot;</OPTIONS>
+                                <VENDOR>WindRiver</VENDOR>
+                                <VERSION>WindRiver</VERSION>
+                            </LINKER>
+                            <LINKER>
+                                <SHORT-NAME>GNU_LINK</SHORT-NAME>
+                                <NAME>GNU</NAME>
+                                <OPTIONS>&quot;-T&quot;_mcal_pjt.ld&quot; -nostartfiles -Wl,--allow-multiple-definition -Wl,--cref -Wl,--oformat=elf32-tricore -Wl,--mcpu=tc161 -Wl,--mem-holes -Wl,--extmap=&quot;a&quot;&quot;</OPTIONS>
+                                <VENDOR>Hightec</VENDOR>
+                                <VERSION>Hightec</VERSION>
+                            </LINKER>
+                        </LINKERS>
+                        <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                        <RESOURCE-CONSUMPTION>
+                            <SHORT-NAME>ResourceConsumption</SHORT-NAME>
+                            <MEMORY-SECTIONS>
+                                <MEMORY-SECTION>
+                                    <SHORT-NAME>DMA_CONST_32BIT</SHORT-NAME>
+                                    <ALIGNMENT>32</ALIGNMENT>
+                                    <SIZE>4</SIZE>
+                                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CONST</SW-ADDRMETHOD-REF>
+                                </MEMORY-SECTION>
+                                <MEMORY-SECTION>
+                                    <SHORT-NAME>DMA_VAR_32BIT</SHORT-NAME>
+                                    <ALIGNMENT>32</ALIGNMENT>
+                                    <SIZE>4</SIZE>
+                                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR</SW-ADDRMETHOD-REF>
+                                </MEMORY-SECTION>
+                                <MEMORY-SECTION>
+                                    <SHORT-NAME>DMA_VAR_8BIT</SHORT-NAME>
+                                    <ALIGNMENT>8</ALIGNMENT>
+                                    <SIZE>2</SIZE>
+                                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR</SW-ADDRMETHOD-REF>
+                                </MEMORY-SECTION>
+                                <MEMORY-SECTION>
+                                    <SHORT-NAME>DMA_POSTBUILDCFG</SHORT-NAME>
+                                    <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                                    <SIZE>144</SIZE>
+                                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CONFIG_DATA</SW-ADDRMETHOD-REF>
+                                </MEMORY-SECTION>
+                                <MEMORY-SECTION>
+                                    <SHORT-NAME>DMA_CODE</SHORT-NAME>
+                                    <ALIGNMENT>32</ALIGNMENT>
+                                    <SIZE>2278</SIZE>
+                                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                                </MEMORY-SECTION>
+                            </MEMORY-SECTIONS>
+                            <SECTION-NAME-PREFIXS>
+                                <SECTION-NAME-PREFIX>
+                                    <SHORT-NAME>DMA</SHORT-NAME>
+                                    <SYMBOL>DMA</SYMBOL>
+                                </SECTION-NAME-PREFIX>
+                            </SECTION-NAME-PREFIXS>
+                        </RESOURCE-CONSUMPTION>
+                        <SW-VERSION>0.0.0</SW-VERSION>
+                        <VENDOR-ID>17</VENDOR-ID>
+                        <AR-RELEASE-VERSION>4.0.3</AR-RELEASE-VERSION>
+                        <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AURIX_Dma/BswModuleDescriptions/Dma/DmaBehavior</BEHAVIOR-REF>
+                        <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                                <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AURIX/Dma</VENDOR-SPECIFIC-MODULE-DEF-REF>
+                        </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                    </BSW-IMPLEMENTATION>
+                </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+                <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                <CATEGORY>STANDARD</CATEGORY>
+                <ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_ChType</SHORT-NAME>
+                     <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                     <SW-DATA-DEF-PROPS>
+                       <SW-DATA-DEF-PROPS-VARIANTS>
+                         <SW-DATA-DEF-PROPS-CONDITIONAL>
+                           <COMPU-METHOD-REF DEST="COMPU-METHOD">/AURIX_Dma/CompuMethods/Dma_ChType</COMPU-METHOD-REF>
+                           <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                         </SW-DATA-DEF-PROPS-CONDITIONAL>
+                       </SW-DATA-DEF-PROPS-VARIANTS>
+                     </SW-DATA-DEF-PROPS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_ChannelStatusType</SHORT-NAME>
+                     <CATEGORY>STRUCTURE</CATEGORY>
+                     <SUB-ELEMENTS>
+                       <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                         <SHORT-NAME>uint32</SHORT-NAME>
+                       </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                     </SUB-ELEMENTS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_ErrorType</SHORT-NAME>
+                     <CATEGORY>STRUCTURE</CATEGORY>
+                     <SUB-ELEMENTS>
+                       <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                         <SHORT-NAME>uint32</SHORT-NAME>
+                       </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                     </SUB-ELEMENTS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_ChannelHaltType</SHORT-NAME>
+                     <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                     <SW-DATA-DEF-PROPS>
+                       <SW-DATA-DEF-PROPS-VARIANTS>
+                         <SW-DATA-DEF-PROPS-CONDITIONAL>
+                           <COMPU-METHOD-REF DEST="COMPU-METHOD">/AURIX_Dma/CompuMethods/Dma_ChannelHaltType</COMPU-METHOD-REF>
+                           <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                         </SW-DATA-DEF-PROPS-CONDITIONAL>
+                       </SW-DATA-DEF-PROPS-VARIANTS>
+                     </SW-DATA-DEF-PROPS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_InterruptModeType</SHORT-NAME>
+                     <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                     <SW-DATA-DEF-PROPS>
+                       <SW-DATA-DEF-PROPS-VARIANTS>
+                         <SW-DATA-DEF-PROPS-CONDITIONAL>
+                           <COMPU-METHOD-REF DEST="COMPU-METHOD">/AURIX_Dma/CompuMethods/Dma_InterruptModeType</COMPU-METHOD-REF>
+                           <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                         </SW-DATA-DEF-PROPS-CONDITIONAL>
+                       </SW-DATA-DEF-PROPS-VARIANTS>
+                     </SW-DATA-DEF-PROPS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_CrcSetType</SHORT-NAME>
+                     <CATEGORY>STRUCTURE</CATEGORY>
+                     <SUB-ELEMENTS>
+                       <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                         <SHORT-NAME>uint32</SHORT-NAME>
+                       </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                     </SUB-ELEMENTS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_TransactionSetType</SHORT-NAME>
+                     <CATEGORY>STRUCTURE</CATEGORY>
+                     <SUB-ELEMENTS>
+                       <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                         <SHORT-NAME>uint32</SHORT-NAME>
+                       </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                     </SUB-ELEMENTS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_FullTxCtrlSetType</SHORT-NAME>
+                     <CATEGORY>STRUCTURE</CATEGORY>
+                     <SUB-ELEMENTS>
+                       <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                         <SHORT-NAME>uint32</SHORT-NAME>
+                       </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                     </SUB-ELEMENTS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_ChannelConfigType</SHORT-NAME>
+                     <CATEGORY>STRUCTURE</CATEGORY>
+                     <SUB-ELEMENTS>
+                       <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                         <SHORT-NAME>uint32</SHORT-NAME>
+                       </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                     </SUB-ELEMENTS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_ConfigType</SHORT-NAME>
+                     <CATEGORY>STRUCTURE</CATEGORY>
+                     <SUB-ELEMENTS>
+                       <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                         <SHORT-NAME>Dma_ChannelConfigType</SHORT-NAME>
+                       </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                     </SUB-ELEMENTS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE>
+                     <SHORT-NAME>Dma_ChannelAddressConfigType</SHORT-NAME>
+                     <CATEGORY>STRUCTURE</CATEGORY>
+                     <SUB-ELEMENTS>
+                       <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                         <SHORT-NAME>Dma_ChIncrementDirectionType</SHORT-NAME>
+                       </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                     </SUB-ELEMENTS>
+                     <TYPE-EMITTER>BSW</TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+                <SHORT-NAME>CompuMethods</SHORT-NAME>
+                <CATEGORY>STANDARD</CATEGORY>
+                <ELEMENTS>
+                    <COMPU-METHOD>
+                      <SHORT-NAME>Dma_ChType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH0</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH1</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH2</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH3</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH4</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH5</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH6</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH7</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH8</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH9</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH10</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH11</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH12</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH13</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH14</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH15</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH16</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH17</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH18</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH19</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH20</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH21</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH22</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH23</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH24</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH25</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH26</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH27</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH28</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH29</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH30</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH31</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH32</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH33</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH34</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH35</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH36</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH37</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH38</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH39</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH40</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH41</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH42</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH43</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH44</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH45</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH46</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH47</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH48</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH49</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH50</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH51</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH52</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH53</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH54</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH55</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH56</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH57</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH58</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH59</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH60</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH61</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH62</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH63</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH64</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH65</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH66</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH67</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH68</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH69</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH70</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH71</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH72</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH73</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH74</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH75</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH76</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH77</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH78</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH79</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH80</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH81</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH82</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH83</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH84</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH85</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH86</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH87</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH88</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH89</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH90</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH91</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH92</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH93</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH94</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH95</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH96</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH97</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH98</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH99</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH100</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH101</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH102</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH103</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH104</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH105</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH106</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH107</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH108</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH109</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH110</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH111</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH112</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH113</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH114</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH115</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH116</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH117</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH118</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH119</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH120</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH121</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH122</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH123</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH124</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH125</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH126</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH127</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH_INVALID</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD>
+                      <SHORT-NAME>Dma_ChannelHaltType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_HALT_OFF</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_HALT_ON</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD>
+                      <SHORT-NAME>Dma_InterruptModeType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH_INT_OFF</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST><VT>DMA_CH_INT_ON</VT></COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                </ELEMENTS>
+            </AR-PACKAGE>
+        </AR-PACKAGES>
+    </AR-PACKAGE>
+</AR-PACKAGES>
+</AUTOSAR>

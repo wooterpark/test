@@ -1,0 +1,2132 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_VCF.a2l
+ *
+ * Code generation for model "SWC_VCF".
+ *
+ * Model version              : 1.6
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Fri Jan 15 17:02:12 2021
+ * 
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_Vcf_stModeReqTabY_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_stModeReqTabY_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_VCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_VCF_CM_single
+        /* Number of Axis Pts   */      16
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_Vcf_stModeReqTabX_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_Vcf_stModeReqTabX_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_stModeReqTabX_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_VCF_CM_single
+      /* Number of Axis Pts     */      16
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_AccPedSet_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_AccPedSet_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_ActiveCntAver_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_ActiveCntAver_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_AutoHoldSpd_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_AutoHoldSpd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_BwdHoldInSpdLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_BwdHoldInSpdLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_BwdHoldOutSpdLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_BwdHoldOutSpdLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_CofHoldTrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_CofHoldTrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_CrawlDspd_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_CrawlDspd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_CrawlNsetD_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_CrawlNsetD_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_CrawlNsetR_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_CrawlNsetR_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_CrawlRspd_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_CrawlRspd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_CrawltrqLo_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_CrawltrqLo_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_CrawltrqUp_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_CrawltrqUp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_Crawltrqadd1_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_Crawltrqadd1_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_Crawltrqadd2_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_Crawltrqadd2_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_Crawltrqsub_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_Crawltrqsub_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_DampingMatrixA_af32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_DampingMatrixA_af32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+      /* Array Size             */
+      NUMBER                            16
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_DampingMatrixB_af32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_DampingMatrixB_af32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+      /* Array Size             */
+      NUMBER                            4
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_DampingMatrixC_af32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_DampingMatrixC_af32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+      /* Array Size             */
+      NUMBER                            4
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_DampingMatrixLp_af32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VAL_BLK 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_DampingMatrixLp_af32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+      /* Array Size             */
+      NUMBER                            4
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_FwdHoldInSpdLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_FwdHoldInSpdLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_FwdHoldOutSpdLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_FwdHoldOutSpdLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_GenElecSpd_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_GenElecSpd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_HoldModVcuReq_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_HoldModVcuReq_u8@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_MotorDrvSpd_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_MotorDrvSpd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_NegDmpMaxSpeed_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_NegDmpMaxSpeed_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_NegDmpMaxTrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_NegDmpMaxTrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_OvCrawlDspd_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_OvCrawlDspd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_OvCrawlRspd_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_OvCrawlRspd_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_PosDmpMaxSpeed_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_PosDmpMaxSpeed_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_PosDmpMaxTrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_PosDmpMaxTrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_ReqTrqMechTrqDif_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_ReqTrqMechTrqDif_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_SLCalTrqSlp_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_SLCalTrqSlp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_SpdDebounce_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_SpdDebounce_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqAbsDiff_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqAbsDiff_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqDecRatio_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqDecRatio_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqDmpNegMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqDmpNegMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqDmpPosMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqDmpPosMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqFbkLMaxNeg_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqFbkLMaxNeg_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqFbkLMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqFbkLMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqFbkLMinNeg_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqFbkLMinNeg_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqFbkLMin_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqFbkLMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqHoldOutLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqHoldOutLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqSlopAccMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqSlopAccMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqSlopAccStep_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqSlopAccStep_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_cnCtlNrm_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_cnCtlNrm_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_nAccChgHiLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_nAccChgHiLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_nAccChgLoLim_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_nAccChgLoLim_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_nSetRamp_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_nSetRamp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_spdThredDmpNeg_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_spdThredDmpNeg_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_spdThredDmpPos_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_spdThredDmpPos_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_tDamping_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_tDamping_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_trqHoldMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_trqHoldMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_trqHoldMin_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_trqHoldMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_trqSlopeCoffent_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_trqSlopeCoffent_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_HoldTimeCount_u16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_HoldTimeCount_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_tSlopAddMax_u16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_tSlopAddMax_u16@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_BrkLgt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_BrkLgt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_CrawlSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_CrawlSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_FunctionReqSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_FunctionReqSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_GearHoldOutSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_GearHoldOutSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_HoldTrqInSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_HoldTrqInSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_HoldTrqLoadSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_HoldTrqLoadSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_StepSlopeFunSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_StepSlopeFunSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqDmpSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqDmpSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_flgOpenCrawlFcn_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_flgOpenCrawlFcn_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_flgOpenHoldFcn_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_flgOpenHoldFcn_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_flgUseSLCal_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_flgUseSLCal_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_ActiveCnt_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_ActiveCnt_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_BetLimSlope_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_BetLimSlope_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_Drv_go_alOffsetcalReq_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_Drv_go_alOffsetcalReq_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_GearD_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_GearD_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_GearLvD_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_GearLvD_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_GearLvN_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_GearLvN_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_GearLvR_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_GearLvR_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_GearR_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_GearR_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_NormalTrqSlope_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_NormalTrqSlope_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_OvHiLimSlope_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_OvHiLimSlope_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_SpdCtlReq_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_SpdCtlReq_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_StandByReq_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_StandByReq_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_TrqCtlReq_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_TrqCtlReq_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_Vcf_UnLoLimSlope_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_Vcf_UnLoLimSlope_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_VCF_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_nMotorObsv_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_nMotorObsv_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_nVehicleObsv_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_nVehicleObsv_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_TrqDmp_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_TrqDmp_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_SpdChangeRatio_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_SpdChangeRatio_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_TrqSrtPInside_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_TrqSrtPInside_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_SlopeReq_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_SlopeReq_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_trqDesAdDmp_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_trqDesAdDmp_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_KpNCtl_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_KpNCtl_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_trqLoad_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_trqLoad_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_trqDesUnProc_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_trqDesUnProc_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_trqRmp_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_VCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_trqRmp_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_CntAdding_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_CntAdding_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_SlopeChangePer_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      255.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_SlopeChangePer_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_flgDmpActv_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_flgDmpActv_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_AsrOvHiLim_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_AsrOvHiLim_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_AsrUnLolim_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_AsrUnLolim_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_flgTrqSetPDecAsr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_flgTrqSetPDecAsr_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_AsrSlipFlg2_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_AsrSlipFlg2_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_AsrSlipFlg1_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_AsrSlipFlg1_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_AsrRatioUnLolim_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_AsrRatioUnLolim_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_SlipFlag_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_SlipFlag_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_TranstoHoldIn_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_TranstoHoldIn_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_TranstoHoldOut_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_TranstoHoldOut_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_VCF_flgHoldModeReq_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_VCF_flgHoldModeReq_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_Vcf_CrawlFlg_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_VCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_Vcf_CrawlFlg_b@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_VCF_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_VCF_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_VCF_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_VCF_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_VCF
+      /* Long identifier        */       "SWC_VCF"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_RE_SWC_VCF_10ms_sys
+        Root_RE_SWC_VCF_2ms_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_RE_SWC_VCF_10ms_sys
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys"
+      /begin SUB_GROUP
+        S1_10ms
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_RE_SWC_VCF_2ms_sys
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys"
+      /begin SUB_GROUP
+        S2_2ms
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_10ms
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms"
+      /begin SUB_GROUP
+        S4_10ms
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_2ms
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms"
+      /begin SUB_GROUP
+        S28_2msSub1
+        S28_CanSig_MAP
+        S28_SignalSelect
+        S28_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_10ms
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms"
+      /begin SUB_GROUP
+        S5_AutoHold
+        S5_Crawl
+        S5_HoldStartTrqCal
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S28_2msSub1
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1"
+      /begin SUB_GROUP
+        S29_ASRFunction
+        S29_Damping_2ms
+        S29_KpCal_2ms
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_StepSlopeFunSwt_b
+        CAL_Vcf_TrqFbkLMaxNeg_f32
+        CAL_Vcf_TrqFbkLMax_f32
+        CAL_Vcf_TrqFbkLMinNeg_f32
+        CAL_Vcf_TrqFbkLMin_f32
+        CAL_Vcf_TrqSlopAccMax_f32
+        CAL_Vcf_TrqSlopAccStep_f32
+        CAL_Vcf_tSlopAddMax_u16
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_SlopeReq_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S28_CanSig_MAP
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/CanSig_MAP"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_stModeReqTabY_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S28_SignalSelect
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/SignalSelect"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_AutoHoldSpd_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S28_Subsystem
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/Subsystem"
+      /begin SUB_GROUP
+        S32_TrqSelect
+        S32_VCF_TrqResultant
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_AutoHold
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/AutoHold"
+      /begin SUB_GROUP
+        S6_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_Crawl
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/Crawl"
+      /begin SUB_GROUP
+        S7_CrawlMode
+        S7_CrawlSpdCal
+        S7_CrawlTrqCal
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_HoldStartTrqCal
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/HoldStartTrqCal"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_CofHoldTrq_f32
+        CAL_Vcf_HoldTrqInSwt_b
+        CAL_Vcf_HoldTrqLoadSwt_b
+        CAL_Vcf_trqHoldMax_f32
+        CAL_Vcf_trqHoldMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S29_ASRFunction
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/ASRFunction"
+      /begin SUB_GROUP
+        S33_ASRFunction
+        S33_FuntionEnableDetermine
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S29_Damping_2ms
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/Damping_2ms"
+      /begin SUB_GROUP
+        S34_Vcf_DmpCtl
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S29_KpCal_2ms
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/KpCal_2ms"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_cnCtlNrm_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_KpNCtl_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S32_TrqSelect
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/Subsystem/TrqSelect"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_Drv_go_alOffsetcalReq_u8
+        CAL_Vcf_SLCalTrqSlp_f32
+        CAL_Vcf_flgUseSLCal_b
+        CAL_Vcf_trqSlopeCoffent_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_trqDesUnProc_f32
+        VAR_Vcf_trqRmp_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S32_VCF_TrqResultant
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/Subsystem/VCF_TrqResultant"
+      /begin REF_MEASUREMENT
+        VAR_Vcf_trqDesAdDmp_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_Subsystem
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/AutoHold/Subsystem"
+      /begin SUB_GROUP
+        S9_Subsystem
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_HoldTimeCount_u16
+        CAL_Vcf_flgOpenHoldFcn_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_VCF_flgHoldModeReq_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_CrawlMode
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/Crawl/CrawlMode"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_AccPedSet_f32
+        CAL_Vcf_BrkLgt_b
+        CAL_Vcf_CrawlSwt_b
+        CAL_Vcf_GearD_u8
+        CAL_Vcf_GearR_u8
+        CAL_Vcf_OvCrawlDspd_f32
+        CAL_Vcf_OvCrawlRspd_f32
+        CAL_Vcf_SpdCtlReq_u8
+        CAL_Vcf_StandByReq_u8
+        CAL_Vcf_TrqCtlReq_u8
+        CAL_Vcf_flgOpenCrawlFcn_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_CrawlFlg_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_CrawlSpdCal
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/Crawl/CrawlSpdCal"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_CrawlNsetD_f32
+        CAL_Vcf_CrawlNsetR_f32
+        CAL_Vcf_GearD_u8
+        CAL_Vcf_GearR_u8
+        CAL_Vcf_nSetRamp_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_CrawlTrqCal
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/Crawl/CrawlTrqCal"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_CrawlDspd_f32
+        CAL_Vcf_CrawlNsetD_f32
+        CAL_Vcf_CrawlNsetR_f32
+        CAL_Vcf_CrawlRspd_f32
+        CAL_Vcf_CrawltrqLo_f32
+        CAL_Vcf_CrawltrqUp_f32
+        CAL_Vcf_Crawltrqadd1_f32
+        CAL_Vcf_Crawltrqadd2_f32
+        CAL_Vcf_Crawltrqsub_f32
+        CAL_Vcf_GearD_u8
+        CAL_Vcf_GearR_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S33_ASRFunction
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/ASRFunction/ASRFunction"
+      /begin SUB_GROUP
+        S37_SlopeValueChange
+        S37_SpdChangeRatio
+        S37_TorqueCalculate
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S33_FuntionEnableDetermine
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/ASRFunction/FuntionEnableDetermine"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_FunctionReqSwt_b
+        CAL_Vcf_GenElecSpd_f32
+        CAL_Vcf_MotorDrvSpd_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S34_Vcf_DmpCtl
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/Damping_2ms/Vcf_DmpCtl"
+      /begin SUB_GROUP
+        S47_Subsystem
+        S47_Vcf_FlgDmpCalc
+        S47_Vcf_TrqDmpCalc
+        S47_Vcf_nVehicleObsv
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_Subsystem
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/AutoHold/Subsystem/Subsystem"
+      /begin SUB_GROUP
+        S11_TrastoHoldIn
+        S11_TrastoHoldOut
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S37_SlopeValueChange
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/ASRFunction/ASRFunction/SlopeValueChange"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_BetLimSlope_u8
+        CAL_Vcf_NormalTrqSlope_u8
+        CAL_Vcf_OvHiLimSlope_u8
+        CAL_Vcf_UnLoLimSlope_u8
+        CAL_Vcf_nAccChgHiLim_f32
+        CAL_Vcf_nAccChgLoLim_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_SlopeChangePer_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S37_SpdChangeRatio
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/ASRFunction/ASRFunction/SpdChangeRatio"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_ActiveCntAver_f32
+        CAL_Vcf_ActiveCnt_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_CntAdding_u8
+        VAR_Vcf_SpdChangeRatio_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S37_TorqueCalculate
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/ASRFunction/ASRFunction/TorqueCalculate"
+      /begin SUB_GROUP
+        S42_ASRSlipFlag
+        S42_ASRTrqDes
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S47_Subsystem
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/Damping_2ms/Vcf_DmpCtl/Subsystem"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_TrqDmpNegMax_f32
+        CAL_Vcf_TrqDmpPosMax_f32
+        CAL_Vcf_spdThredDmpNeg_f32
+        CAL_Vcf_spdThredDmpPos_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S47_Vcf_FlgDmpCalc
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/Damping_2ms/Vcf_DmpCtl/Vcf_FlgDmpCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_NegDmpMaxSpeed_f32
+        CAL_Vcf_NegDmpMaxTrq_f32
+        CAL_Vcf_PosDmpMaxSpeed_f32
+        CAL_Vcf_PosDmpMaxTrq_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_flgDmpActv_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S47_Vcf_TrqDmpCalc
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/Damping_2ms/Vcf_DmpCtl/Vcf_TrqDmpCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_TrqDmpSwt_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_TrqDmp_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S47_Vcf_nVehicleObsv
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/Damping_2ms/Vcf_DmpCtl/Vcf_nVehicleObsv"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_DampingMatrixA_af32
+        CAL_Vcf_DampingMatrixB_af32
+        CAL_Vcf_DampingMatrixC_af32
+        CAL_Vcf_DampingMatrixLp_af32
+        CAL_Vcf_tDamping_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_nMotorObsv_f32
+        VAR_Vcf_nVehicleObsv_f32
+        VAR_Vcf_trqLoad_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_TrastoHoldIn
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/AutoHold/Subsystem/Subsystem/TrastoHoldIn"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_BwdHoldInSpdLim_f32
+        CAL_Vcf_BwdHoldOutSpdLim_f32
+        CAL_Vcf_FwdHoldInSpdLim_f32
+        CAL_Vcf_FwdHoldOutSpdLim_f32
+        CAL_Vcf_GearLvD_u8
+        CAL_Vcf_GearLvR_u8
+        CAL_Vcf_HoldModVcuReq_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_TranstoHoldIn_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_TrastoHoldOut
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_10ms_sys/10ms/10ms/AutoHold/Subsystem/Subsystem/TrastoHoldOut"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_BwdHoldOutSpdLim_f32
+        CAL_Vcf_FwdHoldOutSpdLim_f32
+        CAL_Vcf_GearHoldOutSwt_b
+        CAL_Vcf_GearLvD_u8
+        CAL_Vcf_GearLvN_u8
+        CAL_Vcf_GearLvR_u8
+        CAL_Vcf_HoldModVcuReq_u8
+        CAL_Vcf_TrqHoldOutLim_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_TranstoHoldOut_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S42_ASRSlipFlag
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/ASRFunction/ASRFunction/TorqueCalculate/ASRSlipFlag"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_ReqTrqMechTrqDif_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_AsrRatioUnLolim_b
+        VAR_Vcf_AsrSlipFlg1_b
+        VAR_Vcf_AsrSlipFlg2_b
+        VAR_Vcf_SlipFlag_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S42_ASRTrqDes
+      /* Long identifier        */       "SWC_VCF/RE_SWC_VCF_2ms_sys/2ms/2msSub1/ASRFunction/ASRFunction/TorqueCalculate/ASRTrqDes"
+      /begin REF_CHARACTERISTIC
+        CAL_Vcf_SpdDebounce_f32
+        CAL_Vcf_TrqAbsDiff_f32
+        CAL_Vcf_TrqDecRatio_f32
+        CAL_Vcf_nAccChgHiLim_f32
+        CAL_Vcf_nAccChgLoLim_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_Vcf_AsrOvHiLim_b
+        VAR_Vcf_AsrUnLolim_b
+        VAR_Vcf_TrqSrtPInside_f32
+        VAR_Vcf_flgTrqSetPDecAsr_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_VCF.a2l */

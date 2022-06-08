@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RTAOS</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES>
+          <SHORT-NAME>Os</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_Os/EcucModuleDefs/Os</DEFINITION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>RTE_RESOURCE</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsResource</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsResource/OsResourceProperty</DEFINITION-REF>
+                  <VALUE>STANDARD</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>Rte_EA_BSWImpl4_CanTp_EXCLUSIVE_AREA</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsResource</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsResource/OsResourceProperty</DEFINITION-REF>
+                  <VALUE>STANDARD</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_1000ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>16</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_100ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>17</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_50ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>20</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_20ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>21</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_10ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>22</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_5ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>24</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_1ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>26</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_1000ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>30</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_100ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>31</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_50ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>32</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_20ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>33</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_10ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>34</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_5ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>36</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SWC_1ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>39</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>BSW_10ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>23</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>BSW_5ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>25</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>BSW_1ms_Task_Core1</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>27</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>BSW_10ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>35</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>BSW_5ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>37</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>BSW_1ms_Task_Core0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>40</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskResourceRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RTAOS/Os/RTE_RESOURCE</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskResourceRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RTAOS/Os/Rte_EA_BSWImpl4_CanTp_EXCLUSIVE_AREA</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>BSW_10ms_Task_Core2</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+                  <VALUE>FULL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+                  <VALUE>49</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>Rte_TickCounter</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsCounter</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsCounter/OsCounterMaxAllowedValue</DEFINITION-REF>
+                  <VALUE>65535</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsCounter/OsCounterMinCycle</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsCounter/OsCounterTicksPerBase</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Os/EcucModuleDefs/Os/OsCounter/OsCounterType</DEFINITION-REF>
+                  <VALUE>SOFTWARE</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,114 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     a2ltoolkit.a2l
+ *
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "A2LTOOLKIT_A2L"
+  
+  /begin HEADER "A2LTOOLKIT_A2L"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "A2LTOOLKIT_A2L"
+    
+    /begin MOD_PAR "A2LTOOLKIT_A2L"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "A2LTOOLKIT_A2L" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+
+    %%replace_here%%
+
+
+
+    /begin COMPU_METHOD
+    /* Name of CompuMethod    */      RTE_A2L_Ident_Float
+    /* Long identifier        */      "Q = V"
+    /* Conversion Type        */      RAT_FUNC
+    /* Format                 */      "%8.6"
+    /* Units                  */      ""
+    /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+    /* Name of CompuMethod    */      RTE_A2L_Ident_Int
+    /* Long identifier        */      "Q = V"
+    /* Conversion Type        */      RAT_FUNC
+    /* Format                 */      "%8.0"
+    /* Units                  */      ""
+    /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+
+    /begin COMPU_METHOD
+    /* Name of CompuMethod    */      BSW_A2L_Ident_Float
+    /* Long identifier        */      "Q = V"
+    /* Conversion Type        */      RAT_FUNC
+    /* Format                 */      "%8.6"
+    /* Units                  */      ""
+    /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+    /* Name of CompuMethod    */      BSW_A2L_Ident_Int
+    /* Long identifier        */      "Q = V"
+    /* Conversion Type        */      RAT_FUNC
+    /* Format                 */      "%8.0"
+    /* Units                  */      ""
+    /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+
+  %%compu_vtab_dfc%%
+
+  %%compu_vtab_fid%%
+    
+  /end MODULE
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF A2LTOOLKIT_A2L.a2l */

@@ -1,0 +1,889 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_ADM.a2l
+ *
+ * Code generation for model "SWC_ADM".
+ *
+ * Model version              : 1.269
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Tue Sep  7 10:10:19 2021
+ * 
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_BMSLowerThr_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_BMSLowerThr_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_BMSUpperThr_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_BMSUpperThr_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_GlbDchgThrshTime_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_GlbDchgThrshTime_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      20.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_GlbDchgThrshVolt_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_GlbDchgThrshVolt_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      300.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_L2Com_BMSVolt  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_L2Com_BMSVolt@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_L2Com_HiPrecVolt  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_L2Com_HiPrecVolt@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_VoltAbsDiffThrPerc_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_VoltAbsDiffThrPerc_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_VoltAbsDiffThr_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_VoltAbsDiffThr_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_VoltChgThr_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_VoltChgThr_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      600.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_BMSVoltRngErrCntThr_s16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_BMSVoltRngErrCntThr_s16@ */ 
+      /* Record Layout          */      Scalar_SWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_int16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_BMSVoltRngErrDebThr_s16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_BMSVoltRngErrDebThr_s16@ */ 
+      /* Record Layout          */      Scalar_SWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_int16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_VoltCmpChkErrCntThr_s16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_VoltCmpChkErrCntThr_s16@ */ 
+      /* Record Layout          */      Scalar_SWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_int16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_VoltCmpChkErrDebThr_s16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_VoltCmpChkErrDebThr_s16@ */ 
+      /* Record Layout          */      Scalar_SWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_int16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_BMSVoltRngErrRst_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_BMSVoltRngErrRst_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_GlbDchgErrRst_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_GlbDchgErrRst_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_L2Com_BMSVolt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_L2Com_BMSVolt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_L2Com_HiPrecVolt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_L2Com_HiPrecVolt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_VoltCmpChkErrRst_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_VoltCmpChkErrRst_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_flgCrashSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_flgCrashSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_flgCrash_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_flgCrash_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_flgDchgReqSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_flgDchgReqSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_flgDchgReq_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_flgDchgReq_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_flgstModeReqSwt_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_flgstModeReqSwt_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_DchgMode_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_DchgMode_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      255.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_stModeReq_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_stModeReq_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_HiPrecVolt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_ADM_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1000.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_HiPrecVolt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_BMSVolt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_ADM_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1000.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_BMSVolt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_L2Com_HiPrecVolt_IN
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_ADM_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1000.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_L2Com_HiPrecVolt_IN@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_L2Com_BMSVolt_IN
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_ADM_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1000.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_L2Com_BMSVolt_IN@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_stModeReq_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_ADM_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      255.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_stModeReq_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_VoltCmpChkErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_ADM_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_VoltCmpChkErr_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_BMSVoltRngErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_ADM_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_BMSVoltRngErr_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_flgDchgReq_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_ADM_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_flgDchgReq_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_flgCrash_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_ADM_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_flgCrash_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_ADM_GlbDchgErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_ADM_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_ADM_GlbDchgErr_b@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_ADM_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_ADM_CM_int16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_ADM_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_ADM_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_ADM
+      /* Long identifier        */       "SWC_ADM"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_SWC_ADM_1ms_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_SWC_ADM_1ms_sys
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys"
+      /begin SUB_GROUP
+        S1_GlbDchgMon
+        S1_SigMng
+        S1_VoltMon
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_GlbDchgMon
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/GlbDchgMon"
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_DchgMode_u8
+        CAL_ADM_GlbDchgErrRst_b
+        CAL_ADM_GlbDchgThrshTime_f32
+        CAL_ADM_GlbDchgThrshVolt_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_GlbDchgErr_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_SigMng
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/SigMng"
+      /begin SUB_GROUP
+        S4_Subsystem1
+        S4_Subsystem10
+        S4_Subsystem2
+        S4_Subsystem22
+        S4_Subsystem3
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_VoltMon
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/VoltMon"
+      /begin SUB_GROUP
+        S5_BMSVoltRngMon
+        S5_VoltCmpChkMon
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Subsystem1
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/SigMng/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_flgCrashSwt_b
+        CAL_ADM_flgCrash_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_flgCrash_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Subsystem10
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/SigMng/Subsystem10"
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_flgstModeReqSwt_b
+        CAL_ADM_stModeReq_u8
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_stModeReq_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Subsystem2
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/SigMng/Subsystem2"
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_L2Com_HiPrecVolt
+        CAL_ADM_L2Com_HiPrecVolt_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_L2Com_HiPrecVolt_IN
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Subsystem22
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/SigMng/Subsystem22"
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_flgDchgReqSwt_b
+        CAL_ADM_flgDchgReq_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_flgDchgReq_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Subsystem3
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/SigMng/Subsystem3"
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_L2Com_BMSVolt
+        CAL_ADM_L2Com_BMSVolt_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_L2Com_BMSVolt_IN
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_BMSVoltRngMon
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/VoltMon/BMSVoltRngMon"
+      /begin SUB_GROUP
+        S11_BMSVoltRngChk
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_BMSVoltRngErrCntThr_s16
+        CAL_ADM_BMSVoltRngErrDebThr_s16
+        CAL_ADM_BMSVoltRngErrRst_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_BMSVoltRngErr_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_VoltCmpChkMon
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/VoltMon/VoltCmpChkMon"
+      /begin SUB_GROUP
+        S12_VoltCmpChk
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_VoltCmpChkErrCntThr_s16
+        CAL_ADM_VoltCmpChkErrDebThr_s16
+        CAL_ADM_VoltCmpChkErrRst_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_VoltCmpChkErr_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_BMSVoltRngChk
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/VoltMon/BMSVoltRngMon/BMSVoltRngChk"
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_BMSLowerThr_f32
+        CAL_ADM_BMSUpperThr_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_BMSVolt_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S12_VoltCmpChk
+      /* Long identifier        */       "SWC_ADM/SWC_ADM_1ms_sys/VoltMon/VoltCmpChkMon/VoltCmpChk"
+      /begin REF_CHARACTERISTIC
+        CAL_ADM_VoltAbsDiffThrPerc_f32
+        CAL_ADM_VoltAbsDiffThr_f32
+        CAL_ADM_VoltChgThr_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_ADM_HiPrecVolt_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_ADM.a2l */

@@ -1,0 +1,1249 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_TCF.a2l
+ *
+ * Code generation for model "SWC_TCF".
+ *
+ * Model version              : 1.571
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Wed Jan 12 17:04:24 2022
+ * 
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TCF_LdSubLqCAzGen_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_LdSubLqCAzGen_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      15
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_LdSubLqIqCAy_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      18
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_LdSubLqIdCAx_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_TCF_LdSubLqIdCAx_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_LdSubLqIdCAx_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Number of Axis Pts     */      18
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_TCF_LdSubLqIqCAy_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_LdSubLqIqCAy_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Number of Axis Pts     */      15
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TCF_LdSubLqCAzMot_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_LdSubLqCAzMot_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      15
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_LdSubLqIqCAy_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      18
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_LdSubLqIdCAx_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TCF_PwrLossCAz_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrLossCAz_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_NPwrLosCAy_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      VAR_TCF_Is_f32
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_IsPwrLosCAx_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_TCF_IsPwrLosCAx_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_IsPwrLosCAx_af32@ */
+      /* Input Quantity         */      VAR_TCF_Is_f32
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Number of Axis Pts     */      10
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_TCF_NPwrLosCAy_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_NPwrLosCAy_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Number of Axis Pts     */      10
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TCF_PwrTrqSpdCompa_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrTrqSpdCompa_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      10
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_NPwrLosCAy_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TCF_AgTrqTubeCAy_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_AgTrqTubeCAy_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      35
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_TrqTubeNCAx_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_TCF_TrqTubeNCAx_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TrqTubeNCAx_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Number of Axis Pts     */      35
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_TCF_PwrTrqTubeCAy_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrTrqTubeCAy_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_TCF_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_TCF_CM_single
+        /* Number of Axis Pts   */      35
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_TCF_TrqTubeNCAx_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_HiSpdDirStop_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_HiSpdDirStop_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      -25000.0 
+      /* Upper Limit            */      25000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_HiTrqDirStop_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_HiTrqDirStop_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      -500.0 
+      /* Upper Limit            */      500.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_LoSpdDirStop_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_LoSpdDirStop_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      -25000.0 
+      /* Upper Limit            */      25000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_LoTrqDirStop_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_LoTrqDirStop_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      -500.0 
+      /* Upper Limit            */      500.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_Psi_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_Psi_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_TempStrMax_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TempStrMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      -200.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_TempStrMin_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TempStrMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      -200.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_TempStrPlossFact_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TempStrPlossFact_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      -1.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_TrqMechCutOffFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TrqMechCutOffFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_TrqCalcMonCountTrh_s16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TrqCalcMonCountTrh_s16@ */ 
+      /* Record Layout          */      Scalar_SWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_int16 
+      /* Lower Limit            */      -200.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_TrqCalcMonDebTrh_s16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TrqCalcMonDebTrh_s16@ */ 
+      /* Record Layout          */      Scalar_SWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_int16 
+      /* Lower Limit            */      -200.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_TrqInvalid_s16  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TrqInvalid_s16@ */ 
+      /* Record Layout          */      Scalar_SWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_int16 
+      /* Lower Limit            */      -32767.0 
+      /* Upper Limit            */      32767.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      PRV_CalFltFrq_1ms  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@PRV_CalFltFrq_1ms@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_uint16 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_TrqCalcMonErrRst_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_TrqCalcMonErrRst_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_flgUsePlossCompa_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_flgUsePlossCompa_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_MotorPole_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_MotorPole_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      255.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_TCF_SpeedCtlMode_u8  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_SpeedCtlMode_u8@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_TCF_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      255.0
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_L2Sampling_DycUMon_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_L2Sampling_DycUMon_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_L2Sampling_DycVMon_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_L2Sampling_DycVMon_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_L2Sampling_DycWMon_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_L2Sampling_DycWMon_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_HSPF_StrrTempFlt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_HSPF_StrrTempFlt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_CurrAgTrqTubeH1_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_CurrAgTrqTubeH1_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_CurrAgTrqTubeL1_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_CurrAgTrqTubeL1_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_PwrTrqTubeH1_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrTrqTubeH1_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_PwrTrqTubeL1_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrTrqTubeL1_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_BlendTrq_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_BlendTrq_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_PwrTrq1_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrTrq1_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_Ploss_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -200000.0
+      /* Upper limit            */      200000.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_Ploss_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_Pinput_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -200000.0
+      /* Upper limit            */      200000.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_Pinput_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_Is_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1200.0
+      /* Upper limit            */      1200.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_Is_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_CurrAgTrqflt_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_CurrAgTrqflt_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_LdsubLq_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_LdsubLq_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_idAct_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1200.0
+      /* Upper limit            */      1200.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_idAct_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_iqAct_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1200.0
+      /* Upper limit            */      1200.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_iqAct_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_CurrAgTrq1_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_TCF_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_CurrAgTrq1_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_nDir_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_TCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      255.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_nDir_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_TrqDir_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_TCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      255.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_TrqDir_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_MotorMode_u8
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_TCF_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      255.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_MotorMode_u8@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_TrqCalcMonRslt_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_TCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_TrqCalcMonRslt_b@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_TCF_TrqCalcErr_b
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_TCF_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_TrqCalcErr_b@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_TCF_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_TCF_CM_int16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_TCF_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_TCF_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_TCF_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_TCF
+      /* Long identifier        */       "SWC_TCF"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_SWC_TCF_1ms_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_SWC_TCF_1ms_sys
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys"
+      /begin SUB_GROUP
+        S1_CurrAgTrqCalcProc
+        S1_PwrTrqCalcProc
+        S1_TrqBlendProc
+        S1_TrqCalcEnable
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VAR_HSPF_StrrTempFlt_f32
+        VAR_L2Sampling_DycUMon_f32
+        VAR_L2Sampling_DycVMon_f32
+        VAR_L2Sampling_DycWMon_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_CurrAgTrqCalcProc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc"
+      /begin SUB_GROUP
+        S3_CurrAgTrqCalc
+        S3_IdIqCalc
+        S3_LdsubLqCalc
+        S3_MotorModeJdg
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_TrqMechCutOffFrq_f32
+        PRV_CalFltFrq_1ms
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_CurrAgTrqflt_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_PwrTrqCalcProc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc"
+      /begin SUB_GROUP
+        S5_IsCalc
+        S5_PinputCalc
+        S5_PlossCalc
+        S5_PwrTrqCalc
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_TrqBlendProc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqBlendProc"
+      /begin SUB_GROUP
+        S6_Debouncer
+        S6_TrqBlend
+        S6_TrqTube
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_TrqCalcMonCountTrh_s16
+        CAL_TCF_TrqCalcMonDebTrh_s16
+        CAL_TCF_TrqCalcMonErrRst_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_TrqCalcEnable
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqCalcEnable"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_SpeedCtlMode_u8
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_CurrAgTrqCalc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/CurrAgTrqCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_MotorPole_u8
+        CAL_TCF_Psi_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_CurrAgTrq1_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_IdIqCalc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/IdIqCalc"
+      /begin REF_MEASUREMENT
+        VAR_TCF_idAct_f32
+        VAR_TCF_iqAct_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_LdsubLqCalc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/LdsubLqCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_LdSubLqCAzGen_af32
+        CAL_TCF_LdSubLqCAzMot_af32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_LdsubLq_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_MotorModeJdg
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/MotorModeJdg"
+      /begin SUB_GROUP
+        S11_MotorMode
+        S11_TrqDir
+        S11_nDir
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_IsCalc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc/IsCalc"
+      /begin REF_MEASUREMENT
+        VAR_TCF_Is_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_PinputCalc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc/PinputCalc"
+      /begin REF_MEASUREMENT
+        VAR_TCF_Pinput_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_PlossCalc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc/PlossCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_PwrLossCAz_af32
+        CAL_TCF_TempStrMax_f32
+        CAL_TCF_TempStrMin_f32
+        CAL_TCF_TempStrPlossFact_f32
+        CAL_TCF_flgUsePlossCompa_b
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_Ploss_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_PwrTrqCalc
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc/PwrTrqCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_PwrTrqSpdCompa_af32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_PwrTrq1_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_Debouncer
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqBlendProc/Debouncer"
+      /begin REF_MEASUREMENT
+        VAR_TCF_TrqCalcErr_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_TrqBlend
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqBlendProc/TrqBlend"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_TrqInvalid_s16
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_BlendTrq_f32
+        VAR_TCF_TrqCalcMonRslt_b
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_TrqTube
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqBlendProc/TrqTube"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_AgTrqTubeCAy_af32
+        CAL_TCF_PwrTrqTubeCAy_af32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_CurrAgTrqTubeH1_f32
+        VAR_TCF_CurrAgTrqTubeL1_f32
+        VAR_TCF_PwrTrqTubeH1_f32
+        VAR_TCF_PwrTrqTubeL1_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_MotorMode
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/MotorModeJdg/MotorMode"
+      /begin REF_MEASUREMENT
+        VAR_TCF_MotorMode_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_TrqDir
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/MotorModeJdg/TrqDir"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_HiTrqDirStop_f32
+        CAL_TCF_LoTrqDirStop_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_TrqDir_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_nDir
+      /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/MotorModeJdg/nDir"
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_HiSpdDirStop_f32
+        CAL_TCF_LoSpdDirStop_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_nDir_u8
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_TCF.a2l */

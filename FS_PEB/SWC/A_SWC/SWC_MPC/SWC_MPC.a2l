@@ -1,0 +1,1347 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SWC_MPC.a2l
+ *
+ * Code generation for model "SWC_MPC".
+ *
+ * Model version              : 1.8
+ * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
+ * C source code generated on : Tue Jan 26 11:54:33 2021
+ * 
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_LdSubLqCAzGen_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_LdSubLqCAzGen_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      15
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_LdSubLqCAy_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      18
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_LdSubLqCAx_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_LdSubLqCAx_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_LdSubLqCAx_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      18
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_LdSubLqCAy_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_LdSubLqCAy_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      15
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_LdSubLqCAzMot_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_LdSubLqCAzMot_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      15
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_LdSubLqCAy_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      18
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_LdSubLqCAx_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_cofRpwm_Y_af32
+      /* Long Identifier        */      "随机PWM频率系数查表X轴转速"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_cofRpwm_Y_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      17
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_nCofRpwm_X_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_nCofRpwm_X_af32
+      /* Long Identifier        */      "随机PWM频率系数查表Y轴频率系数值"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_nCofRpwm_X_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      17
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_frqPwmVFTableZ_Frq_af32
+      /* Long Identifier        */      "变载频查表Z轴载频频率"
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_frqPwmVFTableZ_Frq_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      11
+        /* Lower Limit          */      0.0
+        /* Upper Limit          */      1000.0
+        AXIS_PTS_REF                    CAL_MPC_frqPwmVFTableX_Is_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      13
+        /* Lower Limit          */      0.0
+        /* Upper Limit          */      1.15
+        AXIS_PTS_REF                    CAL_MPC_frqPwmVFTableY_VoltModuRate_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_frqPwmVFTableY_VoltModuRate_af32
+      /* Long Identifier        */      "变载频查表Y轴电压调制度"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_frqPwmVFTableY_VoltModuRate_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      13
+      /* Lower Limit            */      0.0
+      /* Upper Limit            */      1.15
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_frqPwmVFTableX_Is_af32
+      /* Long Identifier        */      "变载频查表X轴相电流幅值"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_frqPwmVFTableX_Is_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      11
+      /* Lower Limit            */      0.0
+      /* Upper Limit            */      1000.0
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_MtpaTableY_isd_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_MtpaTableY_isd_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      15
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_MtpaTableX_Trq_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_MtpaTableX_Trq_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_MtpaTableX_Trq_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      15
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_OmbwTableY_Ombw_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_OmbwTableY_Ombw_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      11
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_OmbwTableX_Spd_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_OmbwTableX_Spd_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_OmbwTableX_Spd_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      11
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_RvTableY_Rv_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_RvTableY_Rv_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      11
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_RvTableX_Spd_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_RvTableX_Spd_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_RvTableX_Spd_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      11
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_isdFFTableY_UdcCof_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_isdFFTableY_UdcCof_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      8
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_isdFFTableX_Udc_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_isdFFTableX_Udc_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_isdFFTableX_Udc_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      8
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_isdFFTableZ_isd_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_isdFFTableZ_isd_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      17
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_isdFFTableY_Trq_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      17
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_isdFFTableX_Spd_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_isdFFTableX_Spd_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_isdFFTableX_Spd_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      17
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_isdFFTableY_Trq_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_isdFFTableY_Trq_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      17
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_MtpvTableZ_idGen_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_MtpvTableZ_idGen_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      19
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_MtpvTableY_N_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      8
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_MtpvTableX_Udc_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_MtpvTableX_Udc_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_MtpvTableX_Udc_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      8
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_MtpvTableY_N_af32
+      /* Long Identifier        */      ""
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_MtpvTableY_N_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      19
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_MtpvTableZ_idMot_af32
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      MAP
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_MtpvTableZ_idMot_af32@ */
+      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of Y-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      19
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_MtpvTableY_N_af32
+      /end AXIS_DESCR
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      8
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_MtpvTableX_Udc_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_tCpnBwdGenTableY_tCpn_af32
+      /* Long Identifier        */      "后退发电查表开管时间补偿Y轴修正时间"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_tCpnBwdGenTableY_tCpn_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      16
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_tCpnBwdGenTableX_n_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_tCpnBwdGenTableX_n_af32
+      /* Long Identifier        */      "后退发电查表开管时间补偿X轴速度"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_tCpnBwdGenTableX_n_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      16
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_tCpnBwdMotTableY_tCpn_af32
+      /* Long Identifier        */      "后退电动查表开管时间补偿Y轴修正时间"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_tCpnBwdMotTableY_tCpn_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      16
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_tCpnBwdMotTableX_n_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_tCpnBwdMotTableX_n_af32
+      /* Long Identifier        */      "后退电动查表开管时间补偿X轴速度"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_tCpnBwdMotTableX_n_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      16
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_tCpnFwdGenTableY_tCpn_af32
+      /* Long Identifier        */      "前进发电查表开管时间补偿Y轴修正时间"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_tCpnFwdGenTableY_tCpn_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      16
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_tCpnFwdGenTableX_n_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_tCpnFwdGenTableX_n_af32
+      /* Long Identifier        */      "前进发电查表开管时间补偿X轴速度"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_tCpnFwdGenTableX_n_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      16
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC      
+      /* Name                   */      CAL_MPC_tCpnFwdMotTableY_tCpn_af32
+      /* Long Identifier        */      "前进电动查表开管时间补偿Y轴修正时间"
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_tCpnFwdMotTableY_tCpn_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR                 
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SWC_MPC_CM_single
+        /* Number of Axis Pts   */      16
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    CAL_MPC_tCpnFwdMotTableX_n_af32
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    
+    /begin AXIS_PTS
+      /* Name                   */      CAL_MPC_tCpnFwdMotTableX_n_af32
+      /* Long Identifier        */      "前进电动查表开管时间补偿X轴速度"
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_tCpnFwdMotTableX_n_af32@ */
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SWC_MPC_CM_single
+      /* Number of Axis Pts     */      16
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_CofUdc_f32  
+      /* Long Identifier        */      "扭矩监控电压补偿系数"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_CofUdc_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_IsCutOffFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_IsCutOffFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_Ld_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_Ld_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_Lq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_Lq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_Psi_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_Psi_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_Rcmp_f32  
+      /* Long Identifier        */      "扭矩监控电阻补偿"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_Rcmp_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_Rs_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_Rs_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_TrqMechCutOffFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_TrqMechCutOffFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_idActCutOffFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_idActCutOffFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_iqActCutOffFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_iqActCutOffFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_nSetTrqMonMin_f32  
+      /* Long Identifier        */      "扭矩监控转速计算阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_nSetTrqMonMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_nTrqMonMax_f32  
+      /* Long Identifier        */      "开启扭矩监控转速滞环上限值阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_nTrqMonMax_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_nTrqMonMin_f32  
+      /* Long Identifier        */      "开启扭矩监控转速滞环下限阈值"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_nTrqMonMin_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_udActCutOffFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_udActCutOffFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_uqActCutOffFrq_f32  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_uqActCutOffFrq_f32@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_single 
+      /* Lower Limit            */      -65535.0 
+      /* Upper Limit            */      65535.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_flgDesOrAct_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_flgDesOrAct_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_flgUseLdSubLq_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_flgUseLdSubLq_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_flgUseLdq_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_flgUseLdq_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_MPC_flgUseRs_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_MPC_flgUseRs_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_MPC_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MPC_TrqMon_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MPC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MPC_TrqMon_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MPC_CofRandomPwm_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MPC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MPC_CofRandomPwm_f32@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_MPC_frqPwmVF_f32
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SWC_MPC_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -65535.0
+      /* Upper limit            */      65535.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_MPC_frqPwmVF_f32@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_MPC_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SWC_MPC_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SWC_MPC
+      /* Long identifier        */       "SWC_MPC"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_RE_SWC_MPC_2ms_sys
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_RE_SWC_MPC_2ms_sys
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys"
+      /begin SUB_GROUP
+        S1_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Subsystem1
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1"
+      /begin SUB_GROUP
+        S3_MCF_PMSM
+        S3_MPC_Sig
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_MCF_PMSM
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MCF_PMSM"
+      /begin SUB_GROUP
+        S4_LdqCalc
+        S4_PsiCalc
+        S4_RsCalc
+        S4_TrqCalc1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_MPC_Sig
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig"
+      /begin SUB_GROUP
+        S5_MPC_CofRpwm
+        S5_MPC_Flt
+        S5_MPC_Sig
+        S5_MPC_TrqMon
+        S5_MPC_VF
+        S5_MPC_isd
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_LdqCalc
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MCF_PMSM/LdqCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_LdSubLqCAzGen_af32
+        CAL_MPC_LdSubLqCAzMot_af32
+        CAL_MPC_Ld_f32
+        CAL_MPC_Lq_f32
+        CAL_MPC_flgDesOrAct_b
+        CAL_MPC_flgUseLdSubLq_b
+        CAL_MPC_flgUseLdq_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_PsiCalc
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MCF_PMSM/PsiCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_Psi_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_RsCalc
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MCF_PMSM/RsCalc"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_Rs_f32
+        CAL_MPC_flgUseRs_b
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_TrqCalc1
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MCF_PMSM/TrqCalc1"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_TrqMechCutOffFrq_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_MPC_CofRpwm
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_CofRpwm"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_cofRpwm_Y_af32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MPC_CofRandomPwm_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_MPC_Flt
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_Flt"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_IsCutOffFrq_f32
+        CAL_MPC_idActCutOffFrq_f32
+        CAL_MPC_iqActCutOffFrq_f32
+        CAL_MPC_udActCutOffFrq_f32
+        CAL_MPC_uqActCutOffFrq_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_MPC_Sig
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_Sig"
+      /begin SUB_GROUP
+        S16_BwdGen_2
+        S16_BwdMot_3
+        S16_FwdGen_4
+        S16_FwdMot_1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_MPC_TrqMon
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_TrqMon"
+      /begin SUB_GROUP
+        S17_SpdSwitch
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_CofUdc_f32
+        CAL_MPC_Rcmp_f32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MPC_TrqMon_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_MPC_VF
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_VF"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_frqPwmVFTableZ_Frq_af32
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_MPC_frqPwmVF_f32
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_MPC_isd
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_isd"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_MtpaTableY_isd_af32
+        CAL_MPC_MtpvTableZ_idGen_af32
+        CAL_MPC_MtpvTableZ_idMot_af32
+        CAL_MPC_OmbwTableY_Ombw_af32
+        CAL_MPC_RvTableY_Rv_af32
+        CAL_MPC_isdFFTableY_UdcCof_af32
+        CAL_MPC_isdFFTableZ_isd_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_BwdGen_2
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_Sig/BwdGen_2"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_tCpnBwdGenTableY_tCpn_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_BwdMot_3
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_Sig/BwdMot_3"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_tCpnBwdMotTableY_tCpn_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_FwdGen_4
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_Sig/FwdGen_4"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_tCpnFwdGenTableY_tCpn_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S16_FwdMot_1
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_Sig/FwdMot_1"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_tCpnFwdMotTableY_tCpn_af32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S17_SpdSwitch
+      /* Long identifier        */       "SWC_MPC/RE_SWC_MPC_2ms_sys/Subsystem1/MPC_Sig/MPC_TrqMon/SpdSwitch"
+      /begin REF_CHARACTERISTIC
+        CAL_MPC_nSetTrqMonMin_f32
+        CAL_MPC_nTrqMonMax_f32
+        CAL_MPC_nTrqMonMin_f32
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SWC_MPC.a2l */
