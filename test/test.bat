@@ -2,12 +2,12 @@
 ::QAC
 cd C:\PRQA\QAC-8.1.2-R\projects\examples\src
 copy C:\A\test\QAC.bat C:\PRQA\QAC-8.1.2-R\projects\examples\src
-QAC.bat
+call QAC.bat
 
 ::Tessy报告路径:yu\Projects\tessy\
-cd C:\tessy\TESSY_4.3\bin\
-copy C:\A\test\tessy.bat C:\tessy\TESSY_4.3\bin\
-tessy.bat
+::cd C:\Program Files\Razorcat\TESSY_4.3\bin
+::copy C:\A\test\tessy.bat C:\tessy\TESSY_4.3\bin\
+::tessy.bat
 
 ::ModelAdvisor
 cd C:\A\Model
