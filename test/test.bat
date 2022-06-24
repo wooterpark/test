@@ -4,10 +4,12 @@ cd C:\PRQA\QAC-8.1.2-R\projects\examples\src
 copy C:\A\test\QAC.bat C:\PRQA\QAC-8.1.2-R\projects\examples\src
 call QAC.bat
 
-::Tessy报告路径:yu\Projects\tessy\
-::cd C:\Program Files\Razorcat\TESSY_4.3\bin
-::copy C:\A\test\tessy.bat C:\tessy\TESSY_4.3\bin\
-::tessy.bat
+cd C:\Program Files\Razorcat\TESSY_4.3\bin
+tessyd –-file C:\Users\yusenlin\Projects\TESSY\yu\tessy\tessy.pdbx
+tessycmd connect
+tessycmd restore-db -target project
+tessycmd exec-test C:\Users\yusenlin\Projects\TESSY\yu\tessy\yu.tbs
+tessycmd disconnect
 
 ::ModelAdvisor
 cd C:\A\Model
@@ -29,4 +31,4 @@ start /wait matlab -nodesktop -nosplash -minimize -wait -r "CodeGene([{'\TCF\SWC
 ::Hightec
 cd C:\A\FS_PEB
 copy C:\A\test\Hightec.bat C:\A\FS_PEB
-Hightec.bat
+call Hightec.bat
