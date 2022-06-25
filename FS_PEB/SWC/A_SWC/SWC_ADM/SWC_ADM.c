@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'SWC_ADM'.
  *
- * Model version                  : 1.269
+ * Model version                  : 1.285
  * Simulink Coder version         : 9.3 (R2020a) 18-Nov-2019
- * C/C++ source code generated on : Tue Sep  7 10:10:19 2021
+ * C/C++ source code generated on : Fri Jun 24 16:29:57 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -15,6 +15,8 @@
 
 #include "SWC_ADM.h"
 #include "SWC_ADM_private.h"
+
+/* user code (top of source file) */
 #include "set_get_data.h"
 
 /* Exported block signals */
@@ -25,21 +27,23 @@ float32 VAR_ADM_L2Com_BMSVolt_IN;      /* '<S10>/Switch' */
 uint8 VAR_ADM_stModeReq_u8;            /* '<S7>/Switch' */
 boolean VAR_ADM_VoltCmpChkErr_b;       /* '<S12>/Debounce' */
 boolean VAR_ADM_BMSVoltRngErr_b;       /* '<S11>/Debounce' */
+boolean VAR_VoltCmpChkErrSt;           /* '<S18>/Switch4' */
+boolean VAR_BMSVoltRngErrSt;           /* '<S13>/Logical Operator' */
 boolean VAR_ADM_flgDchgReq_b;          /* '<S9>/Switch' */
 boolean VAR_ADM_flgCrash_b;            /* '<S6>/Switch' */
-boolean VAR_ADM_GlbDchgErr_b;          /* '<S3>/Logical Operator2' */
+boolean VAR_ADM_GlbDchgErr_b;          /* '<S3>/Switch1' */
 
 /* Exported data definition */
-#pragma section ".rodata.CPU1_Calib_32"
+#pragma section ".rodata.Calib_32"
 
 /* Definition for custom storage class: iEDS_Parameter */
 const volatile float32 CAL_ADM_BMSLowerThr_f32 = 0.0F;
                             /* Referenced by: '<S13>/CAL_ADM_BMSLowerThr_f32' */
 const volatile float32 CAL_ADM_BMSUpperThr_f32 = 600.0F;
                             /* Referenced by: '<S13>/CAL_ADM_BMSUpperThr_f32' */
-const volatile sint16 CAL_ADM_BMSVoltRngErrCntThr_s16 = 150;
+const volatile sint16 CAL_ADM_BMSVoltRngErrCntThr_s16 = 100;
                     /* Referenced by: '<S11>/CAL_ADM_BMSVoltRngErrCntThr_s16' */
-const volatile sint16 CAL_ADM_BMSVoltRngErrDebThr_s16 = 100;
+const volatile sint16 CAL_ADM_BMSVoltRngErrDebThr_s16 = 50;
                     /* Referenced by: '<S11>/CAL_ADM_BMSVoltRngErrDebThr_s16' */
 const volatile boolean CAL_ADM_BMSVoltRngErrRst_b = 0;
                          /* Referenced by: '<S11>/CAL_ADM_BMSVoltRngErrRst_b' */
@@ -61,12 +65,14 @@ const volatile float32 CAL_ADM_VoltAbsDiffThr_f32 = 10.0F;
                          /* Referenced by: '<S18>/CAL_ADM_VoltAbsDiffThr_f32' */
 const volatile float32 CAL_ADM_VoltChgThr_f32 = 100.0F;
                              /* Referenced by: '<S18>/CAL_ADM_VoltChgThr_f32' */
-const volatile sint16 CAL_ADM_VoltCmpChkErrCntThr_s16 = 150;
+const volatile sint16 CAL_ADM_VoltCmpChkErrCntThr_s16 = 100;
                     /* Referenced by: '<S12>/CAL_ADM_VoltCmpChkErrCntThr_s16' */
-const volatile sint16 CAL_ADM_VoltCmpChkErrDebThr_s16 = 100;
+const volatile sint16 CAL_ADM_VoltCmpChkErrDebThr_s16 = 50;
                     /* Referenced by: '<S12>/CAL_ADM_VoltCmpChkErrDebThr_s16' */
 const volatile boolean CAL_ADM_VoltCmpChkErrRst_b = 0;
                          /* Referenced by: '<S12>/CAL_ADM_VoltCmpChkErrRst_b' */
+const volatile boolean CAL_ADM_VoltCmpChkErrst_b = 0;
+                           /* Referenced by: '<S3>/CAL_ADM_VoltCmpChkErrst_b' */
 const volatile boolean CAL_ADM_flgCrashSwt_b = 0;/* Referenced by: '<S6>/Constant2' */
 const volatile boolean CAL_ADM_flgCrash_b = 0;/* Referenced by: '<S6>/Constant3' */
 const volatile boolean CAL_ADM_flgDchgReqSwt_b = 0;/* Referenced by: '<S9>/Constant2' */
@@ -90,6 +96,7 @@ RT_MODEL_SWC_ADM_T *const SWC_ADM_M = &SWC_ADM_M_;
 void SWC_ADM_GlbDchgMon(void)
 {
   boolean rtb_LogicalOperator;
+  boolean rtb_LogicalOperator3;
   float32 rtb_Add3;
 
   /* Logic: '<S3>/Logical Operator' incorporates:
@@ -99,11 +106,18 @@ void SWC_ADM_GlbDchgMon(void)
   rtb_LogicalOperator = (SWC_ADM_B.LogicalOperator || (SWC_ADM_B.Add3 ==
     CAL_ADM_DchgMode_u8) || SWC_ADM_B.LogicalOperator1);
 
+  /* Logic: '<S3>/Logical Operator3' incorporates:
+   *  Constant: '<S3>/CAL_ADM_VoltCmpChkErrst_b'
+   *  RelationalOperator: '<S3>/Relational Operator1'
+   */
+  rtb_LogicalOperator3 = (rtb_LogicalOperator && (get_ADM_VoltCmpChkErr() ==
+    CAL_ADM_VoltCmpChkErrst_b));
+
   /* Switch: '<S3>/Switch15' incorporates:
    *  Constant: '<S3>/Constant28'
    *  UnitDelay: '<S3>/Unit Delay4'
    */
-  if (!rtb_LogicalOperator) {
+  if (!rtb_LogicalOperator3) {
     SWC_ADM_DW.UnitDelay4_DSTATE = 0.0F;
   }
 
@@ -144,26 +158,21 @@ void SWC_ADM_GlbDchgMon(void)
    *  Constant: '<S3>/CAL_ADM_GlbDchgErrRst_b'
    *  Constant: '<S3>/CAL_ADM_GlbDchgThrshVolt_f32'
    *  Constant: '<S3>/Constant1'
+   *  Logic: '<S3>/Logical Operator1'
+   *  Logic: '<S3>/Logical Operator2'
    *  RelationalOperator: '<S3>/Relational Operator10'
    *  Switch: '<S3>/Switch2'
    *  UnitDelay: '<S3>/Unit Delay1'
    *  UnitDelay: '<S3>/Unit Delay4'
    */
-  if (SWC_ADM_DW.UnitDelay4_DSTATE > CAL_ADM_GlbDchgThrshVolt_f32) {
-    SWC_ADM_DW.UnitDelay1_DSTATE = true;
+  if ((SWC_ADM_DW.UnitDelay4_DSTATE > CAL_ADM_GlbDchgThrshVolt_f32) ||
+      (rtb_LogicalOperator && get_ADM_VoltCmpChkErr())) {
+    VAR_ADM_GlbDchgErr_b = true;
   } else {
-    SWC_ADM_DW.UnitDelay1_DSTATE = ((!CAL_ADM_GlbDchgErrRst_b) &&
-      SWC_ADM_DW.UnitDelay1_DSTATE);
+    VAR_ADM_GlbDchgErr_b = ((!CAL_ADM_GlbDchgErrRst_b) && VAR_ADM_GlbDchgErr_b);
   }
 
   /* End of Switch: '<S3>/Switch1' */
-
-  /* Logic: '<S3>/Logical Operator2' incorporates:
-   *  Logic: '<S3>/Logical Operator1'
-   *  UnitDelay: '<S3>/Unit Delay1'
-   */
-  VAR_ADM_GlbDchgErr_b = (SWC_ADM_DW.UnitDelay1_DSTATE || (rtb_LogicalOperator &&
-    get_ADM_VoltCmpChkErr()));
 
   /* SignalConversion: '<S3>/Signal Conversion1' */
   set_ADM_GlbDchgErr(VAR_ADM_GlbDchgErr_b);
@@ -173,7 +182,7 @@ void SWC_ADM_GlbDchgMon(void)
    *  Constant: '<S3>/Ts'
    *  UnitDelay: '<S3>/Unit Delay8'
    */
-  if (rtb_LogicalOperator) {
+  if (rtb_LogicalOperator3) {
     SWC_ADM_DW.UnitDelay8_DSTATE = 0.001F;
   } else {
     SWC_ADM_DW.UnitDelay8_DSTATE = 0.0F;
@@ -197,8 +206,8 @@ void SWC_ADM_BMSVoltRngChk(void)
    *  RelationalOperator: '<S13>/Relational Operator1'
    *  RelationalOperator: '<S13>/Relational Operator2'
    */
-  SWC_ADM_B.LogicalOperator_a = ((VAR_ADM_BMSVolt_f32 < CAL_ADM_BMSLowerThr_f32)
-    || (VAR_ADM_BMSVolt_f32 > CAL_ADM_BMSUpperThr_f32));
+  VAR_BMSVoltRngErrSt = ((VAR_ADM_BMSVolt_f32 < CAL_ADM_BMSLowerThr_f32) ||
+    (VAR_ADM_BMSVolt_f32 > CAL_ADM_BMSUpperThr_f32));
 }
 
 /*
@@ -306,10 +315,10 @@ void SWC_ADM_VoltCmpChk(void)
    *  Sum: '<S18>/Add'
    */
   if (VAR_ADM_HiPrecVolt_f32 <= CAL_ADM_VoltChgThr_f32) {
-    SWC_ADM_B.LogicalOperator_a = (fabsf(VAR_ADM_HiPrecVolt_f32 -
+    VAR_VoltCmpChkErrSt = (fabsf(VAR_ADM_HiPrecVolt_f32 -
       VAR_ADM_L2Com_BMSVolt_IN) > CAL_ADM_VoltAbsDiffThr_f32);
   } else {
-    SWC_ADM_B.LogicalOperator_a = (fabsf(VAR_ADM_HiPrecVolt_f32 -
+    VAR_VoltCmpChkErrSt = (fabsf(VAR_ADM_HiPrecVolt_f32 -
       VAR_ADM_L2Com_BMSVolt_IN) > CAL_ADM_VoltAbsDiffThrPerc_f32 *
       VAR_ADM_HiPrecVolt_f32);
   }
@@ -327,13 +336,12 @@ void SWC_ADM_1ms(void)                 /* Explicit Task: SWC_ADM_1ms */
   /* Switch: '<S9>/Switch' incorporates:
    *  Constant: '<S9>/Constant2'
    *  Constant: '<S9>/Constant3'
-   *  DataTypeConversion: '<S9>/Data Type Conversion'
-   *  Inport: '<Root>/L2Com_ModeReq'
+   *  Inport: '<Root>/L2Com_DchgReq'
    */
   if (CAL_ADM_flgDchgReqSwt_b) {
     VAR_ADM_flgDchgReq_b = CAL_ADM_flgDchgReq_b;
   } else {
-    VAR_ADM_flgDchgReq_b = (get_L2Com_ModeReq() != 0);
+    VAR_ADM_flgDchgReq_b = get_L2Com_DchgReq();
   }
 
   /* End of Switch: '<S9>/Switch' */
@@ -344,13 +352,12 @@ void SWC_ADM_1ms(void)                 /* Explicit Task: SWC_ADM_1ms */
   /* Switch: '<S7>/Switch' incorporates:
    *  Constant: '<S7>/Constant2'
    *  Constant: '<S7>/Constant3'
-   *  DataTypeConversion: '<S7>/Data Type Conversion'
-   *  Inport: '<Root>/L2Com_DchgReq'
+   *  Inport: '<Root>/L2Com_ModeReq'
    */
   if (CAL_ADM_flgstModeReqSwt_b) {
     VAR_ADM_stModeReq_u8 = CAL_ADM_stModeReq_u8;
   } else {
-    VAR_ADM_stModeReq_u8 = get_L2Com_DchgReq();
+    VAR_ADM_stModeReq_u8 = get_L2Com_ModeReq();
   }
 
   /* End of Switch: '<S7>/Switch' */
@@ -412,7 +419,7 @@ void SWC_ADM_1ms(void)                 /* Explicit Task: SWC_ADM_1ms */
    *  Constant: '<S12>/CAL_ADM_VoltCmpChkErrDebThr_s16'
    *  Constant: '<S12>/CAL_ADM_VoltCmpChkErrRst_b'
    */
-  VAR_ADM_VoltCmpChkErr_b = SWC_ADM_Debounce(SWC_ADM_B.LogicalOperator_a,
+  VAR_ADM_VoltCmpChkErr_b = SWC_ADM_Debounce(VAR_VoltCmpChkErrSt,
     CAL_ADM_VoltCmpChkErrRst_b, CAL_ADM_VoltCmpChkErrCntThr_s16,
     CAL_ADM_VoltCmpChkErrDebThr_s16, &SWC_ADM_DW.Debounce_n);
 
@@ -437,7 +444,7 @@ void SWC_ADM_1ms(void)                 /* Explicit Task: SWC_ADM_1ms */
    *  Constant: '<S11>/CAL_ADM_BMSVoltRngErrDebThr_s16'
    *  Constant: '<S11>/CAL_ADM_BMSVoltRngErrRst_b'
    */
-  VAR_ADM_BMSVoltRngErr_b = SWC_ADM_Debounce(SWC_ADM_B.LogicalOperator_a,
+  VAR_ADM_BMSVoltRngErr_b = SWC_ADM_Debounce(VAR_BMSVoltRngErrSt,
     CAL_ADM_BMSVoltRngErrRst_b, CAL_ADM_BMSVoltRngErrCntThr_s16,
     CAL_ADM_BMSVoltRngErrDebThr_s16, &SWC_ADM_DW.Debounce);
 

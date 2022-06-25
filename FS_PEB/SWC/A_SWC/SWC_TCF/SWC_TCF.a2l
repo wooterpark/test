@@ -4,9 +4,9 @@
  *
  * Code generation for model "SWC_TCF".
  *
- * Model version              : 1.604
+ * Model version              : 1.571
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C source code generated on : Wed May 25 19:51:06 2022
+ * C source code generated on : Wed Jan 12 17:04:24 2022
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -323,7 +323,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
         /* Axis Type            */      COM_AXIS
         /* Reference to Input   */      NO_INPUT_QUANTITY
         /* Conversion Method    */      SWC_TCF_CM_single
-        /* Number of Axis Pts   */      16
+        /* Number of Axis Pts   */      10
         /* Lower Limit          */      -3.4E+38
         /* Upper Limit          */      3.4E+38
         AXIS_PTS_REF                    CAL_TCF_NPwrLosCAy_af32
@@ -331,9 +331,9 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /begin AXIS_DESCR                 
         /* Description of X-Axis Points */
         /* Axis Type            */      COM_AXIS
-        /* Reference to Input   */      VAR_TCF_Isflt_f32
+        /* Reference to Input   */      VAR_TCF_Is_f32
         /* Conversion Method    */      SWC_TCF_CM_single
-        /* Number of Axis Pts   */      35
+        /* Number of Axis Pts   */      10
         /* Lower Limit          */      -3.4E+38
         /* Upper Limit          */      3.4E+38
         AXIS_PTS_REF                    CAL_TCF_IsPwrLosCAx_af32
@@ -344,11 +344,11 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      CAL_TCF_IsPwrLosCAx_af32
       /* Long Identifier        */      ""
       /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_IsPwrLosCAx_af32@ */
-      /* Input Quantity         */      VAR_TCF_Isflt_f32
+      /* Input Quantity         */      VAR_TCF_Is_f32
       /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
       /* Maximum Difference     */      0
       /* Conversion Method      */      SWC_TCF_CM_single
-      /* Number of Axis Pts     */      35
+      /* Number of Axis Pts     */      10
       /* Lower Limit            */      -3.4E+38
       /* Upper Limit            */      3.4E+38
     /end AXIS_PTS
@@ -361,68 +361,32 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
       /* Maximum Difference     */      0
       /* Conversion Method      */      SWC_TCF_CM_single
-      /* Number of Axis Pts     */      16
+      /* Number of Axis Pts     */      10
       /* Lower Limit            */      -3.4E+38
       /* Upper Limit            */      3.4E+38
     /end AXIS_PTS
     
     /begin CHARACTERISTIC      
-      /* Name                   */      CAL_TCF_PwrCompaElectCAz_af32
+      /* Name                   */      CAL_TCF_PwrTrqSpdCompa_af32
       /* Long Identifier        */      ""
-      /* Characteristic Type    */      MAP
-      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrCompaElectCAz_af32@ */
-      /* Record Layout          */      Lookup2D_FLOAT32_IEEE
+      /* Characteristic Type    */      CURVE
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrTrqSpdCompa_af32@ */
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
       /* Maxdiff                */      0
       /* Conversion Method      */      SWC_TCF_CM_single
       /* Lower Limit            */      -3.4E+38
       /* Upper Limit            */      3.4E+38
       /begin AXIS_DESCR                 
-        /* Description of Y-Axis Points */
-        /* Axis Type            */      COM_AXIS
-        /* Reference to Input   */      VAR_TCF_Isflt_f32
-        /* Conversion Method    */      SWC_TCF_CM_single
-        /* Number of Axis Pts   */      24
-        /* Lower Limit          */      -3.4E+38
-        /* Upper Limit          */      3.4E+38
-        AXIS_PTS_REF                    CAL_TCF_PwrCompaIsCAy_af32
-      /end AXIS_DESCR
-      /begin AXIS_DESCR                 
         /* Description of X-Axis Points */
         /* Axis Type            */      COM_AXIS
         /* Reference to Input   */      NO_INPUT_QUANTITY
         /* Conversion Method    */      SWC_TCF_CM_single
-        /* Number of Axis Pts   */      33
+        /* Number of Axis Pts   */      10
         /* Lower Limit          */      -3.4E+38
         /* Upper Limit          */      3.4E+38
-        AXIS_PTS_REF                    CAL_TCF_PwrCompaSpdCAx_af32
+        AXIS_PTS_REF                    CAL_TCF_NPwrLosCAy_af32
       /end AXIS_DESCR
     /end CHARACTERISTIC
-    
-    /begin AXIS_PTS
-      /* Name                   */      CAL_TCF_PwrCompaSpdCAx_af32
-      /* Long Identifier        */      ""
-      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrCompaSpdCAx_af32@ */
-      /* Input Quantity         */      NO_INPUT_QUANTITY
-      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
-      /* Maximum Difference     */      0
-      /* Conversion Method      */      SWC_TCF_CM_single
-      /* Number of Axis Pts     */      33
-      /* Lower Limit            */      -3.4E+38
-      /* Upper Limit            */      3.4E+38
-    /end AXIS_PTS
-    
-    /begin AXIS_PTS
-      /* Name                   */      CAL_TCF_PwrCompaIsCAy_af32
-      /* Long Identifier        */      ""
-      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrCompaIsCAy_af32@ */
-      /* Input Quantity         */      VAR_TCF_Isflt_f32
-      /* Record Layout          */      Lookup2D_X_FLOAT32_IEEE
-      /* Maximum Difference     */      0
-      /* Conversion Method      */      SWC_TCF_CM_single
-      /* Number of Axis Pts     */      24
-      /* Lower Limit            */      -3.4E+38
-      /* Upper Limit            */      3.4E+38
-    /end AXIS_PTS
     
     /begin CHARACTERISTIC      
       /* Name                   */      CAL_TCF_AgTrqTubeCAy_af32
@@ -439,7 +403,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
         /* Axis Type            */      COM_AXIS
         /* Reference to Input   */      NO_INPUT_QUANTITY
         /* Conversion Method    */      SWC_TCF_CM_single
-        /* Number of Axis Pts   */      18
+        /* Number of Axis Pts   */      35
         /* Lower Limit          */      -3.4E+38
         /* Upper Limit          */      3.4E+38
         AXIS_PTS_REF                    CAL_TCF_TrqTubeNCAx_af32
@@ -454,7 +418,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
       /* Maximum Difference     */      0
       /* Conversion Method      */      SWC_TCF_CM_single
-      /* Number of Axis Pts     */      18
+      /* Number of Axis Pts     */      35
       /* Lower Limit            */      -3.4E+38
       /* Upper Limit            */      3.4E+38
     /end AXIS_PTS
@@ -474,7 +438,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
         /* Axis Type            */      COM_AXIS
         /* Reference to Input   */      NO_INPUT_QUANTITY
         /* Conversion Method    */      SWC_TCF_CM_single
-        /* Number of Axis Pts   */      18
+        /* Number of Axis Pts   */      35
         /* Lower Limit          */      -3.4E+38
         /* Upper Limit          */      3.4E+38
         AXIS_PTS_REF                    CAL_TCF_TrqTubeNCAx_af32
@@ -504,19 +468,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Conversion Method      */      SWC_TCF_CM_single 
       /* Lower Limit            */      -500.0 
       /* Upper Limit            */      500.0
-    /end CHARACTERISTIC
-    
-    
-    /begin CHARACTERISTIC
-      /* Name                   */      CAL_TCF_IsCutOffFrq_f32  
-      /* Long Identifier        */      ""
-      /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_IsCutOffFrq_f32@ */ 
-      /* Record Layout          */      Scalar_FLOAT32_IEEE 
-      /* Maximum Difference     */      0 
-      /* Conversion Method      */      SWC_TCF_CM_single 
-      /* Lower Limit            */      -3.4E+38 
-      /* Upper Limit            */      3.4E+38
     /end CHARACTERISTIC
     
     
@@ -556,45 +507,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Conversion Method      */      SWC_TCF_CM_single 
       /* Lower Limit            */      0.0 
       /* Upper Limit            */      10.0
-    /end CHARACTERISTIC
-    
-    
-    /begin CHARACTERISTIC
-      /* Name                   */      CAL_TCF_PwrInputCutOffFrq_f32  
-      /* Long Identifier        */      ""
-      /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrInputCutOffFrq_f32@ */ 
-      /* Record Layout          */      Scalar_FLOAT32_IEEE 
-      /* Maximum Difference     */      0 
-      /* Conversion Method      */      SWC_TCF_CM_single 
-      /* Lower Limit            */      -3.4E+38 
-      /* Upper Limit            */      3.4E+38
-    /end CHARACTERISTIC
-    
-    
-    /begin CHARACTERISTIC
-      /* Name                   */      CAL_TCF_PwrTrqCalcSpdThrH_f32  
-      /* Long Identifier        */      ""
-      /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrTrqCalcSpdThrH_f32@ */ 
-      /* Record Layout          */      Scalar_FLOAT32_IEEE 
-      /* Maximum Difference     */      0 
-      /* Conversion Method      */      SWC_TCF_CM_single 
-      /* Lower Limit            */      -3.4E+38 
-      /* Upper Limit            */      3.4E+38
-    /end CHARACTERISTIC
-    
-    
-    /begin CHARACTERISTIC
-      /* Name                   */      CAL_TCF_PwrTrqCalcSpdThrL_f32  
-      /* Long Identifier        */      ""
-      /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_TCF_PwrTrqCalcSpdThrL_f32@ */ 
-      /* Record Layout          */      Scalar_FLOAT32_IEEE 
-      /* Maximum Difference     */      0 
-      /* Conversion Method      */      SWC_TCF_CM_single 
-      /* Lower Limit            */      -3.4E+38 
-      /* Upper Limit            */      3.4E+38
     /end CHARACTERISTIC
     
     
@@ -694,19 +606,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
       /* ECU Address            */      0x0000 /* @ECU_Address@PRV_CalFltFrq_1ms@ */ 
-      /* Record Layout          */      Scalar_UWORD 
-      /* Maximum Difference     */      0 
-      /* Conversion Method      */      SWC_TCF_CM_uint16 
-      /* Lower Limit            */      0 
-      /* Upper Limit            */      65535
-    /end CHARACTERISTIC
-    
-    
-    /begin CHARACTERISTIC
-      /* Name                   */      PRV_IsCalFltFrq_1ms  
-      /* Long Identifier        */      ""
-      /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000 /* @ECU_Address@PRV_IsCalFltFrq_1ms@ */ 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      SWC_TCF_CM_uint16 
@@ -847,19 +746,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_PwrTrqfltcomp_f32
-      /* Long identifier        */      ""
-      /* Data type              */      FLOAT32_IEEE
-      /* Conversion method      */      SWC_TCF_CM_single
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      -500.0
-      /* Upper limit            */      500.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrTrqfltcomp_f32@ */
-    /end MEASUREMENT
-    
-    
-    /begin MEASUREMENT
       /* Name                   */      VAR_TCF_PwrTrqTubeH1_f32
       /* Long identifier        */      ""
       /* Data type              */      FLOAT32_IEEE
@@ -899,20 +785,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_PwrTrqCompCof_f32
-      /* Long identifier        */      ""
-      /* Data type              */      FLOAT32_IEEE
-      /* Conversion method      */      SWC_TCF_CM_single
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      -3.4E+38
-      /* Upper limit            */      3.4E+38
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrTrqCompCof_f32@ */
-    /end MEASUREMENT
-    
-    
-    /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_PwrTrqNoflt_f32
+      /* Name                   */      VAR_TCF_PwrTrq1_f32
       /* Long identifier        */      ""
       /* Data type              */      FLOAT32_IEEE
       /* Conversion method      */      SWC_TCF_CM_single
@@ -920,20 +793,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Accuracy (Not used)    */      0
       /* Lower limit            */      -500.0
       /* Upper limit            */      500.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrTrqNoflt_f32@ */
-    /end MEASUREMENT
-    
-    
-    /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_PwrTrqflt_f32
-      /* Long identifier        */      ""
-      /* Data type              */      FLOAT32_IEEE
-      /* Conversion method      */      SWC_TCF_CM_single
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      -500.0
-      /* Upper limit            */      500.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrTrqflt_f32@ */
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrTrq1_f32@ */
     /end MEASUREMENT
     
     
@@ -951,7 +811,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_PwrInputNoflt_f32
+      /* Name                   */      VAR_TCF_Pinput_f32
       /* Long identifier        */      ""
       /* Data type              */      FLOAT32_IEEE
       /* Conversion method      */      SWC_TCF_CM_single
@@ -959,25 +819,12 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Accuracy (Not used)    */      0
       /* Lower limit            */      -200000.0
       /* Upper limit            */      200000.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrInputNoflt_f32@ */
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_Pinput_f32@ */
     /end MEASUREMENT
     
     
     /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_PwrInputflt_f32
-      /* Long identifier        */      ""
-      /* Data type              */      FLOAT32_IEEE
-      /* Conversion method      */      SWC_TCF_CM_single
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      -200000.0
-      /* Upper limit            */      200000.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_PwrInputflt_f32@ */
-    /end MEASUREMENT
-    
-    
-    /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_IsNoflt_f32
+      /* Name                   */      VAR_TCF_Is_f32
       /* Long identifier        */      ""
       /* Data type              */      FLOAT32_IEEE
       /* Conversion method      */      SWC_TCF_CM_single
@@ -985,20 +832,20 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Accuracy (Not used)    */      0
       /* Lower limit            */      -1200.0
       /* Upper limit            */      1200.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_IsNoflt_f32@ */
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_Is_f32@ */
     /end MEASUREMENT
     
     
     /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_Isflt_f32
+      /* Name                   */      VAR_TCF_CurrAgTrqflt_f32
       /* Long identifier        */      ""
       /* Data type              */      FLOAT32_IEEE
       /* Conversion method      */      SWC_TCF_CM_single
       /* Resolution (Not used)  */      0
       /* Accuracy (Not used)    */      0
-      /* Lower limit            */      -1200.0
-      /* Upper limit            */      1200.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_Isflt_f32@ */
+      /* Lower limit            */      -500.0
+      /* Upper limit            */      500.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_CurrAgTrqflt_f32@ */
     /end MEASUREMENT
     
     
@@ -1042,7 +889,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_CurrAgTrqNoComp_f32
+      /* Name                   */      VAR_TCF_CurrAgTrq1_f32
       /* Long identifier        */      ""
       /* Data type              */      FLOAT32_IEEE
       /* Conversion method      */      SWC_TCF_CM_single
@@ -1050,20 +897,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Accuracy (Not used)    */      0
       /* Lower limit            */      -500.0
       /* Upper limit            */      500.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_CurrAgTrqNoComp_f32@ */
-    /end MEASUREMENT
-    
-    
-    /begin MEASUREMENT
-      /* Name                   */      VAR_TCF_CurrAgTrqflt_f32
-      /* Long identifier        */      ""
-      /* Data type              */      FLOAT32_IEEE
-      /* Conversion method      */      SWC_TCF_CM_single
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      -500.0
-      /* Upper limit            */      500.0
-      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_CurrAgTrqflt_f32@ */
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_TCF_CurrAgTrq1_f32@ */
     /end MEASUREMENT
     
     
@@ -1211,16 +1045,23 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
         S3_LdsubLqCalc
         S3_MotorModeJdg
       /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CAL_TCF_TrqMechCutOffFrq_f32
+        PRV_CalFltFrq_1ms
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VAR_TCF_CurrAgTrqflt_f32
+      /end REF_MEASUREMENT
     /end GROUP
     
     /begin GROUP 
       /* Name                   */       S1_PwrTrqCalcProc
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc"
       /begin SUB_GROUP
-        S4_IsCalc
-        S4_PinputCalc
-        S4_PlossCalc
-        S4_PwrTrqCalc
+        S5_IsCalc
+        S5_PinputCalc
+        S5_PlossCalc
+        S5_PwrTrqCalc
       /end SUB_GROUP
     /end GROUP
     
@@ -1228,9 +1069,9 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S1_TrqBlendProc
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqBlendProc"
       /begin SUB_GROUP
-        S5_Debouncer
-        S5_TrqBlend
-        S5_TrqTube
+        S6_Debouncer
+        S6_TrqBlend
+        S6_TrqTube
       /end SUB_GROUP
       /begin REF_CHARACTERISTIC
         CAL_TCF_TrqCalcMonCountTrh_s16
@@ -1243,8 +1084,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S1_TrqCalcEnable
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqCalcEnable"
       /begin REF_CHARACTERISTIC
-        CAL_TCF_PwrTrqCalcSpdThrH_f32
-        CAL_TCF_PwrTrqCalcSpdThrL_f32
         CAL_TCF_SpeedCtlMode_u8
       /end REF_CHARACTERISTIC
     /end GROUP
@@ -1255,12 +1094,9 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /begin REF_CHARACTERISTIC
         CAL_TCF_MotorPole_u8
         CAL_TCF_Psi_f32
-        CAL_TCF_TrqMechCutOffFrq_f32
-        PRV_CalFltFrq_1ms
       /end REF_CHARACTERISTIC
       /begin REF_MEASUREMENT
-        VAR_TCF_CurrAgTrqNoComp_f32
-        VAR_TCF_CurrAgTrqflt_f32
+        VAR_TCF_CurrAgTrq1_f32
       /end REF_MEASUREMENT
     /end GROUP
     
@@ -1289,40 +1125,30 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S3_MotorModeJdg
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/MotorModeJdg"
       /begin SUB_GROUP
-        S10_MotorMode
-        S10_TrqDir
-        S10_nDir
+        S11_MotorMode
+        S11_TrqDir
+        S11_nDir
       /end SUB_GROUP
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S4_IsCalc
+      /* Name                   */       S5_IsCalc
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc/IsCalc"
-      /begin REF_CHARACTERISTIC
-        CAL_TCF_IsCutOffFrq_f32
-        PRV_IsCalFltFrq_1ms
-      /end REF_CHARACTERISTIC
       /begin REF_MEASUREMENT
-        VAR_TCF_IsNoflt_f32
-        VAR_TCF_Isflt_f32
+        VAR_TCF_Is_f32
       /end REF_MEASUREMENT
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S4_PinputCalc
+      /* Name                   */       S5_PinputCalc
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc/PinputCalc"
-      /begin REF_CHARACTERISTIC
-        CAL_TCF_PwrInputCutOffFrq_f32
-        PRV_CalFltFrq_1ms
-      /end REF_CHARACTERISTIC
       /begin REF_MEASUREMENT
-        VAR_TCF_PwrInputNoflt_f32
-        VAR_TCF_PwrInputflt_f32
+        VAR_TCF_Pinput_f32
       /end REF_MEASUREMENT
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S4_PlossCalc
+      /* Name                   */       S5_PlossCalc
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc/PlossCalc"
       /begin REF_CHARACTERISTIC
         CAL_TCF_PwrLossCAz_af32
@@ -1337,22 +1163,18 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S4_PwrTrqCalc
+      /* Name                   */       S5_PwrTrqCalc
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/PwrTrqCalcProc/PwrTrqCalc"
       /begin REF_CHARACTERISTIC
-        CAL_TCF_PwrCompaElectCAz_af32
-        CAL_TCF_TrqMechCutOffFrq_f32
-        PRV_CalFltFrq_1ms
+        CAL_TCF_PwrTrqSpdCompa_af32
       /end REF_CHARACTERISTIC
       /begin REF_MEASUREMENT
-        VAR_TCF_PwrTrqCompCof_f32
-        VAR_TCF_PwrTrqNoflt_f32
-        VAR_TCF_PwrTrqflt_f32
+        VAR_TCF_PwrTrq1_f32
       /end REF_MEASUREMENT
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S5_Debouncer
+      /* Name                   */       S6_Debouncer
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqBlendProc/Debouncer"
       /begin REF_MEASUREMENT
         VAR_TCF_TrqCalcErr_b
@@ -1360,7 +1182,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S5_TrqBlend
+      /* Name                   */       S6_TrqBlend
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqBlendProc/TrqBlend"
       /begin REF_CHARACTERISTIC
         CAL_TCF_TrqInvalid_s16
@@ -1372,7 +1194,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S5_TrqTube
+      /* Name                   */       S6_TrqTube
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/TrqBlendProc/TrqTube"
       /begin REF_CHARACTERISTIC
         CAL_TCF_AgTrqTubeCAy_af32
@@ -1383,12 +1205,11 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
         VAR_TCF_CurrAgTrqTubeL1_f32
         VAR_TCF_PwrTrqTubeH1_f32
         VAR_TCF_PwrTrqTubeL1_f32
-        VAR_TCF_PwrTrqfltcomp_f32
       /end REF_MEASUREMENT
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S10_MotorMode
+      /* Name                   */       S11_MotorMode
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/MotorModeJdg/MotorMode"
       /begin REF_MEASUREMENT
         VAR_TCF_MotorMode_u8
@@ -1396,7 +1217,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S10_TrqDir
+      /* Name                   */       S11_TrqDir
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/MotorModeJdg/TrqDir"
       /begin REF_CHARACTERISTIC
         CAL_TCF_HiTrqDirStop_f32
@@ -1408,7 +1229,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S10_nDir
+      /* Name                   */       S11_nDir
       /* Long identifier        */       "SWC_TCF/SWC_TCF_1ms_sys/CurrAgTrqCalcProc/MotorModeJdg/nDir"
       /begin REF_CHARACTERISTIC
         CAL_TCF_HiSpdDirStop_f32

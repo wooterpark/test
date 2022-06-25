@@ -4,9 +4,9 @@
  *
  * Code generation for model "SWC_ADM".
  *
- * Model version              : 1.269
+ * Model version              : 1.285
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C source code generated on : Tue Sep  7 10:10:19 2021
+ * C source code generated on : Fri Jun 24 16:29:57 2022
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -453,6 +453,19 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin CHARACTERISTIC
+      /* Name                   */      CAL_ADM_VoltCmpChkErrst_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_ADM_VoltCmpChkErrst_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_ADM_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
       /* Name                   */      CAL_ADM_flgCrashSwt_b  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
@@ -636,6 +649,32 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin MEASUREMENT
+      /* Name                   */      VAR_VoltCmpChkErrSt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_ADM_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_VoltCmpChkErrSt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VAR_BMSVoltRngErrSt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SWC_ADM_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VAR_BMSVoltRngErrSt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
       /* Name                   */      VAR_ADM_flgDchgReq_b
       /* Long identifier        */      ""
       /* Data type              */      UBYTE
@@ -736,6 +775,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
         CAL_ADM_GlbDchgErrRst_b
         CAL_ADM_GlbDchgThrshTime_f32
         CAL_ADM_GlbDchgThrshVolt_f32
+        CAL_ADM_VoltCmpChkErrst_b
       /end REF_CHARACTERISTIC
       /begin REF_MEASUREMENT
         VAR_ADM_GlbDchgErr_b
@@ -864,6 +904,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /end REF_CHARACTERISTIC
       /begin REF_MEASUREMENT
         VAR_ADM_BMSVolt_f32
+        VAR_BMSVoltRngErrSt
       /end REF_MEASUREMENT
     /end GROUP
     
@@ -877,6 +918,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /end REF_CHARACTERISTIC
       /begin REF_MEASUREMENT
         VAR_ADM_HiPrecVolt_f32
+        VAR_VoltCmpChkErrSt
       /end REF_MEASUREMENT
     /end GROUP
     

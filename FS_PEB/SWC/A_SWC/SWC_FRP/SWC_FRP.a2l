@@ -4,9 +4,9 @@
  *
  * Code generation for model "SWC_FRP".
  *
- * Model version              : 1.231
+ * Model version              : 1.238
  * Simulink Coder version : 9.3 (R2020a) 18-Nov-2019
- * C source code generated on : Thu Aug 26 09:21:02 2021
+ * C source code generated on : Fri Jun 24 16:31:10 2022
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -219,6 +219,45 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin CHARACTERISTIC
+      /* Name                   */      CAL_FRP_18VHSVoltRngErrOutCtl_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_FRP_18VHSVoltRngErrOutCtl_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_FRP_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_FRP_1V8CPLDVoltRngErrOutCtl_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_FRP_1V8CPLDVoltRngErrOutCtl_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_FRP_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CAL_FRP_3V3CPLDVoltRngErrOutCtl_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_FRP_3V3CPLDVoltRngErrOutCtl_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_FRP_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
       /* Name                   */      CAL_FRP_BMSVoltRngErrOutCtl_b  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
@@ -388,6 +427,19 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin CHARACTERISTIC
+      /* Name                   */      CAL_FRP_UBRVoltRngErrOutCtl_b  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@CAL_FRP_UBRVoltRngErrOutCtl_b@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      SWC_FRP_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
       /* Name                   */      CAL_FRP_UintndSpdErrOutCtl_b  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
@@ -513,6 +565,9 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S1_FaultReactGen
       /* Long identifier        */       "SWC_FRP/SWC_FRM_1ms_sys/FaultReactGen"
       /begin REF_CHARACTERISTIC
+        CAL_FRP_18VHSVoltRngErrOutCtl_b
+        CAL_FRP_1V8CPLDVoltRngErrOutCtl_b
+        CAL_FRP_3V3CPLDVoltRngErrOutCtl_b
         CAL_FRP_BMSVoltRngErrOutCtl_b
         CAL_FRP_CurrRngErrOutCtl_b
         CAL_FRP_CurrSumErrOutCtl_b
@@ -526,6 +581,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
         CAL_FRP_RslvSqrtErrOutCtl_b
         CAL_FRP_TrqCalcErrOutCtl_b
         CAL_FRP_TrqSetPRngErrOutCtl_b
+        CAL_FRP_UBRVoltRngErrOutCtl_b
         CAL_FRP_UintndSpdErrOutCtl_b
         CAL_FRP_UintndTrqErrOutCtl_b
         CAL_FRP_VoltCmpChkErrOutCtl_b

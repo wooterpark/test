@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'SWC_FRP'.
  *
- * Model version                  : 1.231
+ * Model version                  : 1.238
  * Simulink Coder version         : 9.3 (R2020a) 18-Nov-2019
- * C/C++ source code generated on : Thu Aug 26 09:21:02 2021
+ * C/C++ source code generated on : Fri Jun 24 16:31:10 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -55,9 +55,15 @@ extern void SWC_FRP_terminate(void);
 extern void SWC_FRP_1ms(void);
 
 /* Exported data declaration */
-//#pragma section ".rodata.CPU1_Calib_32"
+#pragma section ".rodata.Calib_32"
 
 /* Declaration for custom storage class: iEDS_Parameter */
+extern const volatile boolean CAL_FRP_18VHSVoltRngErrOutCtl_b;
+                     /* Referenced by: '<S4>/CAL_FRP_18VHSVoltRngErrOutCtl_b' */
+extern const volatile boolean CAL_FRP_1V8CPLDVoltRngErrOutCtl_b;
+                   /* Referenced by: '<S4>/CAL_FRP_1V8CPLDVoltRngErrOutCtl_b' */
+extern const volatile boolean CAL_FRP_3V3CPLDVoltRngErrOutCtl_b;
+                   /* Referenced by: '<S4>/CAL_FRP_3V3CPLDVoltRngErrOutCtl_b' */
 extern const volatile boolean CAL_FRP_BMSVoltRngErrOutCtl_b;
                        /* Referenced by: '<S4>/CAL_FRP_BMSVoltRngErrOutCtl_b' */
 extern const volatile boolean CAL_FRP_CurrRngErrOutCtl_b;
@@ -84,6 +90,8 @@ extern const volatile boolean CAL_FRP_TrqCalcErrOutCtl_b;
                           /* Referenced by: '<S4>/CAL_FRP_TrqCalcErrOutCtl_b' */
 extern const volatile boolean CAL_FRP_TrqSetPRngErrOutCtl_b;
                        /* Referenced by: '<S4>/CAL_FRP_TrqSetPRngErrOutCtl_b' */
+extern const volatile boolean CAL_FRP_UBRVoltRngErrOutCtl_b;
+                       /* Referenced by: '<S4>/CAL_FRP_UBRVoltRngErrOutCtl_b' */
 extern const volatile boolean CAL_FRP_UintndSpdErrOutCtl_b;
                         /* Referenced by: '<S4>/CAL_FRP_UintndSpdErrOutCtl_b' */
 extern const volatile boolean CAL_FRP_UintndTrqErrOutCtl_b;
@@ -93,16 +101,10 @@ extern const volatile boolean CAL_FRP_VoltCmpChkErrOutCtl_b;
 extern const volatile boolean CAL_FRP_iPhasSensVolRngErrOutCtl_b;
                   /* Referenced by: '<S4>/CAL_FRP_iPhasSensVolRngErrOutCtl_b' */
 
-//#pragma section
+#pragma section
 
 /* Real-time Model object */
 extern RT_MODEL_SWC_FRP_T *const SWC_FRP_M;
-
-/*-
- * These blocks were eliminated from the model due to optimizations:
- *
- * Block '<S3>/Data Type Conversion16' : Eliminate redundant data type conversion
- */
 
 /*-
  * The generated code includes comments that allow you to trace directly

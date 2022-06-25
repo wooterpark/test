@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'SWC_FRP'.
  *
- * Model version                  : 1.231
+ * Model version                  : 1.238
  * Simulink Coder version         : 9.3 (R2020a) 18-Nov-2019
- * C/C++ source code generated on : Thu Aug 26 09:21:02 2021
+ * C/C++ source code generated on : Fri Jun 24 16:31:10 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -15,6 +15,8 @@
 
 #include "SWC_FRP.h"
 #include "SWC_FRP_private.h"
+
+/* user code (top of source file) */
 #include "set_get_data.h"
 
 /* Exported block signals */
@@ -22,9 +24,15 @@ uint32 VAR_FRP_FaultInfo_u32;          /* '<S3>/Bitwise Operator' */
 boolean VAR_FRP_FaultReact_b;          /* '<S4>/Switch5' */
 
 /* Exported data definition */
-#pragma section ".rodata.CPU1_Calib_32"
+#pragma section ".rodata.Calib_32"
 
 /* Definition for custom storage class: iEDS_Parameter */
+const volatile boolean CAL_FRP_18VHSVoltRngErrOutCtl_b = 1;
+                     /* Referenced by: '<S4>/CAL_FRP_18VHSVoltRngErrOutCtl_b' */
+const volatile boolean CAL_FRP_1V8CPLDVoltRngErrOutCtl_b = 1;
+                   /* Referenced by: '<S4>/CAL_FRP_1V8CPLDVoltRngErrOutCtl_b' */
+const volatile boolean CAL_FRP_3V3CPLDVoltRngErrOutCtl_b = 1;
+                   /* Referenced by: '<S4>/CAL_FRP_3V3CPLDVoltRngErrOutCtl_b' */
 const volatile boolean CAL_FRP_BMSVoltRngErrOutCtl_b = 1;
                        /* Referenced by: '<S4>/CAL_FRP_BMSVoltRngErrOutCtl_b' */
 const volatile boolean CAL_FRP_CurrRngErrOutCtl_b = 1;
@@ -51,6 +59,8 @@ const volatile boolean CAL_FRP_TrqCalcErrOutCtl_b = 1;
                           /* Referenced by: '<S4>/CAL_FRP_TrqCalcErrOutCtl_b' */
 const volatile boolean CAL_FRP_TrqSetPRngErrOutCtl_b = 1;
                        /* Referenced by: '<S4>/CAL_FRP_TrqSetPRngErrOutCtl_b' */
+const volatile boolean CAL_FRP_UBRVoltRngErrOutCtl_b = 1;
+                       /* Referenced by: '<S4>/CAL_FRP_UBRVoltRngErrOutCtl_b' */
 const volatile boolean CAL_FRP_UintndSpdErrOutCtl_b = 1;
                         /* Referenced by: '<S4>/CAL_FRP_UintndSpdErrOutCtl_b' */
 const volatile boolean CAL_FRP_UintndTrqErrOutCtl_b = 1;
@@ -85,6 +95,10 @@ void SWC_FRP_FaultInfoGen(void)
   /* Outputs for Atomic SubSystem: '<S3>/Bit Shift14' */
   /* Outputs for Atomic SubSystem: '<S3>/Bit Shift15' */
   /* Outputs for Atomic SubSystem: '<S3>/Bit Shift16' */
+  /* Outputs for Atomic SubSystem: '<S3>/Bit Shift17' */
+  /* Outputs for Atomic SubSystem: '<S3>/Bit Shift18' */
+  /* Outputs for Atomic SubSystem: '<S3>/Bit Shift19' */
+  /* Outputs for Atomic SubSystem: '<S3>/Bit Shift20' */
   /* S-Function (sfix_bitop): '<S3>/Bitwise Operator' incorporates:
    *  DataTypeConversion: '<S3>/Data Type Conversion'
    *  DataTypeConversion: '<S3>/Data Type Conversion1'
@@ -94,7 +108,12 @@ void SWC_FRP_FaultInfoGen(void)
    *  DataTypeConversion: '<S3>/Data Type Conversion13'
    *  DataTypeConversion: '<S3>/Data Type Conversion14'
    *  DataTypeConversion: '<S3>/Data Type Conversion15'
+   *  DataTypeConversion: '<S3>/Data Type Conversion16'
+   *  DataTypeConversion: '<S3>/Data Type Conversion17'
+   *  DataTypeConversion: '<S3>/Data Type Conversion18'
+   *  DataTypeConversion: '<S3>/Data Type Conversion19'
    *  DataTypeConversion: '<S3>/Data Type Conversion2'
+   *  DataTypeConversion: '<S3>/Data Type Conversion20'
    *  DataTypeConversion: '<S3>/Data Type Conversion3'
    *  DataTypeConversion: '<S3>/Data Type Conversion4'
    *  DataTypeConversion: '<S3>/Data Type Conversion5'
@@ -108,6 +127,9 @@ void SWC_FRP_FaultInfoGen(void)
    *  Inport: '<Root>/STM_UintndSpdErr'
    *  Inport: '<Root>/STM_UintndTrqErr'
    *  Inport: '<Root>/TCF_TrqCalcErr'
+   *  Inport: '<Root>/TRSP_18VHSVoltRngErr'
+   *  Inport: '<Root>/TRSP_1V8CPLDVoltRngErr'
+   *  Inport: '<Root>/TRSP_3V3CPLDVoltRngErr'
    *  Inport: '<Root>/TRSP_CurrRngErr'
    *  Inport: '<Root>/TRSP_CurrSumErr'
    *  Inport: '<Root>/TRSP_ModeReqRngErr'
@@ -118,12 +140,17 @@ void SWC_FRP_FaultInfoGen(void)
    *  Inport: '<Root>/TRSP_RslvSensVolRngErr'
    *  Inport: '<Root>/TRSP_RslvSqrtErr'
    *  Inport: '<Root>/TRSP_TrqSetPRngErr'
+   *  Inport: '<Root>/TRSP_UBRVoltRngErr'
    *  Inport: '<Root>/TRSP_iPhasSensVolRngErr'
    *  MATLAB Function: '<S10>/bit_shift'
    *  MATLAB Function: '<S11>/bit_shift'
    *  MATLAB Function: '<S12>/bit_shift'
    *  MATLAB Function: '<S13>/bit_shift'
+   *  MATLAB Function: '<S14>/bit_shift'
+   *  MATLAB Function: '<S15>/bit_shift'
+   *  MATLAB Function: '<S16>/bit_shift'
    *  MATLAB Function: '<S17>/bit_shift'
+   *  MATLAB Function: '<S18>/bit_shift'
    *  MATLAB Function: '<S28>/bit_shift'
    *  MATLAB Function: '<S31>/bit_shift'
    *  MATLAB Function: '<S32>/bit_shift'
@@ -144,8 +171,15 @@ void SWC_FRP_FaultInfoGen(void)
     (uint32)get_TRSP_CurrRngErr() << 9 | (uint32)get_TRSP_TrqSetPRngErr() << 10 |
     (uint32)get_TRSP_NSetPRngErr() << 11 | (uint32)get_TRSP_ModeReqRngErr() <<
     12 | (uint32)get_TRSP_OffsetRngErr() << 13 | (uint32)get_ADM_BMSVoltRngErr()
-    << 14 | (uint32)get_ADM_VoltCmpChkErr() << 15 | get_ADM_GlbDchgErr() << 16;
+    << 14 | (uint32)get_ADM_VoltCmpChkErr() << 15 | (uint32)get_ADM_GlbDchgErr()
+    << 16 | (uint32)get_TRSP_UBRVoltRngErr() << 17 | (uint32)
+    get_TRSP_18VHSVoltRngErr() << 18 | (uint32)get_TRSP_3V3CPLDVoltRngErr() <<
+    19 | (uint32)get_TRSP_1V8CPLDVoltRngErr() << 20;
 
+  /* End of Outputs for SubSystem: '<S3>/Bit Shift20' */
+  /* End of Outputs for SubSystem: '<S3>/Bit Shift19' */
+  /* End of Outputs for SubSystem: '<S3>/Bit Shift18' */
+  /* End of Outputs for SubSystem: '<S3>/Bit Shift17' */
   /* End of Outputs for SubSystem: '<S3>/Bit Shift16' */
   /* End of Outputs for SubSystem: '<S3>/Bit Shift15' */
   /* End of Outputs for SubSystem: '<S3>/Bit Shift14' */
@@ -171,6 +205,9 @@ void SWC_FRP_FaultInfoGen(void)
 void SWC_FRP_FaultReactGen(void)
 {
   /* Switch: '<S4>/Switch5' incorporates:
+   *  Constant: '<S4>/CAL_FRP_18VHSVoltRngErrOutCtl_b'
+   *  Constant: '<S4>/CAL_FRP_1V8CPLDVoltRngErrOutCtl_b'
+   *  Constant: '<S4>/CAL_FRP_3V3CPLDVoltRngErrOutCtl_b'
    *  Constant: '<S4>/CAL_FRP_BMSVoltRngErrOutCtl_b'
    *  Constant: '<S4>/CAL_FRP_CurrRngErrOutCtl_b'
    *  Constant: '<S4>/CAL_FRP_CurrSumErrOutCtl_b'
@@ -184,6 +221,7 @@ void SWC_FRP_FaultReactGen(void)
    *  Constant: '<S4>/CAL_FRP_RslvSqrtErrOutCtl_b'
    *  Constant: '<S4>/CAL_FRP_TrqCalcErrOutCtl_b'
    *  Constant: '<S4>/CAL_FRP_TrqSetPRngErrOutCtl_b'
+   *  Constant: '<S4>/CAL_FRP_UBRVoltRngErrOutCtl_b'
    *  Constant: '<S4>/CAL_FRP_UintndSpdErrOutCtl_b'
    *  Constant: '<S4>/CAL_FRP_UintndTrqErrOutCtl_b'
    *  Constant: '<S4>/CAL_FRP_VoltCmpChkErrOutCtl_b'
@@ -194,6 +232,9 @@ void SWC_FRP_FaultReactGen(void)
    *  Inport: '<Root>/STM_UintndSpdErr'
    *  Inport: '<Root>/STM_UintndTrqErr'
    *  Inport: '<Root>/TCF_TrqCalcErr'
+   *  Inport: '<Root>/TRSP_18VHSVoltRngErr'
+   *  Inport: '<Root>/TRSP_1V8CPLDVoltRngErr'
+   *  Inport: '<Root>/TRSP_3V3CPLDVoltRngErr'
    *  Inport: '<Root>/TRSP_CurrRngErr'
    *  Inport: '<Root>/TRSP_CurrSumErr'
    *  Inport: '<Root>/TRSP_ModeReqRngErr'
@@ -204,6 +245,7 @@ void SWC_FRP_FaultReactGen(void)
    *  Inport: '<Root>/TRSP_RslvSensVolRngErr'
    *  Inport: '<Root>/TRSP_RslvSqrtErr'
    *  Inport: '<Root>/TRSP_TrqSetPRngErr'
+   *  Inport: '<Root>/TRSP_UBRVoltRngErr'
    *  Inport: '<Root>/TRSP_iPhasSensVolRngErr'
    *  Logic: '<S4>/Logical Operator3'
    *  Switch: '<S4>/Switch1'
@@ -215,7 +257,11 @@ void SWC_FRP_FaultReactGen(void)
    *  Switch: '<S4>/Switch15'
    *  Switch: '<S4>/Switch16'
    *  Switch: '<S4>/Switch17'
+   *  Switch: '<S4>/Switch18'
+   *  Switch: '<S4>/Switch19'
    *  Switch: '<S4>/Switch2'
+   *  Switch: '<S4>/Switch20'
+   *  Switch: '<S4>/Switch21'
    *  Switch: '<S4>/Switch3'
    *  Switch: '<S4>/Switch4'
    *  Switch: '<S4>/Switch6'
@@ -240,7 +286,11 @@ void SWC_FRP_FaultReactGen(void)
       get_TRSP_iPhasSensVolRngErr()) || (CAL_FRP_TrqCalcErrOutCtl_b &&
       get_TCF_TrqCalcErr()) || (CAL_FRP_UintndSpdErrOutCtl_b &&
       get_STM_UintndSpdErr()) || (CAL_FRP_UintndTrqErrOutCtl_b &&
-      get_STM_UintndTrqErr()));
+      get_STM_UintndTrqErr()) || (CAL_FRP_UBRVoltRngErrOutCtl_b &&
+      get_TRSP_UBRVoltRngErr()) || (CAL_FRP_18VHSVoltRngErrOutCtl_b &&
+      get_TRSP_18VHSVoltRngErr()) || (CAL_FRP_3V3CPLDVoltRngErrOutCtl_b &&
+      get_TRSP_3V3CPLDVoltRngErr()) || (CAL_FRP_1V8CPLDVoltRngErrOutCtl_b &&
+      get_TRSP_1V8CPLDVoltRngErr()));
   } else {
     VAR_FRP_FaultReact_b = false;
   }

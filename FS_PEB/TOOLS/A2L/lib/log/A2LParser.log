@@ -390,6 +390,7 @@ Address 0 found for characteristic: CAL_DEM_Disbl_DFC_IgbtDrv_UpBrgFaultBFail_u8
 Address 0 found for characteristic: CAL_TpcTmp_tIGBTTempHiLim_f32
 Address 0 found for characteristic: CAL_MCF_cofOverModu_f32
 Address 0 found for characteristic: CAL_PcfDia_VDD5Highset_f32
+Address 0 found for characteristic: CAL_FRP_1V8CPLDVoltRngErrOutCtl_b
 Address 0 found for characteristic: CAL_MCF_KpAlphaZeroCtl_f32
 Address 0 found for characteristic: CAL_Vcf_CrawlRspd_f32
 Address 0 found for characteristic: CAL_MDF_tiAgComp_f32
@@ -505,6 +506,7 @@ Address 0 found for characteristic: CAL_Cspf_bDernUndrUdc_u8
 Address 0 found for characteristic: CAL_FRP_FaultReactCtl_b
 Address 0 found for characteristic: CAL_TpcTmp_DBCRiseTempDecDiff_f32
 Address 0 found for characteristic: CAL_DEM_Disbl_DFC_IgbtDrv_UpBrgFaultAFail_u8
+Address 0 found for characteristic: CAL_ADM_VoltCmpChkErrst_b
 Address 0 found for characteristic: CAL_TCF_Psi_f32
 Address 0 found for characteristic: CAL_TjrthLv4dlntc_f32
 Address 0 found for characteristic: CAL_Hspf_bt15ChkCntHiLim_u8
@@ -949,6 +951,7 @@ Address 0 found for characteristic: CAL_Vcf_GearR_u8
 Address 0 found for characteristic: CAL_TRSP_UCurrRngLoLim_f32
 Address 0 found for characteristic: CAL_Cspf_bDernExcMin_u8
 Address 0 found for characteristic: CAL_DEM_FIM_DFC_IgbtDrv_ComErr_au8
+Address 0 found for characteristic: CAL_FRP_3V3CPLDVoltRngErrOutCtl_b
 Address 0 found for characteristic: CAL_DEM_Disbl_DFC_Cpld_UnderVol_LS_InFail_u8
 Address 0 found for characteristic: CAL_TRSP_RslvSensVoltLoLim_u16
 Address 0 found for characteristic: CAL_RCF_EstToDefault_b
@@ -1072,6 +1075,7 @@ Address 0 found for characteristic: CAL_RDC_RslRefMin_s32
 Address 0 found for characteristic: CAL_TpcTmp_tRiseDbcTraSave1ToSave2_f32
 Address 0 found for characteristic: CAL_MDF_UsErrFlt_f32
 Address 0 found for characteristic: CAL_RDC_RslRefMax_s32
+Address 0 found for characteristic: CAL_FRP_18VHSVoltRngErrOutCtl_b
 Address 0 found for characteristic: CAL_TjrthLv4ihdh_f32
 Address 0 found for characteristic: CAL_DEM_FIM_DFC_MDF_OpenCirNoPsblErr_au8
 Address 0 found for characteristic: CAL_FRP_iPhasSensVolRngErrOutCtl_b
@@ -1208,6 +1212,7 @@ Address 0 found for characteristic: CAL_TpcTmp_IGBRiseTTempAdds_f32
 Address 0 found for characteristic: CAL_TpcTmp_DBCRiseTempKp_f32
 Address 0 found for characteristic: CAL_TCF_LoTrqDirStop_f32
 Address 0 found for characteristic: CAL_POWER_UBSBC_Threhold_V1_f32
+Address 0 found for characteristic: CAL_FRP_UBRVoltRngErrOutCtl_b
 Address 0 found for characteristic: CAL_Cspf_flgKpLowNCtlSwt_b
 Address 0 found for characteristic: CAL_Cspf_flgtStrrTemp2FltSwt_b
 Address 0 found for characteristic: CAL_TRSP_iPhasSensVoltLoLim_u16
@@ -1360,6 +1365,7 @@ Address 0 found for characteristic: CAL_ADM_GlbDchgErrRst_b
 Address 0 found for characteristic: CAL_ADM_L2Com_BMSVolt_b
 Address 0 found for characteristic: CAL_ADM_L2Com_HiPrecVolt_b
 Address 0 found for characteristic: CAL_ADM_VoltCmpChkErrRst_b
+Address 0 found for characteristic: CAL_ADM_VoltCmpChkErrst_b
 Address 0 found for characteristic: CAL_ADM_flgCrashSwt_b
 Address 0 found for characteristic: CAL_ADM_flgCrash_b
 Address 0 found for characteristic: CAL_ADM_flgDchgReqSwt_b
@@ -1598,6 +1604,9 @@ Address 0 found for characteristic: CAL_Cspf_stModeReq_u8
 Address 0 found for characteristic: CAL_Cspf_stMode_u8
 Address 0 found for characteristic: CAL_Cspf_stTrqEmMax_u8
 Address 0 found for characteristic: CAL_Cspf_stTrqEmMin_u8
+Address 0 found for characteristic: CAL_FRP_18VHSVoltRngErrOutCtl_b
+Address 0 found for characteristic: CAL_FRP_1V8CPLDVoltRngErrOutCtl_b
+Address 0 found for characteristic: CAL_FRP_3V3CPLDVoltRngErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_BMSVoltRngErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_CurrRngErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_CurrSumErrOutCtl_b
@@ -1611,6 +1620,7 @@ Address 0 found for characteristic: CAL_FRP_RslvSensVolRngErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_RslvSqrtErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_TrqCalcErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_TrqSetPRngErrOutCtl_b
+Address 0 found for characteristic: CAL_FRP_UBRVoltRngErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_UintndSpdErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_UintndTrqErrOutCtl_b
 Address 0 found for characteristic: CAL_FRP_VoltCmpChkErrOutCtl_b

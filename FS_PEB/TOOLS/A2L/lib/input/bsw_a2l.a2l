@@ -6654,6 +6654,8 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
          
 
 
+
+
   /begin CHARACTERISTIC CAL_TpcMot_tSttrTraSave1ToNormal_f32 
     "CAL_TpcMot_tSttrTraSave1ToNormal_f32"
     VALUE 
@@ -10110,6 +10112,20 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
          
 
 
+  /begin CHARACTERISTIC CAL_FRP_1V8CPLDVoltRngErrOutCtl_b 
+    "CAL_FRP_1V8CPLDVoltRngErrOutCtl_b"
+    VALUE 
+    0x00000000 
+    Scalar_BOOLEAN
+    0 
+    BSW_A2L_Ident_Int 
+    0
+    1
+    
+  /end CHARACTERISTIC
+         
+
+
 
 
 
@@ -13307,6 +13323,20 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     ECU_ADDRESS 0x00000000
   /end MEASUREMENT
+         
+
+
+  /begin CHARACTERISTIC CAL_ADM_VoltCmpChkErrst_b 
+    "CAL_ADM_VoltCmpChkErrst_b"
+    VALUE 
+    0x00000000 
+    Scalar_BOOLEAN
+    0 
+    BSW_A2L_Ident_Int 
+    0
+    1
+    
+  /end CHARACTERISTIC
          
 
 
@@ -24618,6 +24648,20 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
          
 
 
+  /begin CHARACTERISTIC CAL_FRP_3V3CPLDVoltRngErrOutCtl_b 
+    "CAL_FRP_3V3CPLDVoltRngErrOutCtl_b"
+    VALUE 
+    0x00000000 
+    Scalar_BOOLEAN
+    0 
+    BSW_A2L_Ident_Int 
+    0
+    1
+    
+  /end CHARACTERISTIC
+         
+
+
 
 
 
@@ -26646,6 +26690,8 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
          
 
 
+
+
   /begin MEASUREMENT VAR_TpcTmp_TDbcWLoLimErrState_u8
     "VAR_TpcTmp_TDbcWLoLimErrState_u8"
     UBYTE
@@ -27565,6 +27611,20 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     ECU_ADDRESS 0x00000000
   /end MEASUREMENT
+         
+
+
+  /begin CHARACTERISTIC CAL_FRP_18VHSVoltRngErrOutCtl_b 
+    "CAL_FRP_18VHSVoltRngErrOutCtl_b"
+    VALUE 
+    0x00000000 
+    Scalar_BOOLEAN
+    0 
+    BSW_A2L_Ident_Int 
+    0
+    1
+    
+  /end CHARACTERISTIC
          
 
 
@@ -30988,6 +31048,20 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
          
 
 
+
+
+  /begin CHARACTERISTIC CAL_FRP_UBRVoltRngErrOutCtl_b 
+    "CAL_FRP_UBRVoltRngErrOutCtl_b"
+    VALUE 
+    0x00000000 
+    Scalar_BOOLEAN
+    0 
+    BSW_A2L_Ident_Int 
+    0
+    1
+    
+  /end CHARACTERISTIC
+         
 
 
   /begin CHARACTERISTIC CAL_Cspf_flgKpLowNCtlSwt_b 
