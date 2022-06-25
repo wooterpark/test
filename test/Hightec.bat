@@ -24,21 +24,21 @@ copy !codepath!\output\SWC_ADM_ert_rtw\*.c !cur_path!\SWC\A_SWC\SWC_ADM
 copy !codepath!\output\SWC_FRP_ert_rtw\*.c !cur_path!\SWC\A_SWC\SWC_FRP
 copy !codepath!\output\SWC_STM_ert_rtw\*.c !cur_path!\SWC\A_SWC\SWC_STM
 copy !codepath!\output\SWC_SWD_ert_rtw\*.c !cur_path!\SWC\A_SWC\SWC_SWD
-copy !codepath!\output\SWC_TCF_ert_rtw\*.c !cur_path!\SWC\A_SWC\SWC_TCF
+::copy !codepath!\output\SWC_TCF_ert_rtw\*.c !cur_path!\SWC\A_SWC\SWC_TCF
 copy !codepath!\output\SWC_TRSP_ert_rtw\*.c !cur_path!\SWC\A_SWC\SWC_TRSP
 
 copy !codepath!\output\SWC_ADM_ert_rtw\*.h !cur_path!\SWC\A_SWC\SWC_ADM
 copy !codepath!\output\SWC_FRP_ert_rtw\*.h !cur_path!\SWC\A_SWC\SWC_FRP
 copy !codepath!\output\SWC_STM_ert_rtw\*.h !cur_path!\SWC\A_SWC\SWC_STM
 copy !codepath!\output\SWC_SWD_ert_rtw\*.h !cur_path!\SWC\A_SWC\SWC_SWD
-copy !codepath!\output\SWC_TCF_ert_rtw\*.h !cur_path!\SWC\A_SWC\SWC_TCF
+::copy !codepath!\output\SWC_TCF_ert_rtw\*.h !cur_path!\SWC\A_SWC\SWC_TCF
 copy !codepath!\output\SWC_TRSP_ert_rtw\*.h !cur_path!\SWC\A_SWC\SWC_TRSP
 
 copy !codepath!\output\SWC_ADM_ert_rtw\*.a2l !cur_path!\SWC\A_SWC\SWC_ADM
 copy !codepath!\output\SWC_FRP_ert_rtw\*.a2l !cur_path!\SWC\A_SWC\SWC_FRP
 copy !codepath!\output\SWC_STM_ert_rtw\*.a2l !cur_path!\SWC\A_SWC\SWC_STM
 copy !codepath!\output\SWC_SWD_ert_rtw\*.a2l !cur_path!\SWC\A_SWC\SWC_SWD
-copy !codepath!\output\SWC_TCF_ert_rtw\*.a2l !cur_path!\SWC\A_SWC\SWC_TCF
+::copy !codepath!\output\SWC_TCF_ert_rtw\*.a2l !cur_path!\SWC\A_SWC\SWC_TCF
 copy !codepath!\output\SWC_TRSP_ert_rtw\*.a2l !cur_path!\SWC\A_SWC\SWC_TRSP
 ::####################################################################################################
 echo "3">>log.txt
