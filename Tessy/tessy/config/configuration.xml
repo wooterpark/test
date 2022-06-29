@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configuration version="4.0">
+ <groups/>
+ <projectEnvironments>
+  <projectEnvironment name="GNU GCC (C++) Eclipse CDT (Default)" uuid="c9460017-70ff-4e06-a667-02f185ce5da6">
+   <properties/>
+  </projectEnvironment>
+  <projectEnvironment name="GNU GCC Eclipse CDT (Default)" uuid="ccdc8d34-b494-48db-8e8c-ca65d0a42b43">
+   <properties/>
+  </projectEnvironment>
+ </projectEnvironments>
+</configuration>

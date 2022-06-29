@@ -1,0 +1,18 @@
+-it "ptrdiff_t=int"
+-i "C:\PRQA\QAC-8.1.2-R\include/ansi"
+-q "C:\PRQA\QAC-8.1.2-R\include/ansi"
+-ar+
+-bits+
+-u-
+-a ldouble=16
+-sl+
+-s ldouble=128
+-na 31
+-xn 6
+-xc+
+-ex ansipc
+-ex pc
+-ex asm
+-ex dollar
+-ex longlong
+-fpc-

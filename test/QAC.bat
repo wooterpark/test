@@ -1,13 +1,16 @@
 @echo off
 setlocal enabledelayedexpansion
-cd C:\PRQA\QAC-8.1.2-R\projects\examples\src
+E:
+cd E:\zzy\QAC\src
 set filepath2=%cd%
 ::需修改
 dir /s/b %filepath2%\*.c >>list_c.txt
 for /f "delims=" %%i in (list_c.txt) do (
 	set var=%%i
+	C:
 	cd C:\PRQA\QAC-8.1.2-R\bin
-	qac.exe -via C:\PRQA\QAC-8.1.2-R\projects\examples\examples.via -op C:\PRQA\QAC-8.1.2-R\projects\examples\output !%%i!
+	qac.exe -via E:\zzy\QAC\examples.via -op E:\zzy\testReport\QACoutput !%%i!
 )
-cd C:\PRQA\QAC-8.1.2-R\projects\examples\src
+E:
+cd E:\zzy\QAC\src
 del list_c.txt

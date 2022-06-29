@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mod id="7eaf4920-ef14-4d3e-82a8-bace1af2ea98" lid="8" md5="ee3f3136a09d33b84627c3d9e1431722" opt="15" ver="21">
+<funcs>
+<func decl="result is_value_in_range(struct range,value)" id="2" md5="3a7f5789ee13f6702bbca6ec92116c01" nam="is_value_in_range" scp="2" src="1" srcid="1">
+<coverage c0="5" c1="4" c2="4" mcc="4" mcdc="4"/>
+<metrics calls="0" depth="1" mccabe="3" stmts="7"/>
+</func>
+</funcs>
+<types>
+<enum id="1" nam="TESSYTAG_result" src="1" tmd="0x20000000000" ttg="1">
+<comp id="1" nam="no" val="0" vdf="2"/>
+<comp id="2" nam="yes" val="1" vdf="2"/>
+</enum>
+<typedef id="2" nam="result" src="1" trf="1"/>
+<struct id="3" nam="range" src="1">
+<comp id="1" nam="range_start" tc="10" tmd="0x800000000000000"/>
+<comp id="2" nam="range_len" tc="10" tmd="0x800000000000000"/>
+</struct>
+</types>
+<vars/>
+</mod>

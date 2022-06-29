@@ -1,0 +1,5 @@
+-IC:/PROGRA~1/Razorcat/TESSY_4.3/sys/include
+-IC:/PROGRA~1/Razorcat/TESSY_4.3/sys/include/tessy
+-IC:/PROGRA~1/Razorcat/TESSY_4.3/sys/include/tessy/comm
+-IC:/PROGRA~1/Razorcat/TESSY_4.3/sys/include/tpt
+-IC:/PROGRA~1/Razorcat/TESSY_4.3/Examples/ISVALU~1

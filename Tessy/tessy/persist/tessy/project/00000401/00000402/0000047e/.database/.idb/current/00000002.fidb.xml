@@ -1,0 +1,12 @@
+<func nam="is_value_in_range" id="2">
+ <ret id="3" nam="" tc="15" trf="2" pas="4" ips="4"/>
+ <parms>
+  <parm id="4" nam="r1" tc="27" trf="3" pas="2" ips="2">
+   <comp id="1" pas="2" ips="2"/>
+   <comp id="2" pas="2" ips="2"/>
+  </parm>
+  <parm id="7" nam="v1" tc="10" tmd="0x800000000000000" pas="2" ips="2"/>
+ </parms>
+ <calls/>
+ <vars/>
+</func>

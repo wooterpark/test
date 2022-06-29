@@ -1,0 +1,15 @@
+-il 4
+-i "C:\PRQA\QAC-8.1.2-R\projects/examples/src/inc1"
+-sty exdented
+-tab 0
+-wc function_dont_call
+-en ASC
+-maxerr 99
+-ppl+
+-ppf+
+-met+
+-ppm-
+-co a
+-ss+
+-sr-
+-mll 0

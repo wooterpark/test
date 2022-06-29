@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testobject name="is_value_in_range" type="0" id="1151" foreign_id="0" testdata_id="1" state_mask="0x1188" last_id="0" child_count="1" uuid="f1ee5463-5135-4ab3-9b00-f09bc4861491" testitem_state_mask="0x80" usercode_state_mask="0x00" last_modified="1650511173355" last_synchronized="0">
+	<version value="4.3.10">
+	</version>
+	<properties>
+	</properties>
+	<testitems>
+		<testcase name="" type="1" id="1153" foreign_id="0" testdata_id="1073741823" state_mask="0x1100" testcase_number="1" child_count="1" description="" specification="" comment="" uuid="c0b5cd42-8a20-4a57-b16a-f412adaaec29" testitem_state_mask="0x80" usercode_state_mask="0x00" last_modified="1650511173354" last_synchronized="0">
+			<teststep name="" id="1154" foreign_id="0" testdata_id="1073741824" type="1" state_mask="0x1100" repeat_count="1" description="" specification="" comment="" uuid="df85ffb4-ad9f-465d-8582-7dae6ea46407" testitem_state_mask="0x80" usercode_state_mask="0x00" last_modified="1650511173354" last_synchronized="0">
+			</teststep>
+		</testcase>
+	</testitems>
+</testobject>

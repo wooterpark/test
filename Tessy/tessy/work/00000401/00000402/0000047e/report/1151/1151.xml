@@ -1,0 +1,85 @@
+<report xml_version="3" tessy_version="4.3.10" testobject_name="is_value_in_range" testobject_uuid="f1ee5463-5135-4ab3-9b00-f09bc4861491" success="ok">
+	<summary>
+		<info project_name="yu" module_name="yu" module_uuid="6859748a-8989-4134-af98-45350057828d" testobject_name="is_value_in_range" testobject_uuid="f1ee5463-5135-4ab3-9b00-f09bc4861491" testobject_last_modified="2022-04-21 11:19:33+0800" cte_file="false" has_faultinjections="false" date="2022-06-28" time="14:54:44+0800" user="yusenlin" host="MC-YUSENLIN"/>
+		<comments>
+		</comments>
+		<statistic total="1" ok="1" ok_list="1.1" notok="0" notok_list="" notexecuted="0" notexecuted_list=""/>
+		<metrics>
+			<cc_total value="3" result="ok"/>
+			<result_significance value="true" result="ok"/>
+			<tc_cc_ratio value="0.33" result="notok"/>
+		</metrics>
+		
+		<interface>
+		<mod id="7eaf4920-ef14-4d3e-82a8-bace1af2ea98" lid="8" opt="15" ver="21">
+		<funcs>
+		<func decl="result is_value_in_range(struct range,value)" id="2" nam="is_value_in_range" scp="2" src="1">
+		<coverage c0="5" c1="4" c2="4" mcc="4" mcdc="4"/>
+		<metrics calls="0" depth="1" mccabe="3" stmts="7"/>
+		</func>
+		</funcs>
+		<types>
+		<enum id="1" nam="TESSYTAG_result" src="1" tmd="0x20000000000" ttg="1">
+		<comp id="1" nam="no" val="0" vdf="2"/>
+		<comp id="2" nam="yes" val="1" vdf="2"/>
+		</enum>
+		<typedef id="2" nam="result" src="1" trf="1"/>
+		<struct id="3" nam="range" src="1">
+		<comp id="1" nam="range_start" tc="10" tmd="0x800000000000000"/>
+		<comp id="2" nam="range_len" tc="10" tmd="0x800000000000000"/>
+		</struct>
+		</types>
+		<vars/>
+		</mod>
+		<funcs>
+		<func id="2" nam="is_value_in_range">
+		<ret id="3" ips="4" pas="4" tc="15" trf="2"/>
+		<parms>
+		<parm id="4" ips="2" nam="r1" pas="2" tc="27" trf="3">
+		<comp id="1" ips="2" pas="2"/>
+		<comp id="2" ips="2" pas="2"/>
+		</parm>
+		<parm id="7" ips="2" nam="v1" pas="2" tc="10" tmd="0x800000000000000"/>
+		</parms>
+		</func>
+		</funcs>
+		</interface>
+		
+		<interfaceReport>
+		<element kind="section" name="Parameter">
+		<element indent="1" kind="interface" name="struct range r1" passing="IN">
+		<element indent="2" kind="interface" name="int range_start" passing="IN"/>
+		<element indent="2" kind="interface" name="int range_len" passing="IN"/>
+		</element>
+		<element indent="1" kind="interface" name="int v1" passing="IN"/>
+		</element>
+		<element kind="section" name="Return">
+		<element indent="1" kind="interface" name="result " passing="OUT"/>
+		</element>
+		</interfaceReport>
+		<properties directory="C:\Users\yusenlin\Projects\TESSY\yu\tessy\work\00000401\00000402\0000047e" config="$(PROJECTROOT)\tessy\config\configuration.xml" project_root="C:\Users\yusenlin\Projects\TESSY\yu" project_description="" environment="GNU GCC Eclipse CDT (Default)" kind_of_test="UNIT">
+			<source file="$(ProgramW6432)\Razorcat\TESSY_4.3\Examples\IsValueInRange\is_val_in_range.c" cvs_revision="1" sha1="187f26381099e27b13b35f1789573df5aec133a0"/>
+		</properties>
+		<attributes>
+		</attributes>
+	</summary>
+	<module>
+	</module>
+	<testobject success="ok">
+		<testcase id="1" uuid="c0b5cd42-8a20-4a57-b16a-f412adaaec29" dbid="1153" success="ok" testdata_success="ok" is_faultinjection_testcase="false">
+			<teststep id="1.1" uuid="df85ffb4-ad9f-465d-8582-7dae6ea46407" dbid="1154" success="ok" testdata_success="ok" repeat_count="1">
+				<inputs>
+					<input name="r1.range_start" type="int" type_modifier="" unit="" id="5" value="1" use="1"/>
+					<input name="r1.range_len" type="int" type_modifier="" unit="" id="6" value="1" use="1"/>
+					<input name="v1" type="int" type_modifier="" unit="" id="7" value="1" use="1"/>
+				</inputs>
+				<results>
+					<result name="is_value_in_range()" type="result" type_modifier="" unit="" id="3" expected_value="yes" actual_value="yes" success="ok" use="1"/>
+				</results>
+				<metrics>
+					<result_significance value="true" result="ok"/>
+				</metrics>
+			</teststep>
+		</testcase>
+	</testobject>
+</report>
