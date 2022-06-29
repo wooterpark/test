@@ -1,9 +1,15 @@
 @echo off&&setlocal enabledelayedexpansion
-
+E:
+cd E:\zzy
+md E:\zzy\testReport
 ::QAC
-cd C:\PRQA\QAC-8.1.2-R\projects\examples\src
-copy E:\zzy\test\QAC.bat C:\PRQA\QAC-8.1.2-R\projects\examples\src
+E:
+cd E:\zzy\QAC\src
+copy E:\zzy\test\QAC.bat E:\zzy\QAC\src
 call QAC.bat
+cd E:\zzy\QAC
+ren output QACoutput
+move E:\zzy\QAC\QACoutput E:\zzy\testReport
 
 ::TESSY
 C:
