@@ -3,9 +3,6 @@ E:
 cd E:\zzy
 md E:\zzy\testReport
 ::QAC
-E:
-cd E:\zzy\QAC
-md E:\zzy\QAC\output
 cd E:\zzy\QAC\src
 copy E:\zzy\test\QAC.bat E:\zzy\QAC\src
 call QAC.bat
